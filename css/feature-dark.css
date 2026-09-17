@@ -5,7 +5,7 @@
   background: var(--ink);
   color: var(--cream);
   padding: 5rem 0;
-  border-top: 1px solid rgba(244, 239, 230, 0.08);
+  border-top: var(--border-width) solid color-mix(in srgb, var(--cream) 8%, transparent);
 }
 
 .feature-dark .section-kicker {
@@ -14,24 +14,24 @@
 }
 
 .feature-dark .section-number {
-  color: rgba(244, 239, 230, 0.35);
+  color: color-mix(in srgb, var(--cream) 35%, transparent);
 }
 
 .feature-dark .display {
   color: var(--cream);
   font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.15;
+  line-height: var(--lh-tight);
 }
 
 .feature-dark .lede {
-  color: rgba(244, 239, 230, 0.65);
+  color: color-mix(in srgb, var(--cream) 65%, transparent);
   max-width: 42ch;
   margin-top: var(--space-md);
 }
 
 .feature-dark p {
-  color: rgba(244, 239, 230, 0.6);
-  line-height: 1.7;
+  color: color-mix(in srgb, var(--cream) 60%, transparent);
+  line-height: var(--lh-relaxed);
 }
 
 /* ========================= [Feature Layout] ========================= */
@@ -58,24 +58,24 @@
 .country-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .country-card {
   background: #141311;
-  border: 1px solid rgba(244, 239, 230, 0.1);
-  border-radius: 8px;
+  border: var(--border-width) solid color-mix(in srgb, var(--cream) 10%, transparent);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   transition:
-    transform 220ms var(--ease),
-    border-color 220ms ease,
-    box-shadow 220ms ease;
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
   cursor: pointer;
 }
 
 .country-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(214, 179, 106, 0.35);
+  border-color: color-mix(in srgb, var(--accent-gold) 35%, transparent);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
@@ -98,22 +98,22 @@
 
 .country-card-number {
   position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
+  top: var(--space-sm);
+  left: var(--space-sm);
   font-family: var(--font-mono);
   font-size: 0.6rem;
   letter-spacing: 0.1em;
-  background: rgba(12, 11, 9, 0.75);
+  background: color-mix(in srgb, var(--ink) 75%, transparent);
   backdrop-filter: blur(6px);
   padding: 0.3rem 0.6rem;
-  border-radius: var(--radius-sm);
-  color: rgba(244, 239, 230, 0.8);
+  border-radius: var(--radius-xs);
+  color: color-mix(in srgb, var(--cream) 80%, transparent);
 }
 
 .country-card-flag {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
+  top: var(--space-sm);
+  right: var(--space-sm);
   width: 28px;
   height: 20px;
   border-radius: 2px;
@@ -121,31 +121,31 @@
 }
 
 .country-card-body {
-  padding: 1rem;
+  padding: var(--space-md);
 }
 
 .country-card-body h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: var(--cream);
   margin-bottom: 0.2rem;
 }
 
 .country-card-tagline {
-  font-size: var(--fs-badge);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .country-card-body > p {
-  font-size: var(--fs-body);
-  color: rgba(244, 239, 230, 0.55);
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+  font-size: var(--fs-base);
+  color: color-mix(in srgb, var(--cream) 55%, transparent);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--space-sm);
 }
 
 .country-card-tags {
@@ -156,11 +156,11 @@
 
 .country-card-tags span {
   padding: 0.2rem 0.5rem;
-  border: 1px solid rgba(244, 239, 230, 0.12);
-  border-radius: var(--radius-sm);
+  border: var(--border-width) solid color-mix(in srgb, var(--cream) 12%, transparent);
+  border-radius: var(--radius-xs);
   font-size: 0.55rem;
   letter-spacing: 0.05em;
-  color: rgba(244, 239, 230, 0.45);
+  color: color-mix(in srgb, var(--cream) 45%, transparent);
 }
 
 /* ========================= [Country Nav] ========================= */
@@ -177,14 +177,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(244, 239, 230, 0.08);
-  font-size: var(--fs-nav);
-  font-weight: 500;
+  border-bottom: var(--border-width) solid color-mix(in srgb, var(--cream) 8%, transparent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(244, 239, 230, 0.4);
+  color: color-mix(in srgb, var(--cream) 40%, transparent);
   text-decoration: none;
-  transition: color 200ms var(--ease);
+  transition: color var(--transition-fast);
 }
 
 .country-nav a:hover,
@@ -195,7 +195,7 @@
 .country-nav a span {
   font-family: var(--font-mono);
   font-size: 0.55rem;
-  color: rgba(244, 239, 230, 0.25);
+  color: color-mix(in srgb, var(--cream) 25%, transparent);
 }
 
 /* ========================= [AI Cards] ========================= */
@@ -203,32 +203,32 @@
 .ai-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .ai-card {
   background: #141311;
-  border: 1px solid rgba(244, 239, 230, 0.1);
-  border-radius: 8px;
+  border: var(--border-width) solid color-mix(in srgb, var(--cream) 10%, transparent);
+  border-radius: var(--radius-sm);
   padding: 1.25rem;
   transition:
-    transform 220ms var(--ease),
-    border-color 220ms ease,
-    box-shadow 220ms ease;
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .ai-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(214, 179, 106, 0.3);
+  border-color: color-mix(in srgb, var(--accent-gold) 30%, transparent);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .ai-card-icon {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-  background: rgba(244, 239, 230, 0.06);
-  border: 1px solid rgba(244, 239, 230, 0.1);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--cream) 6%, transparent);
+  border: var(--border-width) solid color-mix(in srgb, var(--cream) 10%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,22 +240,22 @@
   font-family: var(--font-mono);
   font-size: 0.55rem;
   letter-spacing: 0.1em;
-  color: rgba(244, 239, 230, 0.3);
+  color: color-mix(in srgb, var(--cream) 30%, transparent);
   margin-bottom: 0.35rem;
 }
 
 .ai-card h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: var(--cream);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .ai-card p {
-  font-size: var(--fs-body);
-  color: rgba(244, 239, 230, 0.55);
-  line-height: 1.6;
+  font-size: var(--fs-base);
+  color: color-mix(in srgb, var(--cream) 55%, transparent);
+  line-height: var(--lh-normal);
 }
 
 /* ========================= [AI Boundary Panel] ========================= */
@@ -264,8 +264,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(244, 239, 230, 0.08);
-  border-radius: 8px;
+  background: color-mix(in srgb, var(--cream) 8%, transparent);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   margin-top: var(--space-lg);
 }
@@ -278,9 +278,9 @@
 .ai-boundary-panel h4 {
   font-family: var(--font-display);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: var(--cream);
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-sm);
 }
 
 .ai-boundary-panel ul {
@@ -290,18 +290,18 @@
 
 .ai-boundary-panel li {
   padding: 0.4rem 0;
-  font-size: var(--fs-body);
-  color: rgba(244, 239, 230, 0.55);
+  font-size: var(--fs-base);
+  color: color-mix(in srgb, var(--cream) 55%, transparent);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-xs);
 }
 
 .ai-boundary-panel li::before {
   content: "";
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   flex-shrink: 0;
 }
 
@@ -321,6 +321,7 @@
   .country-card-media img {
     transition: none;
   }
+
   .country-card:hover,
   .ai-card:hover {
     transform: none;
@@ -332,7 +333,7 @@
 @media (max-width: 900px) {
   .feature-layout {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 
   .feature-intro {

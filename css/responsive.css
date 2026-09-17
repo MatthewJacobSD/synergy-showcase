@@ -1,5 +1,5 @@
 /* ========================= [Responsive] ========================= */
-/* Desktop-first: wide screen adjustments, then tablet, then mobile */
+/* Desktop-first → Wide → Tablet → Mobile → Small phone */
 
 /* --- Wide screens (1400px+) --- */
 @media (min-width: 1400px) {
@@ -12,7 +12,7 @@
   }
 }
 
-/* --- Small desktop (<= 1024px) --- */
+/* --- Small desktop (≤ 1024px) --- */
 @media (max-width: 1024px) {
   .container {
     width: min(96%, 900px);
@@ -27,23 +27,20 @@
   }
 
   .hero-stats {
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 
-  .artifact-exhibit {
-    gap: 2rem;
-  }
-
+  .artifact-exhibit,
   .split-layout {
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 }
 
-/* --- Tablet (<= 900px) --- */
+/* --- Tablet (≤ 900px) --- */
 @media (max-width: 900px) {
   .artifact-exhibit {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--space-lg);
   }
 
   .artifact-exhibit--reverse {
@@ -51,7 +48,7 @@
   }
 
   .artifact-exhibit-visual {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
   }
 
   .authors-grid {
@@ -60,7 +57,7 @@
 
   .split-layout {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-xl);
   }
 
   .split-layout--reverse {
@@ -68,7 +65,7 @@
   }
 
   .split-image {
-    order: -1;
+    order: -1; /* image first on mobile */
   }
 
   .artifacts-grid {
@@ -76,11 +73,12 @@
   }
 }
 
-/* --- Mobile (<= 700px) --- */
+/* --- Mobile (≤ 700px) --- */
 @media (max-width: 700px) {
+  /* Header */
   .site-header {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-sm);
     padding: 0.85rem 5%;
   }
 
@@ -89,12 +87,13 @@
   }
 
   .primary-nav {
-    gap: 1rem;
+    gap: var(--space-md);
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 0.62rem;
+    font-size: var(--fs-xs);
   }
 
+  /* Hero */
   .hero--full {
     min-height: 75vh;
   }
@@ -102,8 +101,8 @@
   .hero-overlay {
     background: linear-gradient(
       to bottom,
-      hsla(40, 30%, 95%, 0.96) 0%,
-      hsla(40, 30%, 95%, 0.9) 100%
+      hsla(40 30% 95% / 0.96) 0%,
+      hsla(40 30% 95% / 0.9) 100%
     );
     padding: 4rem 5% 3rem;
   }
@@ -122,21 +121,20 @@
 
   .hero-stats {
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: var(--space-lg);
   }
 
   .hero-stat-value {
     font-size: 1.3rem;
   }
 
+  /* Typography */
   .display {
     font-size: 1.55rem;
   }
 
-  .section {
-    padding: 3rem 0;
-  }
-
+  /* Sections */
+  section,
   .artifacts-section,
   .authors-section,
   .challenges-section,
@@ -145,9 +143,10 @@
     padding: 3rem 0;
   }
 
+  /* Grids */
   .artifacts-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: var(--space-sm);
   }
 
   .authors-grid {
@@ -162,6 +161,7 @@
     font-size: 0.95rem;
   }
 
+  /* CTAs */
   .cta-row {
     flex-direction: column;
     gap: 0.6rem;
@@ -172,10 +172,11 @@
     text-align: center;
   }
 
+  /* Footer & PowerPoint */
   .footer-inner {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
+    gap: var(--space-xs);
   }
 
   .site-powerpoint .container {
@@ -184,14 +185,14 @@
   }
 }
 
-/* --- Small phone (<= 400px) --- */
+/* --- Small phone (≤ 400px) --- */
 @media (max-width: 400px) {
   .site-header {
     padding: 0.75rem 4%;
   }
 
   .primary-nav {
-    gap: 0.75rem;
+    gap: var(--space-sm);
   }
 
   .hero--full {
@@ -202,10 +203,7 @@
     font-size: 1.35rem;
   }
 
-  .eyebrow {
-    font-size: 0.56rem;
-  }
-
+  .eyebrow,
   .section-kicker {
     font-size: 0.56rem;
   }
@@ -217,7 +215,7 @@
   }
 
   .hero-stats {
-    gap: 1rem;
+    gap: var(--space-md);
   }
 
   .hero-stat-value {

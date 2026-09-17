@@ -11,15 +11,32 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--ink) 20%, transparent) var(--cream);
 }
 
 body {
   font-family: var(--font-body);
-  font-size: var(--fs-body);
-  line-height: 1.6;
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
   color: var(--ink);
   background-color: var(--cream);
   -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
 }
 
 /* ========================= [Page Transition] ========================= */
@@ -54,13 +71,15 @@ body.page-leaving {
   background: var(--ink);
   color: var(--cream);
   font-size: 0.55rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   opacity: 0;
   transform: translate(0, 0) scale(0.9);
-  transition: opacity 0.2s var(--ease), transform 0.2s var(--spring);
+  transition:
+    opacity 0.2s var(--ease),
+    transform 0.2s var(--ease-spring);
 }
 
 .custom-cursor.visible {
@@ -81,21 +100,24 @@ body.page-leaving {
   gap: 0.4rem;
   padding: 0.6rem 1rem;
   background: var(--cream);
-  border: 1px solid var(--ink-overlay);
-  border-radius: var(--radius-md);
-  font-size: var(--fs-badge);
-  font-weight: 600;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink);
-  box-shadow: 0 4px 16px hsla(30, 8%, 4%, 0.08);
-  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    color var(--transition-fast);
   text-decoration: none;
 }
 
 .floating-back:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px hsla(30, 8%, 4%, 0.12);
+  box-shadow: var(--shadow-lg);
   color: var(--accent-sage);
 }
 
@@ -119,49 +141,29 @@ body.page-leaving {
   background: color-mix(in srgb, var(--ink) 35%, transparent);
 }
 
-html {
-  scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--ink) 20%, transparent) var(--cream);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input {
-  font: inherit;
-}
-
 /* ========================= [Typography] ========================= */
 /* Display headings, eyebrow labels, lede paragraph */
 
 .display {
   font-family: var(--font-display);
-  font-size: var(--fs-display);
-  font-weight: 600;
-  line-height: 1.15;
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
   letter-spacing: -0.02em;
 }
 
 .eyebrow {
-  font-size: var(--fs-badge);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   margin-bottom: var(--space-sm);
 }
 
 .lede {
   font-size: 1.05rem;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   max-width: 42ch;
   margin-top: var(--space-md);
 }

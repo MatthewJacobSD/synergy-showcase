@@ -1,20 +1,24 @@
 /* ========================= [Sections] ========================= */
-/* Generic section padding and alternating backgrounds */
+/* Generic section padding + alternating backgrounds */
 
 section {
   padding: 4.5rem 0;
 }
 
 section.alt {
-  background: linear-gradient(180deg, hsla(40, 20%, 94%, 0.4) 0%, hsla(40, 20%, 96%, 0.2) 100%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-subtle) 40%, transparent) 0%,
+    color-mix(in srgb, var(--surface-faint) 20%, transparent) 100%
+  );
 }
 
 /* ========================= [Section Kickers] ========================= */
-/* Small uppercase labels and intro paragraphs */
+/* Small uppercase labels + intro paragraphs */
 
 .section-kicker {
-  font-size: var(--fs-badge);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-sage);
@@ -22,24 +26,22 @@ section.alt {
 }
 
 .section-number {
+  display: block;
   font-family: var(--font-mono);
-  font-size: var(--fs-badge);
-  color: var(--cream-dim);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
   letter-spacing: 0.05em;
   margin-bottom: var(--space-xs);
-  display: block;
 }
 
 .section-intro {
   max-width: 58ch;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   font-size: 1.05rem;
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
+  margin-block: var(--space-md);
 }
 
 /* ========================= [Intro Section] ========================= */
-/* Introduction text block below the hero */
 
 .intro {
   padding: 5rem 0;
@@ -52,9 +54,9 @@ section.alt {
 .intro p {
   max-width: 58ch;
   margin-bottom: 1.25rem;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: var(--lh-relaxed);
 }
 
 .intro p:last-child {
@@ -62,11 +64,11 @@ section.alt {
 }
 
 /* ========================= [Artifacts Editorial] ========================= */
-/* Large alternating layout: exhibit-style artifact showcases */
+/* Large alternating exhibit-style showcases */
 
 .artifacts-section {
   padding: 5rem 0;
-  border-top: 1px solid var(--ink-overlay);
+  border-top: var(--border-width) solid var(--border-color);
 }
 
 .artifacts-header {
@@ -79,11 +81,11 @@ section.alt {
   gap: 3rem;
   align-items: center;
   padding: 3rem 0;
-  border-top: 1px solid var(--ink-overlay);
+  border-top: var(--border-width) solid var(--border-color);
 }
 
 .artifact-exhibit:last-child {
-  border-bottom: 1px solid var(--ink-overlay);
+  border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .artifact-exhibit--reverse {
@@ -94,13 +96,15 @@ section.alt {
   direction: ltr;
 }
 
+/* Visual */
+
 .artifact-exhibit-visual {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;
   background: var(--surface-subtle);
-  border: 1px solid var(--ink-overlay);
+  border: var(--border-width) solid var(--border-color);
 }
 
 .artifact-exhibit-visual img {
@@ -115,7 +119,7 @@ section.alt {
   transform: scale(1.03);
 }
 
-.artifact-exhibit-visual .artifact-visual-placeholder {
+.artifact-visual-placeholder {
   width: 100%;
   height: 100%;
   display: flex;
@@ -123,27 +127,33 @@ section.alt {
   justify-content: center;
   font-family: var(--font-display);
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: color-mix(in srgb, var(--ink) 10%, transparent);
 }
 
-.artifact-exhibit-visual .powerpoint-preview {
+/* PowerPoint preview inside exhibit */
+
+.powerpoint-preview {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  background: linear-gradient(135deg, hsla(40, 20%, 94%, 0.8) 0%, hsla(40, 15%, 90%, 0.6) 100%);
+  gap: var(--space-sm);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--surface-subtle) 80%, transparent) 0%,
+    color-mix(in srgb, var(--surface-hover) 60%, transparent) 100%
+  );
 }
 
 .powerpoint-preview-icon {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: var(--cream);
-  border: 1px solid var(--ink-overlay);
+  border: var(--border-width) solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,18 +162,20 @@ section.alt {
 
 .powerpoint-preview-label {
   font-family: var(--font-mono);
-  font-size: var(--fs-body);
-  font-weight: 500;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
   color: var(--ink);
 }
 
 .powerpoint-preview-meta {
-  font-size: var(--fs-badge);
-  color: var(--cream-dim);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
   letter-spacing: 0.05em;
 }
 
-.artifact-exhibit-visual .artifact-accent-bar {
+/* Accent bar */
+
+.artifact-accent-bar {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -171,37 +183,39 @@ section.alt {
   height: 3px;
 }
 
-.artifact-accent-bar--sage { background: var(--accent-sage); }
+.artifact-accent-bar--sage       { background: var(--accent-sage); }
 .artifact-accent-bar--terracotta { background: var(--accent-terracotta); }
-.artifact-accent-bar--slate { background: var(--accent-slate); }
-.artifact-accent-bar--gold { background: var(--accent-gold); }
-.artifact-accent-bar--ink { background: var(--ink); }
+.artifact-accent-bar--slate      { background: var(--accent-slate); }
+.artifact-accent-bar--gold       { background: var(--accent-gold); }
+.artifact-accent-bar--ink        { background: var(--ink); }
+
+/* Content */
 
 .artifact-exhibit-content {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-sm);
 }
 
 .artifact-exhibit-number {
   font-family: var(--font-mono);
-  font-size: var(--fs-badge);
-  color: var(--cream-dim);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
   letter-spacing: 0.1em;
 }
 
 .artifact-exhibit-title {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 600;
-  line-height: 1.1;
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
   letter-spacing: -0.02em;
 }
 
 .artifact-exhibit-desc {
-  color: var(--cream-dim);
-  font-size: var(--fs-body);
-  line-height: 1.65;
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
   max-width: 42ch;
 }
 
@@ -209,11 +223,11 @@ section.alt {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: var(--fs-strong);
-  font-weight: 500;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
   color: var(--ink);
-  transition: all var(--transition-fast);
   margin-top: 0.25rem;
+  transition: color var(--transition-fast), gap var(--transition-fast);
 }
 
 .artifact-exhibit-link:hover {
@@ -229,11 +243,12 @@ section.alt {
   transform: translateX(3px);
 }
 
-/* Legacy grid fallback (unused but kept for safety) */
+/* Legacy grid (kept for safety) */
+
 .artifacts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: var(--space-md);
   margin-top: var(--space-lg);
 }
 
@@ -241,22 +256,22 @@ section.alt {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  border: 1px solid var(--ink-overlay);
-  border-radius: var(--radius-md);
-  background: hsla(40, 20%, 97%, 0.5);
-  transition: all var(--transition-base);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--surface-faint) 50%, transparent);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .artifact-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-sage);
-  box-shadow: 0 8px 24px hsla(30, 8%, 4%, 0.06);
+  box-shadow: var(--shadow-md);
 }
 
 .artifact-number {
   font-family: var(--font-display);
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: color-mix(in srgb, var(--ink) 18%, transparent);
   line-height: 1;
   margin-bottom: var(--space-sm);
@@ -265,22 +280,22 @@ section.alt {
 .artifact-card h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   margin-bottom: var(--space-xs);
 }
 
 .artifact-card p {
-  color: var(--cream-dim);
-  font-size: var(--fs-body);
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
   flex: 1;
 }
 
 .artifact-link {
   display: inline-block;
   margin-top: var(--space-md);
-  font-size: var(--fs-nav);
-  font-weight: 500;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.04em;
   color: var(--accent-sage);
   transition: color var(--transition-fast);
@@ -291,11 +306,10 @@ section.alt {
 }
 
 /* ========================= [Authors] ========================= */
-/* 3-column grid with richer avatars */
 
 .authors-section {
   padding: 5rem 0;
-  border-top: 1px solid var(--ink-overlay);
+  border-top: var(--border-width) solid var(--border-color);
 }
 
 .authors-grid {
@@ -308,22 +322,22 @@ section.alt {
 .author-card {
   position: relative;
   padding: 1.75rem;
-  border: 1px solid var(--ink-overlay);
-  border-radius: var(--radius-md);
-  background: hsla(40, 20%, 97%, 0.5);
-  transition: all var(--transition-base);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--surface-faint) 50%, transparent);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .author-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px hsla(30, 8%, 4%, 0.07);
+  box-shadow: var(--shadow-lg);
   border-color: color-mix(in srgb, var(--accent-sage) 40%, transparent);
 }
 
 .author-avatar {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: var(--ink);
   color: var(--cream);
   display: flex;
@@ -331,7 +345,7 @@ section.alt {
   justify-content: center;
   font-family: var(--font-display);
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   margin-bottom: var(--space-md);
   border: 2px solid transparent;
   transition: border-color var(--transition-fast);
@@ -344,14 +358,14 @@ section.alt {
 .author-card h3 {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   margin-bottom: 0.25rem;
 }
 
 .author-role {
   display: block;
-  font-size: var(--fs-badge);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent-terracotta);
@@ -359,13 +373,12 @@ section.alt {
 }
 
 .author-card > p {
-  color: var(--cream-dim);
-  font-size: var(--fs-body);
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
 }
 
 /* ========================= [Author Popover] ========================= */
-/* Floating contact panel that appears above/below card on hover */
 
 .author-popover {
   position: absolute;
@@ -374,10 +387,10 @@ section.alt {
   width: min(320px, calc(100vw - 2rem));
   transform: translateY(6px);
   background: var(--cream);
-  border: 1px solid var(--ink-overlay);
-  border-radius: var(--radius-md);
-  padding: 0.75rem;
-  box-shadow: 0 12px 32px hsla(30, 8%, 4%, 0.1);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  box-shadow: var(--shadow-lg);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -395,7 +408,7 @@ section.alt {
   left: 1.5rem;
   border: 6px solid transparent;
   border-top-color: var(--cream);
-  filter: drop-shadow(0 2px 2px hsla(30, 8%, 4%, 0.06));
+  filter: drop-shadow(0 2px 2px hsla(30 8% 4% / 0.06));
 }
 
 .author-popover.popover-below {
@@ -408,7 +421,7 @@ section.alt {
   bottom: 100%;
   border-top-color: transparent;
   border-bottom-color: var(--cream);
-  filter: drop-shadow(0 -2px 2px hsla(30, 8%, 4%, 0.06));
+  filter: drop-shadow(0 -2px 2px hsla(30 8% 4% / 0.06));
 }
 
 .author-card:hover .author-popover,
@@ -429,7 +442,7 @@ section.alt {
   align-items: center;
   gap: 0.65rem;
   padding: 0.5rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   transition: background var(--transition-fast);
 }
 
@@ -443,10 +456,10 @@ section.alt {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--ink-overlay);
-  border-radius: var(--radius-sm);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-xs);
   font-size: 0.9rem;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
 }
 
 .author-popover .social-divider {
@@ -461,15 +474,15 @@ section.alt {
 }
 
 .author-popover .social-content small {
-  font-size: var(--fs-badge);
+  font-size: var(--fs-xs);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
 }
 
 .author-popover .social-content span {
-  font-size: var(--fs-body);
-  font-weight: 500;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
   color: var(--ink);
   white-space: nowrap;
   overflow: hidden;
@@ -477,12 +490,11 @@ section.alt {
 }
 
 /* ========================= [Split Layout] ========================= */
-/* Two-column layout for Challenges and Collaboration */
 
 .challenges-section,
 .collaboration-section {
   padding: 5rem 0;
-  border-top: 1px solid var(--ink-overlay);
+  border-top: var(--border-width) solid var(--border-color);
 }
 
 .split-layout {
@@ -505,10 +517,10 @@ section.alt {
 }
 
 .split-content p {
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   font-size: 1.05rem;
   margin-bottom: 1rem;
-  line-height: 1.7;
+  line-height: var(--lh-relaxed);
 }
 
 .split-content p:last-child {
@@ -516,9 +528,9 @@ section.alt {
 }
 
 .split-image {
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  border: 1px solid var(--ink-overlay);
+  border: var(--border-width) solid var(--border-color);
 }
 
 .split-image img {
@@ -533,35 +545,33 @@ section.alt {
 }
 
 /* ========================= [PowerPoint Section] ========================= */
-/* CTA banner linking to the current PowerPoint presentation */
 
 .site-powerpoint {
   padding: 3rem 0;
-  border-top: 1px solid var(--ink-overlay);
-  border-bottom: 1px solid var(--ink-overlay);
+  border-block: var(--border-width) solid var(--border-color);
 }
 
 .site-powerpoint .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .powerpoint-label {
-  font-size: var(--fs-badge);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
 }
 
 .powerpoint-link p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: var(--fs-strong);
-  font-weight: 500;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
   color: var(--ink);
   transition: color var(--transition-fast);
 }
@@ -579,11 +589,10 @@ section.alt {
 }
 
 /* ========================= [Final Showcase] ========================= */
-/* Closing section with CTA back to artifacts */
 
 .showcase-section {
   padding: 5rem 0;
-  border-top: 1px solid var(--ink-overlay);
+  border-top: var(--border-width) solid var(--border-color);
 }
 
 .showcase-section .display {

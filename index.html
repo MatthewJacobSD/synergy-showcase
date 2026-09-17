@@ -20,7 +20,12 @@
 
     <nav class="primary-nav" aria-label="Primary">
       <div class="nav-dropdown">
-        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+        <button
+          class="nav-dropdown-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
           Artifacts
           <span class="nav-chevron" aria-hidden="true"></span>
         </button>
@@ -30,7 +35,7 @@
           <a href="quests/artifact-03.html" role="menuitem">03 — Lost in Translation</a>
           <a href="quests/artifact-04.html" role="menuitem">04 — The Culture Games</a>
           <a href="quests/artifact-05.html" role="menuitem">05 — Getting to know Maranda</a>
-        </div>      
+        </div>
       </div>
 
       <a href="#countries">Cultures</a>
@@ -44,11 +49,15 @@
   <main>
 
     <!-- ========================= [Hero] ========================= -->
-    <section class="hero hero--full">
+    <section class="hero hero--full" aria-label="Introduction">
       <div class="hero-overlay">
         <div class="hero-copy">
           <p class="eyebrow">INT / Synergy / 2026</p>
-          <h1 class="hero-display">Five artifacts.<br>Three people.<br>One collaborative experience.</h1>
+          <h1 class="hero-display">
+            Five artifacts.<br />
+            Three people.<br />
+            One collaborative experience.
+          </h1>
           <p class="hero-sub">
             A collection of work created throughout the INT Synergy course —
             bringing together individual contributions and group quests
@@ -60,20 +69,20 @@
             <a class="cta ghost" href="#how">Our process</a>
           </div>
 
-          <div class="hero-stats">
-            <div class="hero-stat">
+          <div class="hero-stats" role="list">
+            <div class="hero-stat" role="listitem">
               <span class="hero-stat-value">5</span>
               <span class="hero-stat-label">Artifacts</span>
             </div>
-            <div class="hero-stat">
+            <div class="hero-stat" role="listitem">
               <span class="hero-stat-value">3</span>
               <span class="hero-stat-label">Contributors</span>
             </div>
-            <div class="hero-stat">
+            <div class="hero-stat" role="listitem">
               <span class="hero-stat-value">7</span>
               <span class="hero-stat-label">Weeks</span>
             </div>
-            <div class="hero-stat">
+            <div class="hero-stat" role="listitem">
               <span class="hero-stat-value">1</span>
               <span class="hero-stat-label">Showcase</span>
             </div>
@@ -125,16 +134,21 @@
         </div>
 
         <!-- Artifact 01 -->
-        <div class="artifact-exhibit reveal">
+        <article class="artifact-exhibit reveal">
           <div class="artifact-exhibit-visual">
             <div class="powerpoint-preview">
-              <div class="powerpoint-preview-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h2m2 0h6"/></svg>
+              <div class="powerpoint-preview-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <path d="M7 8h2m2 0h6"/>
+                </svg>
               </div>
               <span class="powerpoint-preview-label">synergy.pptx</span>
               <span class="powerpoint-preview-meta">PowerPoint · Group Artifact</span>
             </div>
-            <div class="artifact-accent-bar artifact-accent-bar--sage"></div>
+            <div class="artifact-accent-bar artifact-accent-bar--sage" aria-hidden="true"></div>
           </div>
           <div class="artifact-exhibit-content">
             <span class="artifact-exhibit-number">Artifact 01</span>
@@ -145,16 +159,19 @@
             </p>
             <a href="quests/artifact-01.html" class="artifact-exhibit-link">
               Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Artifact 02 -->
-        <div class="artifact-exhibit artifact-exhibit--reverse reveal" data-delay="80">
+        <article class="artifact-exhibit artifact-exhibit--reverse reveal" data-delay="80">
           <div class="artifact-exhibit-visual">
             <img src="images/home/artifact-02.jpg" alt="GiGo — AI usage and prompt design" />
-            <div class="artifact-accent-bar artifact-accent-bar--terracotta"></div>
+            <div class="artifact-accent-bar artifact-accent-bar--terracotta" aria-hidden="true"></div>
           </div>
           <div class="artifact-exhibit-content">
             <span class="artifact-exhibit-number">Artifact 02</span>
@@ -165,16 +182,19 @@
             </p>
             <a href="quests/artifact-02.html" class="artifact-exhibit-link">
               Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Artifact 03 -->
-        <div class="artifact-exhibit reveal" data-delay="80">
+        <article class="artifact-exhibit reveal" data-delay="80">
           <div class="artifact-exhibit-visual">
-            <div class="artifact-visual-placeholder">03</div>
-            <div class="artifact-accent-bar artifact-accent-bar--slate"></div>
+            <div class="artifact-visual-placeholder" aria-hidden="true">03</div>
+            <div class="artifact-accent-bar artifact-accent-bar--slate" aria-hidden="true"></div>
           </div>
           <div class="artifact-exhibit-content">
             <span class="artifact-exhibit-number">Artifact 03</span>
@@ -185,16 +205,19 @@
             </p>
             <a href="quests/artifact-03.html" class="artifact-exhibit-link">
               Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Artifact 04 -->
-        <div class="artifact-exhibit artifact-exhibit--reverse reveal" data-delay="80">
+        <article class="artifact-exhibit artifact-exhibit--reverse reveal" data-delay="80">
           <div class="artifact-exhibit-visual">
-            <div class="artifact-visual-placeholder">04</div>
-            <div class="artifact-accent-bar artifact-accent-bar--gold"></div>
+            <div class="artifact-visual-placeholder" aria-hidden="true">04</div>
+            <div class="artifact-accent-bar artifact-accent-bar--gold" aria-hidden="true"></div>
           </div>
           <div class="artifact-exhibit-content">
             <span class="artifact-exhibit-number">Artifact 04</span>
@@ -205,16 +228,19 @@
             </p>
             <a href="quests/artifact-04.html" class="artifact-exhibit-link">
               Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </div>
-        </div>
+        </article>
 
         <!-- Artifact 05 -->
-        <div class="artifact-exhibit reveal" data-delay="80">
+        <article class="artifact-exhibit reveal" data-delay="80">
           <div class="artifact-exhibit-visual">
-            <div class="artifact-visual-placeholder">05</div>
-            <div class="artifact-accent-bar artifact-accent-bar--ink"></div>
+            <div class="artifact-visual-placeholder" aria-hidden="true">05</div>
+            <div class="artifact-accent-bar artifact-accent-bar--ink" aria-hidden="true"></div>
           </div>
           <div class="artifact-exhibit-content">
             <span class="artifact-exhibit-number">Artifact 05</span>
@@ -225,11 +251,13 @@
             </p>
             <a href="quests/artifact-05.html" class="artifact-exhibit-link">
               Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
             </a>
           </div>
-        </div>
-
+        </article>
       </div>
     </section>
 
@@ -247,22 +275,23 @@
 
         <div class="authors-grid">
           <article class="author-card reveal">
-            <div class="author-avatar">M</div>
+            <div class="author-avatar" aria-hidden="true">M</div>
             <h3>Matthew Jacob Sarkodie Darkwah</h3>
             <span class="author-role">Website development &amp; final showcase</span>
-            <p>Responsible for designing and developing the website that brings all five artifacts together and presents the group's work as a single final showcase.</p>
+            <p>
+              Responsible for designing and developing the website that brings all five
+              artifacts together and presents the group's work as a single final showcase.
+            </p>
             <div class="author-popover">
-              <a href="mailto:608280@student.saxion.nl" aria-label="Email MatthewJacob">
+              <a href="mailto:608280@student.saxion.nl" aria-label="Email Matthew Jacob">
                 <span class="social-icon" aria-hidden="true">✉</span>
-                <span class="social-divider"></span>
                 <span class="social-content">
                   <small>Saxion Student ID</small>
                   <span>608280</span>
                 </span>
               </a>
-              <a href="https://github.com/MatthewJacobSD" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <a href="https://github.com/MatthewJacobSD" target="_blank" rel="noopener noreferrer" aria-label="Matthew Jacob on GitHub">
                 <span class="social-icon" aria-hidden="true">⎔</span>
-                <span class="social-divider"></span>
                 <span class="social-content">
                   <small>GitHub</small>
                   <span>github.com/MatthewJacobSD</span>
@@ -272,14 +301,16 @@
           </article>
 
           <article class="author-card reveal" data-delay="80">
-            <div class="author-avatar">E</div>
+            <div class="author-avatar" aria-hidden="true">E</div>
             <h3>Elina Nilisani</h3>
             <span class="author-role">PowerPoint development</span>
-            <p>Responsible for contributing to the activities and constructing the PowerPoint artifacts used in the final showcase.</p>
+            <p>
+              Responsible for contributing to the activities and constructing the
+              PowerPoint artifacts used in the final showcase.
+            </p>
             <div class="author-popover">
               <a href="mailto:597889@student.saxion.nl" aria-label="Email Elina">
                 <span class="social-icon" aria-hidden="true">✉</span>
-                <span class="social-divider"></span>
                 <span class="social-content">
                   <small>Saxion Student ID</small>
                   <span>597889</span>
@@ -289,14 +320,16 @@
           </article>
 
           <article class="author-card reveal" data-delay="160">
-            <div class="author-avatar">T</div>
+            <div class="author-avatar" aria-hidden="true">T</div>
             <h3>Thijmen Verschuur</h3>
             <span class="author-role">PowerPoint development</span>
-            <p>Responsible for contributing to the activities and constructing the PowerPoint artifacts used in the final showcase.</p>
+            <p>
+              Responsible for contributing to the activities and constructing the
+              PowerPoint artifacts used in the final showcase.
+            </p>
             <div class="author-popover">
               <a href="mailto:586289@student.saxion.nl" aria-label="Email Thijmen">
                 <span class="social-icon" aria-hidden="true">✉</span>
-                <span class="social-divider"></span>
                 <span class="social-content">
                   <small>Saxion Student ID</small>
                   <span>586289</span>
@@ -314,16 +347,16 @@
         <div class="feature-intro">
           <span class="section-number">04 / Perspectives</span>
           <p class="section-kicker">Cultural Atlas</p>
-          <h2 class="display">Three Countries.<br>Three Perspectives.</h2>
+          <h2 class="display">Three Countries.<br />Three Perspectives.</h2>
           <p class="lede">
             Our project brought together three different cultures, languages,
             and ways of thinking. Here is a closer look at the countries we
             came from — and what shapes our backgrounds, values, and perspectives.
           </p>
           <nav class="country-nav" aria-label="Countries">
-            <a href="#italy" class="is-active">ITALY <span>01</span></a>
-            <a href="#iran">IRAN <span>02</span></a>
-            <a href="#netherlands">NETHERLANDS <span>03</span></a>
+            <a href="#italy" class="is-active">Italy <span>01</span></a>
+            <a href="#iran">Iran <span>02</span></a>
+            <a href="#netherlands">Netherlands <span>03</span></a>
           </nav>
         </div>
 
@@ -331,12 +364,16 @@
           <article class="country-card reveal" id="italy">
             <div class="country-card-media">
               <img src="images/home/italy-poster.png" alt="Italy — culture and tradition" />
-              <span class="country-card-number">01 · ITALY</span>
+              <span class="country-card-number">01 · Italy</span>
             </div>
             <div class="country-card-body">
               <h3>Italy</h3>
               <p class="country-card-tagline">History, Family, and Balance</p>
-              <p>Italy is known for its rich history, art, food, and strong sense of family. People value connection, tradition, and enjoying the present. It is a culture where work and everyday life are deeply intertwined.</p>
+              <p>
+                Italy is known for its rich history, art, food, and strong sense of family.
+                People value connection, tradition, and enjoying the present. It is a culture
+                where work and everyday life are deeply intertwined.
+              </p>
               <div class="country-card-tags">
                 <span>Family &amp; Community</span>
                 <span>Food &amp; Culture</span>
@@ -348,12 +385,17 @@
           <article class="country-card reveal" data-delay="90" id="iran">
             <div class="country-card-media">
               <img src="images/home/iran-architecture.png" alt="Iran — heritage and resilience" />
-              <span class="country-card-number">02 · IRAN</span>
+              <span class="country-card-number">02 · Iran</span>
             </div>
             <div class="country-card-body">
               <h3>Iran</h3>
               <p class="country-card-tagline">Resilience, Culture, and Pride</p>
-              <p>Iran has a long and rich history, with a unique blend of tradition, art, and strong cultural roots. People often value resilience, hospitality, and deep cultural ties. It is a country where respect and community are central to daily life.</p>
+              <p>
+                Iran has a long and rich history, with a unique blend of tradition, art,
+                and strong cultural roots. People often value resilience, hospitality, and
+                deep cultural ties. It is a country where respect and community are central
+                to daily life.
+              </p>
               <div class="country-card-tags">
                 <span>Heritage &amp; History</span>
                 <span>Hospitality</span>
@@ -365,12 +407,16 @@
           <article class="country-card reveal" data-delay="180" id="netherlands">
             <div class="country-card-media">
               <img src="images/home/netherlands-poster.png" alt="Netherlands — openness and innovation" />
-              <span class="country-card-number">03 · NETHERLANDS</span>
+              <span class="country-card-number">03 · Netherlands</span>
             </div>
             <div class="country-card-body">
               <h3>Netherlands</h3>
               <p class="country-card-tagline">Openness, Equality, and Innovation</p>
-              <p>The Netherlands is known for its open-minded culture, emphasis on independence, equality, and direct communication. It is a society that values innovation, practicality, and a strong focus on sustainability and freedom.</p>
+              <p>
+                The Netherlands is known for its open-minded culture, emphasis on independence,
+                equality, and direct communication. It is a society that values innovation,
+                practicality, and a strong focus on sustainability and freedom.
+              </p>
               <div class="country-card-tags">
                 <span>Sustainability</span>
                 <span>Equality &amp; Diversity</span>
@@ -388,7 +434,7 @@
         <div class="feature-intro">
           <span class="section-number">05 / Tool</span>
           <p class="section-kicker">Using AI with Purpose</p>
-          <h2 class="display">Support, Not<br>a Shortcut.</h2>
+          <h2 class="display">Support, Not<br />a Shortcut.</h2>
           <p class="lede">
             AI helped us refine text, understand concepts, and debug code —
             but we did not use it for everything. We focused on using it
@@ -399,30 +445,49 @@
         <div>
           <div class="ai-cards">
             <article class="ai-card reveal">
-              <div class="ai-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1l3 3m-3-3h-4m4 0v4m-4-4H8m0 0v4m0-4H6m6 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+              <div class="ai-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a4 4 0 0 1 4 4v1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1l3 3m-3-3h-4m4 0v4m-4-4H8m0 0v4m0-4H6m6 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+                </svg>
               </div>
               <span class="ai-card-number">01</span>
               <h3>AI Assistant</h3>
-              <p>We used AI as a research and writing assistant — for summaries, to understand complex topics, brainstorm ideas, and refine our text. It helped us work faster and stay more focused.</p>
+              <p>
+                We used AI as a research and writing assistant — for summaries, to understand
+                complex topics, brainstorm ideas, and refine our text. It helped us work faster
+                and stay more focused.
+              </p>
             </article>
 
             <article class="ai-card reveal" data-delay="80">
-              <div class="ai-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h2m2 0h2m2 0h2"/></svg>
+              <div class="ai-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <path d="M7 8h2m2 0h2m2 0h2"/>
+                </svg>
               </div>
               <span class="ai-card-number">02</span>
               <h3>Code Lecturer</h3>
-              <p>When we encountered unfamiliar programming concepts, AI acted like a tutor — explaining what things do and why. It helped us learn and improve our own code.</p>
+              <p>
+                When we encountered unfamiliar programming concepts, AI acted like a tutor —
+                explaining what things do and why. It helped us learn and improve our own code.
+              </p>
             </article>
 
             <article class="ai-card reveal" data-delay="160">
-              <div class="ai-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+              <div class="ai-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 9v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                </svg>
               </div>
               <span class="ai-card-number">03</span>
               <h3>Debugger</h3>
-              <p>AI helped us identify errors and fix bugs. It pointed us toward solutions, but we made the final decisions and understood the fixes before applying them.</p>
+              <p>
+                AI helped us identify errors and fix bugs. It pointed us toward solutions,
+                but we made the final decisions and understood the fixes before applying them.
+              </p>
             </article>
           </div>
 
@@ -457,7 +522,7 @@
       <div class="container">
         <div class="split-layout">
           <div class="split-content">
-            <span class="section-number">04 / Process</span>
+            <span class="section-number">06 / Process</span>
             <p class="section-kicker">Challenges</p>
             <h2 class="display">Surpassing obstacles</h2>
             <p>
@@ -488,7 +553,7 @@
       <div class="container">
         <div class="split-layout split-layout--reverse">
           <div class="split-content">
-            <span class="section-number">05 / Process</span>
+            <span class="section-number">07 / Process</span>
             <p class="section-kicker">Collaboration</p>
             <h2 class="display">Built together</h2>
             <p>
@@ -520,9 +585,9 @@
         <a href="#" class="powerpoint-link">
           <p>
             View Our Current PowerPoint
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
             </svg>
           </p>
         </a>
@@ -532,7 +597,7 @@
     <!-- ========================= [Final Showcase] ========================= -->
     <section class="showcase-section alt" id="showcase">
       <div class="container">
-        <span class="section-number">06 / Result</span>
+        <span class="section-number">08 / Result</span>
         <p class="section-kicker">Final Showcase</p>
         <h2 class="display">Five artifacts, brought together.</h2>
         <p class="section-intro">

@@ -1,5 +1,5 @@
 /* ========================= [Hero] ========================= */
-/* Full-width hero with editorial typography and stats strip */
+/* Full-width hero with editorial typography + stats strip */
 
 .hero--full {
   position: relative;
@@ -17,9 +17,9 @@
   height: 100%;
   background: linear-gradient(
     to right,
-    hsla(40, 30%, 95%, 0.95) 0%,
-    hsla(40, 30%, 95%, 0.85) 40%,
-    hsla(40, 30%, 95%, 0.3) 100%
+    hsla(40 30% 95% / 0.95) 0%,
+    hsla(40 30% 95% / 0.85) 40%,
+    hsla(40 30% 95% / 0.3) 100%
   );
   display: flex;
   align-items: center;
@@ -33,33 +33,32 @@
 .hero--full .hero-display {
   font-family: var(--font-display);
   font-size: var(--fs-hero);
-  font-weight: 600;
-  line-height: 1.05;
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
   letter-spacing: -0.03em;
   margin-bottom: var(--space-md);
 }
 
 .hero--full .hero-sub {
   font-size: 1.1rem;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   max-width: 48ch;
-  line-height: 1.6;
+  line-height: var(--lh-normal);
   margin-bottom: var(--space-lg);
 }
 
 .hero--full .lede {
-  color: var(--cream-dim);
+  color: var(--text-secondary);
 }
 
 /* ========================= [Hero Stats Strip] ========================= */
-/* Quick-glance project stats below the hero CTA */
 
 .hero-stats {
   display: flex;
   gap: 3rem;
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--ink-overlay);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: var(--border-width) solid var(--border-color);
 }
 
 .hero-stat {
@@ -71,27 +70,27 @@
 .hero-stat-value {
   font-family: var(--font-display);
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: var(--ink);
   line-height: 1;
 }
 
 .hero-stat-label {
-  font-size: var(--fs-badge);
-  font-weight: 500;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cream-dim);
+  color: var(--text-secondary);
 }
 
 /* ========================= [CTA Buttons] ========================= */
-/* Call-to-action button styles: solid and ghost variants */
+/* Solid + Ghost variants */
 
 .cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 2rem;
+  margin-top: var(--space-xl);
 }
 
 .cta {
@@ -100,12 +99,13 @@
   justify-content: center;
   gap: 0.4rem;
   padding: 0.75rem 1.5rem;
-  font-size: var(--fs-strong);
-  font-weight: 500;
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
 }
 
+/* Solid */
 .cta.solid {
   background: var(--ink);
   color: var(--cream);
@@ -116,14 +116,15 @@
   transform: translateY(-1px);
 }
 
+/* Ghost */
 .cta.ghost {
-  background: hsla(40, 30%, 97%, 0.7);
+  background: hsla(40 30% 97% / 0.7);
   backdrop-filter: blur(6px);
-  border: 1px solid hsla(30, 10%, 20%, 0.12);
+  border: var(--border-width) solid var(--border-color);
   color: var(--ink);
 }
 
 .cta.ghost:hover {
-  background: hsla(40, 30%, 97%, 0.9);
+  background: hsla(40 30% 97% / 0.9);
   transform: translateY(-1px);
 }

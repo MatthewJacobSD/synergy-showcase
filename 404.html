@@ -12,16 +12,21 @@
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/empty-state.css" />
 </head>
-  <body>
-    <a href="index.html" class="floating-back">← Showcase</a>
+<body>
+  <a href="index.html" class="floating-back">← Showcase</a>
 
-    <!-- ========================= [Header] ========================= -->
+  <!-- ========================= [Header] ========================= -->
   <header class="site-header">
     <a class="logo" href="index.html">Saxion</a>
 
     <nav class="primary-nav" aria-label="Primary">
       <div class="nav-dropdown">
-        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+        <button
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-haspopup="true"
+          type="button"
+        >
           Artifacts
           <span class="nav-chevron" aria-hidden="true"></span>
         </button>
@@ -34,18 +39,18 @@
         </div>
       </div>
 
-      <a href="#authors">Authors</a>
-      <a href="#challenges">Challenges</a>
-      <a href="#collaboration">Collaboration</a>
+      <a href="index.html#authors">Authors</a>
+      <a href="index.html#challenges">Challenges</a>
+      <a href="index.html#collaboration">Collaboration</a>
     </nav>
   </header>
 
   <main>
     <!-- ========================= [404 Error] ========================= -->
-    <section class="empty-state">
+    <section class="empty-state" aria-labelledby="error-title">
       <div class="empty-state-inner">
-        <div class="error-code">404</div>
-        <h1>Page not found</h1>
+        <div class="error-code" aria-hidden="true">404</div>
+        <h1 id="error-title">Page not found</h1>
         <p>
           The page you are looking for does not exist or has been moved.
         </p>
@@ -57,14 +62,14 @@
   </main>
 
   <!-- ========================= [Footer] ========================= -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-inner">
-          <span>INT Synergy / Saxion / 2026</span>
-          <span>Sinterklaas</span>
-        </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>INT Synergy / Saxion / 2026</span>
+        <span>Sinterklaas</span>
       </div>
-    </footer>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

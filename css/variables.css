@@ -1,60 +1,94 @@
-/* ========================= [Variables] ========================= */
-/* Custom properties: colors, typography, spacing, motion, radius */
+/* ========================= [Design Tokens] ========================= */
+/* Colors · Typography · Spacing · Motion · Radius · Shadows · Borders */
 
 :root {
-  --cream: #f4efe6;
-  --ink: #0c0b09;
+  /* ---------- Color: Base ---------- */
+  --cream:          #f4efe6;
+  --ink:            #0c0b09;
 
-  /* Text */
-  --cream-dim: #8c8579;
-  --cream-timestamp: #a39e94;
-  --cream-table-head: #6f6a61;
+  /* ---------- Color: Text ---------- */
+  --text-primary:   var(--ink);
+  --text-secondary: #8c8579;          /* was --cream-dim */
+  --text-muted:     #a39e94;          /* was --cream-timestamp */
+  --text-faint:     #6f6a61;          /* was --cream-table-head */
 
-  /* Surfaces */
+  /* ---------- Color: Surfaces ---------- */
+  --surface-base:   var(--cream);
   --surface-subtle: hsl(40 20% 94%);
-  --surface-hover: hsl(40 18% 91%);
-  --surface-faint: hsl(40 15% 96%);
-  --ink-overlay: hsla(30 8% 4% / 0.08);
+  --surface-hover:  hsl(40 18% 91%);
+  --surface-faint:  hsl(40 15% 96%);
+  --surface-overlay: hsla(30 8% 4% / 0.08); /* was --ink-overlay */
 
-  /* Accents */
-  --accent-sage: #7d8f7a;
+  /* ---------- Color: Accents ---------- */
+  --accent-sage:       #7d8f7a;
   --accent-terracotta: #c08b74;
-  --accent-slate: #6b7c8c;
-  --accent-gold: #b89a6a;
+  --accent-slate:      #6b7c8c;
+  --accent-gold:       #b89a6a;
 
-  /* Status */
-  --success-border: hsl(150 25% 45%);
-  --warning-border: hsl(35 55% 52%);
-  --error-border: hsl(0 55% 55%);
+  /* ---------- Color: Status ---------- */
+  --success: hsl(150 25% 45%);
+  --warning: hsl(35 55% 52%);
+  --error:   hsl(0 55% 55%);
 
-  /* Typography */
+  /* ---------- Typography: Families ---------- */
   --font-display: "Fraunces", "Playfair Display", Georgia, serif;
-  --font-body: "Source Sans 3", "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+  --font-body:    "Source Sans 3", "Inter", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
 
-  /* Font sizes */
-  --fs-badge: 0.62rem;
-  --fs-nav: 0.68rem;
-  --fs-body: 0.82rem;
-  --fs-strong: 0.92rem;
-  --fs-display: 2rem;
-  --fs-hero: clamp(2.8rem, 5vw, 4.2rem);
+  /* ---------- Typography: Sizes ---------- */
+  --fs-xs:      0.62rem;   /* badges */
+  --fs-sm:      0.68rem;   /* nav / labels */
+  --fs-base:    0.82rem;   /* body */
+  --fs-md:      0.92rem;   /* strong / emphasis */
+  --fs-lg:      1.125rem;
+  --fs-xl:      1.5rem;
+  --fs-2xl:     2rem;      /* display */
+  --fs-hero:    clamp(2.8rem, 5vw, 4.2rem);
 
-  /* Spacing */
-  --space-xs: 0.64rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2.5rem;
+  /* ---------- Typography: Weights & Line Heights ---------- */
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;
+  --fw-bold:    700;
 
-  /* Motion */
-  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
-  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --transition-fast: 0.2s var(--ease);
-  --transition-base: 0.25s var(--ease);
-  --transition-spring: 0.5s var(--spring);
+  --lh-tight:   1.15;
+  --lh-snug:    1.35;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
 
-  /* Radius */
-  --radius-sm: 2px;
-  --radius-md: 4px;
+  /* ---------- Spacing (4px base scale) ---------- */
+  --space-2xs: 0.25rem;   /* 4px */
+  --space-xs:  0.5rem;    /* 8px */
+  --space-sm:  0.75rem;   /* 12px */
+  --space-md:  1rem;      /* 16px */
+  --space-lg:  1.5rem;    /* 24px */
+  --space-xl:  2.5rem;    /* 40px */
+  --space-2xl: 4rem;      /* 64px */
+
+  /* ---------- Motion ---------- */
+  --ease:             cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-spring:      cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:    150ms;
+  --duration-base:    250ms;
+  --duration-slow:    400ms;
+
+  --transition-fast:  var(--duration-fast) var(--ease);
+  --transition-base:  var(--duration-base) var(--ease);
+  --transition-spring: var(--duration-slow) var(--ease-spring);
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-sm: 0 1px 2px hsla(30 8% 4% / 0.06);
+  --shadow-md: 0 4px 12px hsla(30 8% 4% / 0.08);
+  --shadow-lg: 0 12px 32px hsla(30 8% 4% / 0.12);
+
+  /* ---------- Borders ---------- */
+  --border-width: 1px;
+  --border-color: hsla(30 8% 4% / 0.12);
 }

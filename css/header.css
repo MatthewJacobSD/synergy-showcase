@@ -1,5 +1,5 @@
 /* ========================= [Layout] ========================= */
-/* Container width and horizontal centering */
+/* Container width + horizontal centering */
 
 .container {
   width: min(1100px, 92%);
@@ -19,29 +19,29 @@
   z-index: 100;
   background: color-mix(in srgb, var(--cream) 92%, transparent);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--ink-overlay);
+  border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .logo {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   letter-spacing: -0.03em;
 }
 
 /* ========================= [Navigation] ========================= */
-/* Primary nav links with hover transitions */
+/* Primary nav links */
 
 .primary-nav {
   display: flex;
   align-items: center;
   gap: 1.75rem;
-  font-size: var(--fs-nav);
-  font-weight: 500;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
 }
 
 .primary-nav a {
-  color: var(--cream-dim);
+  color: var(--text-secondary);
   transition: color var(--transition-fast);
 }
 
@@ -66,7 +66,7 @@
 }
 
 /* ========================= [Dropdown] ========================= */
-/* Artifact dropdown menu with chevron toggle */
+/* Artifact dropdown with chevron toggle */
 
 .nav-dropdown {
   position: relative;
@@ -79,9 +79,9 @@
   background: none;
   border: none;
   font: inherit;
-  font-size: var(--fs-nav);
-  font-weight: 500;
-  color: var(--cream-dim);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
   cursor: pointer;
   transition: color var(--transition-fast);
 }
@@ -112,14 +112,17 @@
   left: 0;
   min-width: 180px;
   background: var(--cream);
-  border: 1px solid var(--ink-overlay);
-  border-radius: var(--radius-md);
-  padding: 0.5rem;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
-  transition: all var(--transition-base);
-  box-shadow: 0 8px 24px hsla(30 8% 4% / 0.08);
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base),
+    visibility var(--transition-base);
+  box-shadow: var(--shadow-md);
 }
 
 .nav-dropdown.is-open .nav-dropdown-menu {
@@ -131,9 +134,9 @@
 .nav-dropdown-menu a {
   display: block;
   padding: 0.55rem 0.75rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
   color: var(--ink);
-  font-size: var(--fs-nav);
+  font-size: var(--fs-sm);
 }
 
 .nav-dropdown-menu a:hover {
