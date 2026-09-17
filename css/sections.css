@@ -100,9 +100,13 @@ section.alt {
   overflow: hidden;
   aspect-ratio: 4/3;
   background: var(--surface-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.artifact-exhibit-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .artifact-exhibit-visual .artifact-visual-placeholder {
