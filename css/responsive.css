@@ -1,5 +1,5 @@
 /* ========================= [Responsive] ========================= */
-/* Desktop-only: wide screen (1400px+) adjustments */
+/* Desktop-first: wide screen adjustments, then tablet, then mobile */
 
 /* --- Wide screens (1400px+) --- */
 @media (min-width: 1400px) {
@@ -9,5 +9,218 @@
 
   .hero--full .hero-copy {
     max-width: 640px;
+  }
+}
+
+/* --- Small desktop (<= 1024px) --- */
+@media (max-width: 1024px) {
+  .container {
+    width: min(96%, 900px);
+  }
+
+  .hero--full {
+    min-height: 80vh;
+  }
+
+  .hero-overlay {
+    padding: 5rem 5%;
+  }
+
+  .hero-stats {
+    gap: 2rem;
+  }
+
+  .artifact-exhibit {
+    gap: 2rem;
+  }
+
+  .split-layout {
+    gap: 2rem;
+  }
+}
+
+/* --- Tablet (<= 900px) --- */
+@media (max-width: 900px) {
+  .artifact-exhibit {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .artifact-exhibit--reverse {
+    direction: ltr;
+  }
+
+  .artifact-exhibit-visual {
+    aspect-ratio: 16/9;
+  }
+
+  .authors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .split-layout--reverse {
+    direction: ltr;
+  }
+
+  .split-image {
+    order: -1;
+  }
+
+  .artifacts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile (<= 700px) --- */
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.85rem 5%;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .primary-nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.62rem;
+  }
+
+  .hero--full {
+    min-height: 75vh;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsla(40, 30%, 95%, 0.96) 0%,
+      hsla(40, 30%, 95%, 0.9) 100%
+    );
+    padding: 4rem 5% 3rem;
+  }
+
+  .hero--full .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero--full .hero-display {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero--full .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .hero-stat-value {
+    font-size: 1.3rem;
+  }
+
+  .display {
+    font-size: 1.55rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .artifacts-section,
+  .authors-section,
+  .challenges-section,
+  .collaboration-section,
+  .showcase-section {
+    padding: 3rem 0;
+  }
+
+  .artifacts-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .authors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .author-card {
+    padding: 1.25rem;
+  }
+
+  .split-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .site-powerpoint .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- Small phone (<= 400px) --- */
+@media (max-width: 400px) {
+  .site-header {
+    padding: 0.75rem 4%;
+  }
+
+  .primary-nav {
+    gap: 0.75rem;
+  }
+
+  .hero--full {
+    min-height: 70vh;
+  }
+
+  .display {
+    font-size: 1.35rem;
+  }
+
+  .eyebrow {
+    font-size: 0.56rem;
+  }
+
+  .section-kicker {
+    font-size: 0.56rem;
+  }
+
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .hero-stat-value {
+    font-size: 1.1rem;
   }
 }

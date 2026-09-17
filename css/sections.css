@@ -1,20 +1,33 @@
 /* ========================= [Sections] ========================= */
-/* Generic section padding */
+/* Generic section padding and alternating backgrounds */
 
 section {
   padding: 4.5rem 0;
 }
 
+section.alt {
+  background: linear-gradient(180deg, hsla(40, 20%, 94%, 0.4) 0%, hsla(40, 20%, 96%, 0.2) 100%);
+}
+
 /* ========================= [Section Kickers] ========================= */
-/* Small uppercase labels and intro paragraphs for sections */
+/* Small uppercase labels and intro paragraphs */
 
 .section-kicker {
   font-size: var(--fs-badge);
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-sage);
   margin-bottom: var(--space-sm);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: var(--fs-badge);
+  color: var(--cream-dim);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+  display: block;
 }
 
 .section-intro {
@@ -28,6 +41,10 @@ section {
 /* ========================= [Intro Section] ========================= */
 /* Introduction text block below the hero */
 
+.intro {
+  padding: 5rem 0;
+}
+
 .intro .display {
   margin-bottom: var(--space-lg);
 }
@@ -37,20 +54,136 @@ section {
   margin-bottom: 1.25rem;
   color: var(--cream-dim);
   font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .intro p:last-child {
   margin-bottom: 0;
 }
 
-/* ========================= [Artifacts] ========================= */
-/* 3-column grid of artifact cards with hover lift */
+/* ========================= [Artifacts Editorial] ========================= */
+/* Large alternating layout: exhibit-style artifact showcases */
 
 .artifacts-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--ink-overlay);
 }
 
+.artifacts-header {
+  margin-bottom: var(--space-xl);
+}
+
+.artifact-exhibit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.artifact-exhibit:last-child {
+  border-bottom: 1px solid var(--ink-overlay);
+}
+
+.artifact-exhibit--reverse {
+  direction: rtl;
+}
+
+.artifact-exhibit--reverse > * {
+  direction: ltr;
+}
+
+.artifact-exhibit-visual {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artifact-exhibit-visual .artifact-visual-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.artifact-exhibit-visual .artifact-accent-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.artifact-accent-bar--sage { background: var(--accent-sage); }
+.artifact-accent-bar--terracotta { background: var(--accent-terracotta); }
+.artifact-accent-bar--slate { background: var(--accent-slate); }
+.artifact-accent-bar--gold { background: var(--accent-gold); }
+.artifact-accent-bar--ink { background: var(--ink); }
+
+.artifact-exhibit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.artifact-exhibit-number {
+  font-family: var(--font-mono);
+  font-size: var(--fs-badge);
+  color: var(--cream-dim);
+  letter-spacing: 0.1em;
+}
+
+.artifact-exhibit-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.artifact-exhibit-desc {
+  color: var(--cream-dim);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  max-width: 42ch;
+}
+
+.artifact-exhibit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--fs-strong);
+  font-weight: 500;
+  color: var(--ink);
+  transition: all var(--transition-fast);
+  margin-top: 0.25rem;
+}
+
+.artifact-exhibit-link:hover {
+  color: var(--accent-sage);
+  gap: 0.6rem;
+}
+
+.artifact-exhibit-link svg {
+  transition: transform var(--transition-fast);
+}
+
+.artifact-exhibit-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Legacy grid fallback (unused but kept for safety) */
 .artifacts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,23 +245,23 @@ section {
 }
 
 /* ========================= [Authors] ========================= */
-/* 3-column grid of author cards with avatar and role */
+/* 3-column grid with richer avatars */
 
 .authors-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--ink-overlay);
 }
 
 .authors-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: var(--space-lg);
 }
 
 .author-card {
   position: relative;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid var(--ink-overlay);
   border-radius: var(--radius-md);
   background: hsla(40, 20%, 97%, 0.5);
@@ -136,14 +269,14 @@ section {
 }
 
 .author-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px hsla(30, 8%, 4%, 0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px hsla(30, 8%, 4%, 0.07);
   border-color: color-mix(in srgb, var(--accent-sage) 40%, transparent);
 }
 
 .author-avatar {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--ink);
   color: var(--cream);
@@ -151,14 +284,20 @@ section {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: var(--space-md);
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.author-card:hover .author-avatar {
+  border-color: var(--accent-sage);
 }
 
 .author-card h3 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
@@ -173,7 +312,7 @@ section {
   margin-bottom: var(--space-sm);
 }
 
-.author-card p {
+.author-card > p {
   color: var(--cream-dim);
   font-size: var(--fs-body);
   line-height: 1.6;
@@ -181,7 +320,6 @@ section {
 
 /* ========================= [Author Popover] ========================= */
 /* Floating contact panel that appears above/below card on hover */
-/* Positions: above by default, flips below if no space, right-aligns for last card */
 
 .author-popover {
   position: absolute;
@@ -198,14 +336,12 @@ section {
   visibility: hidden;
   pointer-events: none;
   z-index: 50;
-  /* Slow entrance */
   transition:
     opacity 0.4s var(--ease),
     transform 0.5s var(--ease),
     visibility 0.4s;
 }
 
-/* Arrow pointing down (popover is above) */
 .author-popover::after {
   content: "";
   position: absolute;
@@ -216,7 +352,6 @@ section {
   filter: drop-shadow(0 2px 2px hsla(30, 8%, 4%, 0.06));
 }
 
-/* Flipped below: arrow points up */
 .author-popover.popover-below {
   bottom: auto;
   top: calc(100% + 12px);
@@ -230,7 +365,6 @@ section {
   filter: drop-shadow(0 -2px 2px hsla(30, 8%, 4%, 0.06));
 }
 
-/* Show state — fast exit */
 .author-card:hover .author-popover,
 .author-card:focus-within .author-popover,
 .author-card.popover-active .author-popover {
@@ -244,7 +378,6 @@ section {
     visibility 0.15s;
 }
 
-/* Popover row layout */
 .author-popover a {
   display: flex;
   align-items: center;
@@ -298,12 +431,11 @@ section {
 }
 
 /* ========================= [Split Layout] ========================= */
-/* Two-column layout for Challenges and Collaboration sections */
-/* Reversible with .split-layout--reverse */
+/* Two-column layout for Challenges and Collaboration */
 
 .challenges-section,
 .collaboration-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--ink-overlay);
 }
 
@@ -330,6 +462,7 @@ section {
   color: var(--cream-dim);
   font-size: 1.05rem;
   margin-bottom: 1rem;
+  line-height: 1.7;
 }
 
 .split-content p:last-child {
@@ -403,7 +536,7 @@ section {
 /* Closing section with CTA back to artifacts */
 
 .showcase-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   border-top: 1px solid var(--ink-overlay);
 }
 

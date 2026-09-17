@@ -1,9 +1,9 @@
 /* ========================= [Hero] ========================= */
-/* Full-width hero section with background image and overlay */
+/* Full-width hero with editorial typography and stats strip */
 
 .hero--full {
   position: relative;
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   background-image: url("../images/home/enquiry.jpg");
@@ -17,20 +17,70 @@
   height: 100%;
   background: linear-gradient(
     to right,
-    hsla(40, 30%, 95%, 0.93) 0%,
-    hsla(40, 30%, 95%, 0.78) 45%,
-    hsla(40, 30%, 95%, 0.25) 100%
+    hsla(40, 30%, 95%, 0.95) 0%,
+    hsla(40, 30%, 95%, 0.85) 40%,
+    hsla(40, 30%, 95%, 0.3) 100%
   );
   display: flex;
   align-items: center;
-  padding: 6rem 5%;
+  padding: 6rem 7vw;
 }
 
 .hero--full .hero-copy {
-  max-width: 560px;
+  max-width: 620px;
+}
+
+.hero--full .hero-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-md);
+}
+
+.hero--full .hero-sub {
+  font-size: 1.1rem;
+  color: var(--cream-dim);
+  max-width: 48ch;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
 }
 
 .hero--full .lede {
+  color: var(--cream-dim);
+}
+
+/* ========================= [Hero Stats Strip] ========================= */
+/* Quick-glance project stats below the hero CTA */
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: var(--fs-badge);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--cream-dim);
 }
 
@@ -48,7 +98,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1.35rem;
+  gap: 0.4rem;
+  padding: 0.75rem 1.5rem;
   font-size: var(--fs-strong);
   font-weight: 500;
   border-radius: var(--radius-md);
@@ -62,6 +113,7 @@
 
 .cta.solid:hover {
   background: color-mix(in srgb, var(--ink) 85%, white);
+  transform: translateY(-1px);
 }
 
 .cta.ghost {
@@ -73,4 +125,5 @@
 
 .cta.ghost:hover {
   background: hsla(40, 30%, 97%, 0.9);
+  transform: translateY(-1px);
 }

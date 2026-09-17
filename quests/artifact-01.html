@@ -4,49 +4,236 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artifact 1 — Good, Bad, Funny | INT Synergy</title>
-    <meta name="description" content="Artifact 1 from the INT Synergy course — introducing yourself through real stories and a cultural dimension dossier." />
+    <meta
+      name="description"
+      content="Artifact 1 from the INT Synergy course — introducing yourself through real stories and a cultural dimension dossier."
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="../css/global.css" />
     <style>
-      .artifact-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--ink-overlay); }
-      .artifact-hero .section-kicker { color: var(--accent-sage); }
-      .artifact-hero .display { margin-bottom: var(--space-sm); }
-      .artifact-hero .lede { color: var(--cream-dim); max-width: 58ch; }
-      .artifact-meta { display: flex; gap: 2rem; margin-top: var(--space-lg); flex-wrap: wrap; }
-      .artifact-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
-      .artifact-meta-label { font-size: var(--fs-badge); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); }
-      .artifact-meta-value { font-size: var(--fs-body); color: var(--ink); }
+      .artifact-hero {
+        padding: 5rem 0 3rem;
+        border-bottom: 1px solid var(--ink-overlay);
+      }
+      .artifact-hero .section-kicker {
+        color: var(--accent-sage);
+      }
+      .artifact-hero .display {
+        margin-bottom: var(--space-sm);
+      }
+      .artifact-hero .lede {
+        color: var(--cream-dim);
+        max-width: 58ch;
+      }
+      .artifact-meta {
+        display: flex;
+        gap: 2rem;
+        margin-top: var(--space-lg);
+        flex-wrap: wrap;
+      }
+      .artifact-meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .artifact-meta-label {
+        font-size: var(--fs-badge);
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--cream-dim);
+      }
+      .artifact-meta-value {
+        font-size: var(--fs-body);
+        color: var(--ink);
+      }
 
-      .content-section { padding: 3.5rem 0; border-bottom: 1px solid var(--ink-overlay); }
-      .content-section .display { font-size: 1.4rem; margin-bottom: var(--space-md); }
-      .content-section p { color: var(--cream-dim); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem; max-width: 65ch; }
-      .content-section p:last-child { margin-bottom: 0; }
+      .content-section {
+        padding: 3.5rem 0;
+        border-bottom: 1px solid var(--ink-overlay);
+      }
+      .content-section .display {
+        font-size: 1.4rem;
+        margin-bottom: var(--space-md);
+      }
+      .content-section p {
+        color: var(--cream-dim);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        max-width: 65ch;
+      }
+      .content-section p:last-child {
+        margin-bottom: 0;
+      }
 
-      .contrib-card { padding: 1.5rem; border: 1px solid var(--ink-overlay); border-radius: var(--radius-md); background: hsla(40, 20%, 97%, 0.5); margin-bottom: 1rem; }
-      .contrib-card:last-child { margin-bottom: 0; }
-      .contrib-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
-      .contrib-role { font-size: var(--fs-badge); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-terracotta); margin-bottom: var(--space-sm); }
-      .contrib-card p { color: var(--cream-dim); font-size: var(--fs-body); line-height: 1.65; margin-bottom: 0.75rem; }
-      .contrib-card p:last-child { margin-bottom: 0; }
-      .contrib-card h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--ink); }
-      .contrib-card blockquote { border-left: 2px solid var(--accent-sage); padding-left: 1rem; margin: 0.75rem 0; color: var(--cream-dim); font-style: italic; font-size: 0.95rem; }
-      .contrib-card ul { margin: 0.5rem 0; padding-left: 1.25rem; color: var(--cream-dim); font-size: 0.95rem; }
-      .contrib-card ul li { margin-bottom: 0.4rem; }
-      .contrib-card .source { font-size: var(--fs-badge); color: var(--cream-dim); margin-top: 0.75rem; font-style: italic; }
+      .contrib-card {
+        padding: 1.5rem;
+        border: 1px solid var(--ink-overlay);
+        border-radius: var(--radius-md);
+        background: hsla(40, 20%, 97%, 0.5);
+        margin-bottom: 1rem;
+      }
+      .contrib-card:last-child {
+        margin-bottom: 0;
+      }
+      .contrib-name {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .contrib-role {
+        font-size: var(--fs-badge);
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-terracotta);
+        margin-bottom: var(--space-sm);
+      }
+      .contrib-card p {
+        color: var(--cream-dim);
+        font-size: var(--fs-body);
+        line-height: 1.65;
+        margin-bottom: 0.75rem;
+      }
+      .contrib-card p:last-child {
+        margin-bottom: 0;
+      }
+      .contrib-card h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--ink);
+      }
+      .contrib-card blockquote {
+        border-left: 2px solid var(--accent-sage);
+        padding-left: 1rem;
+        margin: 0.75rem 0;
+        color: var(--cream-dim);
+        font-style: italic;
+        font-size: 0.95rem;
+      }
+      .contrib-card ul {
+        margin: 0.5rem 0;
+        padding-left: 1.25rem;
+        color: var(--cream-dim);
+        font-size: 0.95rem;
+      }
+      .contrib-card ul li {
+        margin-bottom: 0.4rem;
+      }
+      .contrib-card .source {
+        font-size: var(--fs-badge);
+        color: var(--cream-dim);
+        margin-top: 0.75rem;
+        font-style: italic;
+      }
 
-      .powerpoint-embed { padding: 3rem 0; border-bottom: 1px solid var(--ink-overlay); text-align: center; }
-      .powerpoint-embed .display { font-size: 1.4rem; margin-bottom: var(--space-md); }
-      .powerpoint-placeholder { width: 100%; max-width: 720px; aspect-ratio: 16/9; margin: 0 auto; border: 2px dashed var(--ink-overlay); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--cream-dim); font-size: 1.05rem; }
+      /* Waving flag animation */
+      .flag-inline {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+      .flag-svg {
+        width: 32px;
+        height: 22px;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+      }
+      .flag-svg .flag-wave {
+        animation: flagWave 2.5s ease-in-out infinite;
+        transform-origin: left center;
+      }
+      .flag-svg .flag-wave-2 {
+        animation: flagWave 2.5s ease-in-out 0.3s infinite;
+        transform-origin: left center;
+      }
+      .flag-svg .flag-wave-3 {
+        animation: flagWave 2.5s ease-in-out 0.6s infinite;
+        transform-origin: left center;
+      }
 
-      .back-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: var(--space-lg); font-size: var(--fs-body); font-weight: 500; color: var(--accent-sage); transition: color var(--transition-fast); }
-      .back-link:hover { color: var(--ink); }
+      @keyframes flagWave {
+        0%,
+        100% {
+          transform: skewY(0deg) scaleX(1);
+        }
+        25% {
+          transform: skewY(1.5deg) scaleX(0.98);
+        }
+        50% {
+          transform: skewY(-1deg) scaleX(1.01);
+        }
+        75% {
+          transform: skewY(0.8deg) scaleX(0.99);
+        }
+      }
+
+      .flag-pole {
+        position: relative;
+        display: inline-block;
+      }
+      .flag-pole::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -2px;
+        bottom: -2px;
+        width: 2px;
+        background: #888;
+        border-radius: 1px;
+      }
+
+      .powerpoint-embed {
+        padding: 3rem 0;
+        border-bottom: 1px solid var(--ink-overlay);
+        text-align: center;
+      }
+      .powerpoint-embed .display {
+        font-size: 1.4rem;
+        margin-bottom: var(--space-md);
+      }
+      .powerpoint-placeholder {
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16/9;
+        margin: 0 auto;
+        border: 2px dashed var(--ink-overlay);
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--cream-dim);
+        font-size: 1.05rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: var(--space-lg);
+        font-size: var(--fs-body);
+        font-weight: 500;
+        color: var(--accent-sage);
+        transition: color var(--transition-fast);
+      }
+      .back-link:hover {
+        color: var(--ink);
+      }
     </style>
   </head>
   <body>
+    <a href="../index.html" class="floating-back">← Showcase</a>
+
     <!-- ========================= [Header] ========================= -->
     <header class="site-header">
       <a class="logo" href="../index.html">Saxion</a>
@@ -58,11 +245,11 @@
             <span class="nav-chevron" aria-hidden="true"></span>
           </button>
           <div class="nav-dropdown-menu" role="menu">
-          <a href="artifact-01.html" role="menuitem" aria-current="page">Artifact 1 — Good, Bad, Funny</a>
-          <a href="artifact-02.html" role="menuitem">Artifact 2 — GiGo (Garbage In / Garbage Out)</a>
-          <a href="artifact-03.html" role="menuitem">Artifact 3 - Lost in Translation, Found in Structure</a>
-          <a href="artifact-04.html" role="menuitem">Artifact 4 - The Culture Games</a>
-          <a href="artifact-05.html" role="menuitem">Artifact 5 - Getting to know Maranda</a>
+            <a href="artifact-01.html" role="menuitem" aria-current="page">01 — Good, Bad, Funny</a>
+            <a href="artifact-02.html" role="menuitem">02 — GiGo</a>
+            <a href="artifact-03.html" role="menuitem">03 — Lost in Translation</a>
+            <a href="artifact-04.html" role="menuitem">04 — The Culture Games</a>
+            <a href="artifact-05.html" role="menuitem">05 — Getting to know Maranda</a>
           </div>
         </div>
 
@@ -79,9 +266,9 @@
           <span class="section-kicker">Artifact 01</span>
           <h1 class="display">Good, Bad, Funny</h1>
           <p class="lede">
-            Introducing yourself through real stories and a cultural dimension dossier.
-            This artifact explores how personal experiences reflect cultural values,
-            and how understanding communication styles helps international teams work together.
+            Introducing yourself through real stories and a cultural dimension dossier. This
+            artifact explores how personal experiences reflect cultural values, and how
+            understanding communication styles helps international teams work together.
           </p>
           <div class="artifact-meta">
             <div class="artifact-meta-item">
@@ -105,12 +292,11 @@
         <div class="container">
           <h2 class="display">What we were asked to do</h2>
           <p>
-            Quest 1 asked each team member to write three short stories from their own
-            experience — one good, one bad, one funny — and identify a cultural insight
-            across those stories. The second part required a mini-dossier on one cultural
-            dimension: defining the concept, providing data points for the home country
-            and the Netherlands, and explaining what this means for working together
-            in an international team.
+            Quest 1 asked each team member to write three short stories from their own experience —
+            one good, one bad, one funny — and identify a cultural insight across those stories. The
+            second part required a mini-dossier on one cultural dimension: defining the concept,
+            providing data points for the home country and the Netherlands, and explaining what this
+            means for working together in an international team.
           </p>
         </div>
       </section>
@@ -120,14 +306,14 @@
         <div class="container">
           <h2 class="display">Our approach</h2>
           <p>
-            Each member wrote their own stories and chose a cultural dimension to research.
-            We then combined our individual work into a single PowerPoint presentation
-            that presents our stories side by side and compares our cultural dimensions.
+            Each member wrote their own stories and chose a cultural dimension to research. We then
+            combined our individual work into a single PowerPoint presentation that presents our
+            stories side by side and compares our cultural dimensions.
           </p>
           <p>
-            The cultural dimension we focused on was <strong>directness and communication
-            style</strong> — how different cultures express thoughts, give feedback, and
-            handle honesty in personal and professional settings.
+            The cultural dimension we focused on was
+            <strong>directness and communication style</strong> — how different cultures express
+            thoughts, give feedback, and handle honesty in personal and professional settings.
           </p>
         </div>
       </section>
@@ -137,8 +323,8 @@
         <div class="container">
           <h2 class="display">Individual contributions</h2>
           <p>
-            Each member's work is presented below. The combined group result is in the
-            PowerPoint presentation at the bottom of this page.
+            Each member's work is presented below. The combined group result is in the PowerPoint
+            presentation at the bottom of this page.
           </p>
 
           <div class="contrib-card">
@@ -154,15 +340,29 @@
             <ul>
               <li><strong>Passive:</strong> Avoids conflict and expresses thoughts indirectly</li>
               <li><strong>Aggressive:</strong> Dominates and expresses thoughts forcefully</li>
-              <li><strong>Passive-Aggressive:</strong> Expresses feelings indirectly through sarcasm or backhanded compliments</li>
-              <li><strong>Assertive:</strong> Clearly and respectfully expresses thoughts and needs</li>
+              <li>
+                <strong>Passive-Aggressive:</strong> Expresses feelings indirectly through sarcasm
+                or backhanded compliments
+              </li>
+              <li>
+                <strong>Assertive:</strong> Clearly and respectfully expresses thoughts and needs
+              </li>
             </ul>
 
-            <h4>Home Country — Italy</h4>
+            <h4>
+              <span class="flag-inline flag-pole">
+                <svg class="flag-svg" viewBox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="flag-wave" x="0" y="0" width="11" height="22" fill="#009246" />
+                  <rect class="flag-wave-2" x="11" y="0" width="10" height="22" fill="#fff" />
+                  <rect class="flag-wave-3" x="21" y="0" width="11" height="22" fill="#CE2B37" />
+                </svg>
+              </span>
+              Home Country — Italy
+            </h4>
             <p>
-              Italian communication is generally described as direct. Italians tend to be open
-              about their emotions and speak clearly about their point. From a conversation they
-              generally expect similar honesty from a partner or anyone they are communicating with.
+              Italian communication is generally described as direct. Italians tend to be open about
+              their emotions and speak clearly about their point. From a conversation they generally
+              expect similar honesty from a partner or anyone they are communicating with.
             </p>
             <p>
               The Italian style is generally open and bold. Expecting to either dictate or narrate
@@ -173,21 +373,33 @@
 
             <p>
               However, being direct doesn't mean that you are acting blunt or annoying. The study
-              "Dirlo o non dirlo?" shows that Italians and Dutch people often use similar strategies,
-              but Italian speech can also contain softeners — apologies, downtoners, more tactful
-              wording. That is why Italians can still sound more "wrapped" even when they are being direct.
+              "Dirlo o non dirlo?" shows that Italians and Dutch people often use similar
+              strategies, but Italian speech can also contain softeners — apologies, downtoners,
+              more tactful wording. That is why Italians can still sound more "wrapped" even when
+              they are being direct.
             </p>
             <p class="source">Source: Schuiringa &amp; Pinto (2015), Tilburg, Netherlands</p>
 
-            <h4>Netherlands</h4>
+            <h4>
+              <span class="flag-inline flag-pole">
+                <svg class="flag-svg" viewBox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="flag-wave" x="0" y="0" width="32" height="7.3" fill="#AE1C28" />
+                  <rect class="flag-wave-2" x="0" y="7.3" width="32" height="7.4" fill="#fff" />
+                  <rect class="flag-wave-3" x="0" y="14.7" width="32" height="7.3" fill="#21468B" />
+                </svg>
+              </span>
+              Netherlands
+            </h4>
             <p>
-              Dutch communication is also described as very direct, but in a more short and practical
-              way. Dutch people tend to speak quite frankly and in a straightforward manner. At times
-              this may be misunderstood as rude, especially if one is not used to forthrightness.
+              Dutch communication is also described as very direct, but in a more short and
+              practical way. Dutch people tend to speak quite frankly and in a straightforward
+              manner. At times this may be misunderstood as rude, especially if one is not used to
+              forthrightness.
             </p>
             <p>
               There is even a Dutch idea of <em>bespreekbaarheid</em> (speakability): the idea that
-              things can and should be talked about. Saying "no" directly is not seen as rude, but as clear.
+              things can and should be talked about. Saying "no" directly is not seen as rude, but
+              as clear.
             </p>
             <p class="source">Source: Dutch – Communication — Cultural Atlas, Mosaica (2024)</p>
 
@@ -209,31 +421,95 @@
               express their thoughts, opinions, and feelings.
             </p>
 
-            <h4>Cultural Data for Iran</h4>
+            <h4>
+              <span class="flag-inline flag-pole">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="630"
+                  height="360"
+                >
+                  <rect width="630" height="360" fill="#da0000" />
+                  <rect width="630" height="240" fill="#fff" />
+                  <rect width="630" height="120" fill="#239f40" />
+                  <g transform="translate(8.4,100.4)">
+                    <g id="tb4">
+                      <g id="tb1" fill="none" stroke="#fff" stroke-width="2">
+                        <path
+                          id="tbp1"
+                          d="M0,1H26M1,10V5H9V9H17V5H12M4,9H6M26,9H21V5H29M29,0V9H37V0M33,0V9"
+                          transform="scale(1.4)"
+                        />
+                        <path id="tbp2" d="M0,7H9M10,7H19" transform="scale(2.8)" />
+                        <use xlink:href="#tbp2" y="120" />
+                        <use xlink:href="#tbp1" y="145.2" />
+                      </g>
+                      <g id="tb3">
+                        <use xlink:href="#tb1" x="56" />
+                        <use xlink:href="#tb1" x="112" />
+                        <use xlink:href="#tb1" x="168" />
+                      </g>
+                    </g>
+                    <use xlink:href="#tb3" x="168" />
+                    <use xlink:href="#tb4" x="392" />
+                  </g>
+                  <g fill="#da0000" transform="matrix(45,0,0,45,315,180)">
+                    <g id="emblem_half">
+                      <path
+                        d="M 1.015679,-0.01556 A 0.77528237,0.7752862 0 0 1 0.60199011,0.67052066 1.0040699,1.0040749 0 0 0 0.44435035,-0.74067818 q -0.0221518,-0.0177005 -0.0452767,-0.0341288 A 0.77575926,0.7757631 0 0 1 1.015679,-0.01556 Z"
+                      />
+                      <path
+                        d="m 0.65590144,-0.04683837 a 0.92689013,0.92689472 0 0 1 -1.21301321,0.88105983 q 0.0245198,0.00118 0.0492749,0.001178 a 1.0158759,1.0158809 0 0 0 0.84183925,-1.58419413 0.92423346,0.92423804 0 0 1 0.32189906,0.7019563 z"
+                      />
+                      <path
+                        d="M 0.26154437,-0.94393072 A 0.14154065,0.14154135 0 0 1 1.7299476e-6,-0.86887791 L -0.01707249,-0.88602911 1.7299476e-6,-0.96931462 A 0.1321491,0.13214975 0 0 0 0.24983482,-1.0002001 a 0.14021999,0.14022068 0 0 1 0.0117096,0.0562694 z"
+                      />
+                      <path
+                        d="M 0.11992727,-0.71445117 A 0.31475286,0.31475442 0 0 1 1.2855032e-6,-0.81025163 L -0.0506876,-0.01642556 1.2855032e-6,1.0001998 0.07882572,0.89166862 0.0891995,0.64144186 0.09996594,0.3809197 l 0.0014156,-0.0334002 4.7111e-4,-0.0124172 0.002279,-0.0541474 0.006758,-0.1640148 0.005501,-0.13242286 0.001571,-0.03827263 0.002042,-0.04872535 V -0.71445117 Z M 1.2855032e-6,-0.54965037 9.0174383e-5,-0.54949481 1.2855032e-6,-0.54933925 Z m 0,0.86447753 V 0.3145916 L 3.946188e-4,0.31468049 Z"
+                      />
+                    </g>
+                    <use xlink:href="#emblem_half" transform="scale(-1,1)" />
+                  </g>
+                </svg>
+              </span>
+              Cultural Data for Iran
+            </h4>
             <ul>
               <li>
-                <strong>Indirect Style:</strong> Iran generally has a high-context communication style.
-                People may not always express everything directly with words, and the listener is
-                sometimes expected to understand the meaning from the context, tone, or behavior.
-                The cultural concept of Ta'arof is a good example of this communication style.
+                <strong>Indirect Style:</strong> Iran generally has a high-context communication
+                style. People may not always express everything directly with words, and the
+                listener is sometimes expected to understand the meaning from the context, tone, or
+                behavior. The cultural concept of Ta'arof is a good example of this communication
+                style.
               </li>
               <li>
                 <strong>Soft Feedback:</strong> In the Iranian workplace, people may prefer to give
                 negative feedback in a soft and gentle way instead of criticizing someone directly.
-                Around 65% of workers prefer softer language when giving bad news or negative feedback.
+                Around 65% of workers prefer softer language when giving bad news or negative
+                feedback.
               </li>
             </ul>
             <p class="source">Source: Fidibo — Ta'arof and Iranian communication culture</p>
 
-            <h4>Cultural Data for the Netherlands</h4>
+            <h4>
+              <span class="flag-inline flag-pole">
+                <svg class="flag-svg" viewBox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="flag-wave" x="0" y="0" width="32" height="7.3" fill="#AE1C28" />
+                  <rect class="flag-wave-2" x="0" y="7.3" width="32" height="7.4" fill="#fff" />
+                  <rect class="flag-wave-3" x="0" y="14.7" width="32" height="7.3" fill="#21468B" />
+                </svg>
+              </span>
+              Cultural Data for the Netherlands
+            </h4>
             <ul>
               <li>
                 <strong>Very Direct:</strong> The Netherlands is known for having a very direct
-                communication style and is ranked among the top three most direct countries in the world.
+                communication style and is ranked among the top three most direct countries in the
+                world.
               </li>
               <li>
-                <strong>Honest Feedback:</strong> More than 85% of Dutch workers prefer quick, clear,
-                and honest feedback without unnecessary polite words.
+                <strong>Honest Feedback:</strong> More than 85% of Dutch workers prefer quick,
+                clear, and honest feedback without unnecessary polite words.
               </li>
             </ul>
             <p class="source">Source: KNM</p>
@@ -256,8 +532,8 @@
             <h3 class="contrib-name">Thijmen Verschuur</h3>
             <span class="contrib-role">PowerPoint development</span>
             <p>
-              Thijmen contributed to the PowerPoint presentation and the group artifact
-              construction for this quest.
+              Thijmen contributed to the PowerPoint presentation and the group artifact construction
+              for this quest.
             </p>
           </div>
         </div>
@@ -267,16 +543,18 @@
       <section class="powerpoint-embed">
         <div class="container">
           <h2 class="display">Group PowerPoint</h2>
-          <div class="powerpoint-placeholder">
-            PowerPoint presentation will be embedded here
-          </div>
+          <div class="powerpoint-placeholder">PowerPoint presentation will be embedded here</div>
         </div>
       </section>
 
-      <!-- ========================= [Back Link] ========================= -->
+      <!-- ========================= [Navigation] ========================= -->
       <section class="content-section">
-        <div class="container">
-          <a href="../index.html" class="back-link">← Back to all artifacts</a>
+        <div
+          class="container"
+          style="display: flex; justify-content: space-between; align-items: center"
+        >
+          <span></span>
+          <a href="artifact-02.html" class="back-link" style="margin-top: 0"> Next: GiGo → </a>
         </div>
       </section>
     </main>
@@ -285,7 +563,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-inner">
-          <span>INT Synergy – Artifact Showcase</span>
+          <span>INT Synergy / Saxion / 2026</span>
           <span>Kindercarnavalsoptochtvoorbereidingswerkzaamhedencomiteleden</span>
         </div>
       </div>
