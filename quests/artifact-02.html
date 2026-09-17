@@ -3,15 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artifact 2 — Usage of AI | INT Synergy</title>
-    <meta name="description" content="Artifact 2 from the INT Synergy course — Usage of AI quest." />
+    <title>Artifact 2 — GiGo (Garbage In / Garbage Out) | INT Synergy</title>
+    <meta name="description" content="Artifact 2 from the INT Synergy course — using AI tools responsibly and prompt engineering." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/empty-state.css" />
+    <style>
+      .artifact-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--ink-overlay); }
+      .artifact-hero .section-kicker { color: var(--accent-sage); }
+      .artifact-hero .display { margin-bottom: var(--space-sm); }
+      .artifact-hero .lede { color: var(--cream-dim); max-width: 58ch; }
+      .artifact-meta { display: flex; gap: 2rem; margin-top: var(--space-lg); flex-wrap: wrap; }
+      .artifact-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+      .artifact-meta-label { font-size: var(--fs-badge); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); }
+      .artifact-meta-value { font-size: var(--fs-body); color: var(--ink); }
+
+      .content-section { padding: 3.5rem 0; border-bottom: 1px solid var(--ink-overlay); }
+      .content-section .display { font-size: 1.4rem; margin-bottom: var(--space-md); }
+      .content-section p { color: var(--cream-dim); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem; max-width: 65ch; }
+      .content-section p:last-child { margin-bottom: 0; }
+
+      .contrib-card { padding: 1.5rem; border: 1px solid var(--ink-overlay); border-radius: var(--radius-md); background: hsla(40, 20%, 97%, 0.5); margin-bottom: 1rem; }
+      .contrib-card:last-child { margin-bottom: 0; }
+      .contrib-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+      .contrib-role { font-size: var(--fs-badge); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-terracotta); margin-bottom: var(--space-sm); }
+      .contrib-card p { color: var(--cream-dim); font-size: var(--fs-body); line-height: 1.65; margin-bottom: 0.75rem; }
+      .contrib-card p:last-child { margin-bottom: 0; }
+      .contrib-card h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--ink); }
+      .contrib-card blockquote { border-left: 2px solid var(--accent-sage); padding-left: 1rem; margin: 0.75rem 0; color: var(--cream-dim); font-style: italic; font-size: 0.95rem; white-space: pre-line; }
+      .contrib-card ul { margin: 0.5rem 0; padding-left: 1.25rem; color: var(--cream-dim); font-size: 0.95rem; }
+      .contrib-card ul li { margin-bottom: 0.4rem; }
+      .contrib-card ol { margin: 0.5rem 0; padding-left: 1.25rem; color: var(--cream-dim); font-size: 0.95rem; }
+      .contrib-card ol li { margin-bottom: 0.4rem; }
+
+      .powerpoint-embed { padding: 3rem 0; border-bottom: 1px solid var(--ink-overlay); text-align: center; }
+      .powerpoint-embed .display { font-size: 1.4rem; margin-bottom: var(--space-md); }
+      .powerpoint-placeholder { width: 100%; max-width: 720px; aspect-ratio: 16/9; margin: 0 auto; border: 2px dashed var(--ink-overlay); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--cream-dim); font-size: 1.05rem; }
+
+      .back-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: var(--space-lg); font-size: var(--fs-body); font-weight: 500; color: var(--accent-sage); transition: color var(--transition-fast); }
+      .back-link:hover { color: var(--ink); }
+    </style>
   </head>
   <body>
     <!-- ========================= [Header] ========================= -->
@@ -40,17 +74,215 @@
     </header>
 
     <main>
-      <!-- ========================= [Empty State] ========================= -->
-      <section class="empty-state">
-        <div class="empty-state-inner">
-          <div class="empty-state-icon">02</div>
-          <span class="status-badge status-badge--upcoming">Upcoming</span>
-          <h1>Usage of AI</h1>
-          <p>Upcoming planning, no date for it yet. Stay tuned.</p>
-          <p>
-            This artifact will explore how artificial intelligence can be used, the opportunities it
-            provides, and the considerations that come with incorporating AI into our work.
+      <!-- ========================= [Artifact Hero] ========================= -->
+      <section class="artifact-hero">
+        <div class="container">
+          <span class="section-kicker">Artifact 02</span>
+          <h1 class="display">GiGo — Garbage In / Garbage Out</h1>
+          <p class="lede">
+            Using AI tools responsibly and documenting that use properly. This artifact
+            explores how the quality of AI output depends on the quality of the input,
+            and how prompt design determines whether you get useful results or garbage.
           </p>
+          <div class="artifact-meta">
+            <div class="artifact-meta-item">
+              <span class="artifact-meta-label">Quest</span>
+              <span class="artifact-meta-value">2 — Usage of AI</span>
+            </div>
+            <div class="artifact-meta-item">
+              <span class="artifact-meta-label">Status</span>
+              <span class="artifact-meta-value">Completed</span>
+            </div>
+            <div class="artifact-meta-item">
+              <span class="artifact-meta-label">Members</span>
+              <span class="artifact-meta-value">Matthew, Elina, Thijmen</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= [Quest Overview] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">What we were asked to do</h2>
+          <p>
+            Quest 2 had two parts. Part 1 asked each member to write a personal AI usage plan:
+            how they intend to use AI tools during their studies, what responsible use looks like
+            for them, and what GiGo (Garbage In, Garbage Out) means and how to avoid it.
+          </p>
+          <p>
+            Part 2 required choosing a real context from studies or daily life and writing a
+            scenario card that includes a bad prompt and why it fails, a good prompt for the same
+            task and why it is better, and a verification checklist — steps to check whether
+            the output is reliable.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================= [Our Approach] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">Our approach</h2>
+          <p>
+            Each member chose their own real-world context for the prompt scenario. Matthew
+            used a technology store website project, Elina explored a Java translation pipeline,
+            and Thijmen designed a bottle cap identifier system. We then combined our individual
+            work into a single PowerPoint presentation.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================= [Individual Contributions] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">Individual contributions</h2>
+
+          <div class="contrib-card">
+            <h3 class="contrib-name">Matthew Jacob Sarkodie Darkwah</h3>
+            <span class="contrib-role">Scenario: Technology Store Website</span>
+
+            <h4>Bad Prompt</h4>
+            <blockquote>"Build me a website about a tech store that sells tech media and generate a generous amount of revenue. Ensure the website is modern and follows web principles, integrating specific language suitable for sections related to the current project idea."</blockquote>
+            <p>
+              The main problem is that it does not give enough specific information. Words such as
+              "modern", "web principles" and "suitable language" can mean different things depending
+              on the project. The AI has to make its own assumptions, which can lead to a result
+              that does not match the original idea.
+            </p>
+
+            <h4>Good Prompt</h4>
+            <blockquote>"Build a website for a technology store that sells technology products and related media. This is for a university project, so first understand the concept before implementing anything. The target audience should be students and general consumers interested in technology.
+
+First identify the purpose, target audience, website structure, required pages, content, visual style and main user journey. The website should be modern, responsive and follow good web design and accessibility principles.
+
+Do not immediately start implementing. First create a plan and explain any assumptions or missing information. After the plan, create an implementation plan and then build the website according to it.
+
+After implementation, audit the website against the original requirements, test the main functionality and identify anything that does not match the requirements. Do not assume that the result is correct just because the implementation works. Leave the final decision to the human reviewer."</blockquote>
+            <p>
+              This is better because it gives the AI more information about the what, how, details,
+              concept, goal, what to avoid and what to include instead of expecting it to understand
+              everything from a short sentence. It also gives it a process to follow.
+            </p>
+
+            <h4>Verification Checklist</h4>
+            <ul>
+              <li><strong>Does it follow the original idea?</strong> Compare the result with what was originally wanted.</li>
+              <li><strong>Does it follow the requirements?</strong> Check that required pages, sections and functionality are there.</li>
+              <li><strong>Is the content correct?</strong> Check whether the AI has invented information or misunderstood something.</li>
+              <li><strong>Does the design make sense?</strong> Check layout, navigation, typography, images and consistency.</li>
+              <li><strong>Does it work on different screens?</strong> Test desktop, tablet and mobile.</li>
+              <li><strong>Does the functionality work?</strong> Manually test buttons, navigation, forms and other important parts.</li>
+              <li><strong>Check the code.</strong> Inspect for obvious errors, unnecessary code, duplicated code.</li>
+              <li><strong>Human verification.</strong> Personally review the result instead of assuming the AI is correct.</li>
+              <li><strong>Give the AI feedback and test again.</strong> If something is wrong, explain and ask for refinement.</li>
+              <li><strong>Human decision.</strong> Decide whether the result is good enough to continue with.</li>
+            </ul>
+          </div>
+
+          <div class="contrib-card">
+            <h3 class="contrib-name">Elina Nilisani</h3>
+            <span class="contrib-role">Scenario: Java Translation Pipeline</span>
+
+            <h4>The Project</h4>
+            <p>
+              A Java application that translates English sentences to Dutch through four modules:
+              model (data structures), analysis (syntactic tagging), translation (dictionary lookup),
+              and rules (grammatical restructuring).
+            </p>
+
+            <h4>How a Sentence Travels Through the System</h4>
+            <ol>
+              <li>The entry point receives an English text string from the user.</li>
+              <li>Sentence Analyzer parses the input into Token instances and assigns part-of-speech labels.</li>
+              <li>The application displays the analyzed structure to the terminal.</li>
+              <li>Translator references the loaded dictionary CSV to map each token to its Dutch translation.</li>
+              <li>The direct translation result is outputted for display.</li>
+              <li>The user picks a specific grammar rule option from the console prompt.</li>
+              <li>RuleEngine processes the tokens according to the selected rule and rearranges their sequence.</li>
+              <li>The adjusted final Dutch sentence structure is rendered as the ultimate output.</li>
+            </ol>
+
+            <h4>AI Interaction 1</h4>
+            <p>
+              <strong>What I needed:</strong> Clarify how Sentence Analyzer handles words missing from
+              the analysis CSV lookup files.
+            </p>
+            <p>
+              <strong>What AI told me:</strong> Unlisted words are given a default or generic grammatical
+              role (like 'Other') so the pipeline doesn't break.
+            </p>
+            <p>
+              <strong>What I did with it:</strong> Noted this behavior to understand why unknown words
+              can still pass through the translation and rule pipeline without throwing exceptions.
+            </p>
+
+            <h4>AI Interaction 2</h4>
+            <p>
+              <strong>What I needed:</strong> Understand the design reason behind separating translation
+              logic from syntax manipulation logic.
+            </p>
+            <p>
+              <strong>What AI told me:</strong> Keeping them separate follows the Single Responsibility
+              Principle, making it easier to add new grammar rules without altering the dictionary
+              translation code.
+            </p>
+            <p>
+              <strong>What I did with it:</strong> Used this insight to write the summary of the
+              architecture and better grasp how modular design is applied.
+            </p>
+          </div>
+
+          <div class="contrib-card">
+            <h3 class="contrib-name">Thijmen Verschuur</h3>
+            <span class="contrib-role">Scenario: Bottle Cap Identifier</span>
+
+            <h4>Context</h4>
+            <p>
+              Collecting bottle caps for over 10 years with over 300 unique ones, but starting to
+              lose track of which ones are in the collection. Working on a better way to catalogue
+              and identify them.
+            </p>
+
+            <h4>Bad Prompt</h4>
+            <blockquote>"How can I make a bottle cap identifier"</blockquote>
+            <p>
+              Fails because it is way too generic, there is zero context behind it and no clear
+              expectations.
+            </p>
+
+            <h4>Good Prompt</h4>
+            <blockquote>"I am making a bottle cap identifier, it will need to scan the caps, store their picture somewhere and be able to compare the scanned caps with newly scanned caps from anywhere to check whether the can is unique or not, what can I use to scan them, store them, compare them, run it 24/7 and access it from anywhere outside of my local network"</blockquote>
+            <p>
+              Succeeds because it has very clear instructions, expectations and context.
+            </p>
+
+            <h4>Verification Checklist</h4>
+            <p>
+              Go to the Google/GitHub pages of the listed systems and check if this matches what
+              was asked for and if it can be used (no specific licensing or technical complications).
+              If they do, go back and ask for more info on the specifics and repeat until there is
+              a clear setup. If they don't, explain what's wrong with them and ask to find another way.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= [PowerPoint] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">Group PowerPoint</h2>
+          <p>
+            This artifact does not have an accompanying PowerPoint presentation.
+            The individual contributions above represent the complete group output
+            for Quest 2.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================= [Back Link] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <a href="../index.html" class="back-link">← Back to all artifacts</a>
         </div>
       </section>
     </main>
@@ -59,8 +291,8 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-inner">
-          <a href="../index.html">← Back to showcase</a>
-          <span>Sinterklaas</span>
+          <span>INT Synergy – Artifact Showcase</span>
+          <span>Kindercarnavalsoptochtvoorbereidingswerkzaamhedencomiteleden</span>
         </div>
       </div>
     </footer>

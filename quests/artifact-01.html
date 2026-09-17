@@ -4,14 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artifact 1 — Good, Bad, Funny | INT Synergy</title>
-    <meta name="description" content="Artifact 1 from the INT Synergy course — Good, Bad, Funny quest." />
+    <meta name="description" content="Artifact 1 from the INT Synergy course — introducing yourself through real stories and a cultural dimension dossier." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/empty-state.css" />
+    <style>
+      .artifact-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--ink-overlay); }
+      .artifact-hero .section-kicker { color: var(--accent-sage); }
+      .artifact-hero .display { margin-bottom: var(--space-sm); }
+      .artifact-hero .lede { color: var(--cream-dim); max-width: 58ch; }
+      .artifact-meta { display: flex; gap: 2rem; margin-top: var(--space-lg); flex-wrap: wrap; }
+      .artifact-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+      .artifact-meta-label { font-size: var(--fs-badge); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream-dim); }
+      .artifact-meta-value { font-size: var(--fs-body); color: var(--ink); }
+
+      .content-section { padding: 3.5rem 0; border-bottom: 1px solid var(--ink-overlay); }
+      .content-section .display { font-size: 1.4rem; margin-bottom: var(--space-md); }
+      .content-section p { color: var(--cream-dim); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem; max-width: 65ch; }
+      .content-section p:last-child { margin-bottom: 0; }
+
+      .contrib-card { padding: 1.5rem; border: 1px solid var(--ink-overlay); border-radius: var(--radius-md); background: hsla(40, 20%, 97%, 0.5); margin-bottom: 1rem; }
+      .contrib-card:last-child { margin-bottom: 0; }
+      .contrib-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+      .contrib-role { font-size: var(--fs-badge); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-terracotta); margin-bottom: var(--space-sm); }
+      .contrib-card p { color: var(--cream-dim); font-size: var(--fs-body); line-height: 1.65; margin-bottom: 0.75rem; }
+      .contrib-card p:last-child { margin-bottom: 0; }
+      .contrib-card h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--ink); }
+      .contrib-card blockquote { border-left: 2px solid var(--accent-sage); padding-left: 1rem; margin: 0.75rem 0; color: var(--cream-dim); font-style: italic; font-size: 0.95rem; }
+      .contrib-card ul { margin: 0.5rem 0; padding-left: 1.25rem; color: var(--cream-dim); font-size: 0.95rem; }
+      .contrib-card ul li { margin-bottom: 0.4rem; }
+      .contrib-card .source { font-size: var(--fs-badge); color: var(--cream-dim); margin-top: 0.75rem; font-style: italic; }
+
+      .powerpoint-embed { padding: 3rem 0; border-bottom: 1px solid var(--ink-overlay); text-align: center; }
+      .powerpoint-embed .display { font-size: 1.4rem; margin-bottom: var(--space-md); }
+      .powerpoint-placeholder { width: 100%; max-width: 720px; aspect-ratio: 16/9; margin: 0 auto; border: 2px dashed var(--ink-overlay); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--cream-dim); font-size: 1.05rem; }
+
+      .back-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: var(--space-lg); font-size: var(--fs-body); font-weight: 500; color: var(--accent-sage); transition: color var(--transition-fast); }
+      .back-link:hover { color: var(--ink); }
+    </style>
   </head>
   <body>
     <!-- ========================= [Header] ========================= -->
@@ -40,33 +73,220 @@
     </header>
 
     <main>
-      <!-- ========================= [Empty State] ========================= -->
-      <section class="empty-state">
-        <div class="empty-state-inner">
-          <div class="empty-state-icon">01</div>
-          <span class="status-badge status-badge--progress">In Progress</span>
-          <h1>Good, Bad, Funny</h1>
-          <p>
-            The artifact planning has been done and is currently under work. This page will be
-            updated once the PowerPoint presentation and supporting content are ready to showcase.
+      <!-- ========================= [Artifact Hero] ========================= -->
+      <section class="artifact-hero">
+        <div class="container">
+          <span class="section-kicker">Artifact 01</span>
+          <h1 class="display">Good, Bad, Funny</h1>
+          <p class="lede">
+            Introducing yourself through real stories and a cultural dimension dossier.
+            This artifact explores how personal experiences reflect cultural values,
+            and how understanding communication styles helps international teams work together.
           </p>
-          <p>Check back soon for the final result.</p>
+          <div class="artifact-meta">
+            <div class="artifact-meta-item">
+              <span class="artifact-meta-label">Quest</span>
+              <span class="artifact-meta-value">1 — Introducing Yourself</span>
+            </div>
+            <div class="artifact-meta-item">
+              <span class="artifact-meta-label">Status</span>
+              <span class="artifact-meta-value">Completed</span>
+            </div>
+            <div class="artifact-meta-item">
+              <span class="artifact-meta-label">Members</span>
+              <span class="artifact-meta-value">Matthew, Elina, Thijmen</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= [Quest Overview] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">What we were asked to do</h2>
+          <p>
+            Quest 1 asked each team member to write three short stories from their own
+            experience — one good, one bad, one funny — and identify a cultural insight
+            across those stories. The second part required a mini-dossier on one cultural
+            dimension: defining the concept, providing data points for the home country
+            and the Netherlands, and explaining what this means for working together
+            in an international team.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================= [Our Approach] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">Our approach</h2>
+          <p>
+            Each member wrote their own stories and chose a cultural dimension to research.
+            We then combined our individual work into a single PowerPoint presentation
+            that presents our stories side by side and compares our cultural dimensions.
+          </p>
+          <p>
+            The cultural dimension we focused on was <strong>directness and communication
+            style</strong> — how different cultures express thoughts, give feedback, and
+            handle honesty in personal and professional settings.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================= [Individual Contributions] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <h2 class="display">Individual contributions</h2>
+          <p>
+            Each member's work is presented below. The combined group result is in the
+            PowerPoint presentation at the bottom of this page.
+          </p>
+
+          <div class="contrib-card">
+            <h3 class="contrib-name">Matthew Jacob Sarkodie Darkwah</h3>
+            <span class="contrib-role">Cultural Dimension: Directness &amp; Openness</span>
+
+            <h4>Communication Styles</h4>
+            <p>
+              Communication style refers to the consistent patterns of verbal and non-verbal
+              behavior individuals use to express thoughts, feelings, and needs. The four main
+              communication styles are:
+            </p>
+            <ul>
+              <li><strong>Passive:</strong> Avoids conflict and expresses thoughts indirectly</li>
+              <li><strong>Aggressive:</strong> Dominates and expresses thoughts forcefully</li>
+              <li><strong>Passive-Aggressive:</strong> Expresses feelings indirectly through sarcasm or backhanded compliments</li>
+              <li><strong>Assertive:</strong> Clearly and respectfully expresses thoughts and needs</li>
+            </ul>
+
+            <h4>Home Country — Italy</h4>
+            <p>
+              Italian communication is generally described as direct. Italians tend to be open
+              about their emotions and speak clearly about their point. From a conversation they
+              generally expect similar honesty from a partner or anyone they are communicating with.
+            </p>
+            <p>
+              The Italian style is generally open and bold. Expecting to either dictate or narrate
+              your own life story should be a norm to get used to. Raised voices and humour also
+              play a role. Italians often enjoy joking throughout conversations to lighten the mood.
+            </p>
+            <p class="source">Source: Italian – Communication — Cultural Atlas, Mosaica (2024)</p>
+
+            <p>
+              However, being direct doesn't mean that you are acting blunt or annoying. The study
+              "Dirlo o non dirlo?" shows that Italians and Dutch people often use similar strategies,
+              but Italian speech can also contain softeners — apologies, downtoners, more tactful
+              wording. That is why Italians can still sound more "wrapped" even when they are being direct.
+            </p>
+            <p class="source">Source: Schuiringa &amp; Pinto (2015), Tilburg, Netherlands</p>
+
+            <h4>Netherlands</h4>
+            <p>
+              Dutch communication is also described as very direct, but in a more short and practical
+              way. Dutch people tend to speak quite frankly and in a straightforward manner. At times
+              this may be misunderstood as rude, especially if one is not used to forthrightness.
+            </p>
+            <p>
+              There is even a Dutch idea of <em>bespreekbaarheid</em> (speakability): the idea that
+              things can and should be talked about. Saying "no" directly is not seen as rude, but as clear.
+            </p>
+            <p class="source">Source: Dutch – Communication — Cultural Atlas, Mosaica (2024)</p>
+
+            <h4>Working Together</h4>
+            <p>
+              Working together can be a positive experience and an opportunity to explore cultural
+              values and differences. Small differences in communication styles can sometimes affect
+              teamwork, but these misunderstandings can often be solved through clear communication.
+            </p>
+          </div>
+
+          <div class="contrib-card">
+            <h3 class="contrib-name">Elina Nilisani</h3>
+            <span class="contrib-role">Cultural Dimension: Communication Style</span>
+
+            <h4>Definition</h4>
+            <p>
+              This cultural dimension is about how people communicate with each other and how they
+              express their thoughts, opinions, and feelings.
+            </p>
+
+            <h4>Cultural Data for Iran</h4>
+            <ul>
+              <li>
+                <strong>Indirect Style:</strong> Iran generally has a high-context communication style.
+                People may not always express everything directly with words, and the listener is
+                sometimes expected to understand the meaning from the context, tone, or behavior.
+                The cultural concept of Ta'arof is a good example of this communication style.
+              </li>
+              <li>
+                <strong>Soft Feedback:</strong> In the Iranian workplace, people may prefer to give
+                negative feedback in a soft and gentle way instead of criticizing someone directly.
+                Around 65% of workers prefer softer language when giving bad news or negative feedback.
+              </li>
+            </ul>
+            <p class="source">Source: Fidibo — Ta'arof and Iranian communication culture</p>
+
+            <h4>Cultural Data for the Netherlands</h4>
+            <ul>
+              <li>
+                <strong>Very Direct:</strong> The Netherlands is known for having a very direct
+                communication style and is ranked among the top three most direct countries in the world.
+              </li>
+              <li>
+                <strong>Honest Feedback:</strong> More than 85% of Dutch workers prefer quick, clear,
+                and honest feedback without unnecessary polite words.
+              </li>
+            </ul>
+            <p class="source">Source: KNM</p>
+
+            <h4>Impact on an International Team</h4>
+            <p>
+              Different communication styles can create misunderstandings when Iranian and Dutch
+              people work together. For example, a Dutch colleague might say "This work is bad" —
+              meaning the work needs improvement — while an Iranian colleague might interpret it as
+              rude or personally offensive.
+            </p>
+            <p>
+              Another common problem happens when someone needs to say no. An Iranian person might
+              say "I will try" instead of a direct "No," but a Dutch colleague may understand that
+              as a commitment to complete the task.
+            </p>
+          </div>
+
+          <div class="contrib-card">
+            <h3 class="contrib-name">Thijmen Verschuur</h3>
+            <span class="contrib-role">PowerPoint development</span>
+            <p>
+              Thijmen contributed to the PowerPoint presentation and the group artifact
+              construction for this quest.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= [PowerPoint] ========================= -->
+      <section class="powerpoint-embed">
+        <div class="container">
+          <h2 class="display">Group PowerPoint</h2>
+          <div class="powerpoint-placeholder">
+            PowerPoint presentation will be embedded here
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= [Back Link] ========================= -->
+      <section class="content-section">
+        <div class="container">
+          <a href="../index.html" class="back-link">← Back to all artifacts</a>
         </div>
       </section>
     </main>
-
-
-    <!-- [Artifact section 1] -->
-     <!-- section header -->
-      <!-- Section description  -->
-       <!-- section footer -->
 
     <!-- ========================= [Footer] ========================= -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-inner">
-          <a href="../index.html">← Back to showcase</a>
-          <span>Sinterklaas</span>
+          <span>INT Synergy – Artifact Showcase</span>
+          <span>Kindercarnavalsoptochtvoorbereidingswerkzaamhedencomiteleden</span>
         </div>
       </div>
     </footer>
