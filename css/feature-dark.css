@@ -1,0 +1,350 @@
+/* ========================= [Dark Feature Sections] ========================= */
+/* Full-width dark panels for Cultural Atlas and AI sections */
+
+.feature-dark {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 5rem 0;
+  border-top: 1px solid rgba(244, 239, 230, 0.08);
+}
+
+.feature-dark .section-kicker {
+  color: var(--accent-gold);
+  letter-spacing: 0.12em;
+}
+
+.feature-dark .section-number {
+  color: rgba(244, 239, 230, 0.35);
+}
+
+.feature-dark .display {
+  color: var(--cream);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.feature-dark .lede {
+  color: rgba(244, 239, 230, 0.65);
+  max-width: 42ch;
+  margin-top: var(--space-md);
+}
+
+.feature-dark p {
+  color: rgba(244, 239, 230, 0.6);
+  line-height: 1.7;
+}
+
+/* ========================= [Feature Layout] ========================= */
+/* Two-column: intro left, cards right */
+
+.feature-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.feature-intro {
+  position: sticky;
+  top: 6rem;
+}
+
+.feature-intro .display {
+  margin-bottom: var(--space-md);
+}
+
+/* ========================= [Country Cards] ========================= */
+
+.country-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.country-card {
+  background: #141311;
+  border: 1px solid rgba(244, 239, 230, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    transform 220ms var(--ease),
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+  cursor: pointer;
+}
+
+.country-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(214, 179, 106, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.country-card-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.country-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.country-card:hover .country-card-media img {
+  transform: scale(1.04);
+}
+
+.country-card-number {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  background: rgba(12, 11, 9, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  color: rgba(244, 239, 230, 0.8);
+}
+
+.country-card-flag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 28px;
+  height: 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.country-card-body {
+  padding: 1rem;
+}
+
+.country-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+}
+
+.country-card-tagline {
+  font-size: var(--fs-badge);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.country-card-body > p {
+  font-size: var(--fs-body);
+  color: rgba(244, 239, 230, 0.55);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.country-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.country-card-tags span {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(244, 239, 230, 0.12);
+  border-radius: var(--radius-sm);
+  font-size: 0.55rem;
+  letter-spacing: 0.05em;
+  color: rgba(244, 239, 230, 0.45);
+}
+
+/* ========================= [Country Nav] ========================= */
+
+.country-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: var(--space-lg);
+}
+
+.country-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(244, 239, 230, 0.08);
+  font-size: var(--fs-nav);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.4);
+  text-decoration: none;
+  transition: color 200ms var(--ease);
+}
+
+.country-nav a:hover,
+.country-nav a.is-active {
+  color: var(--cream);
+}
+
+.country-nav a span {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: rgba(244, 239, 230, 0.25);
+}
+
+/* ========================= [AI Cards] ========================= */
+
+.ai-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.ai-card {
+  background: #141311;
+  border: 1px solid rgba(244, 239, 230, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition:
+    transform 220ms var(--ease),
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(214, 179, 106, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.ai-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(244, 239, 230, 0.06);
+  border: 1px solid rgba(244, 239, 230, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: var(--space-md);
+}
+
+.ai-card-number {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: rgba(244, 239, 230, 0.3);
+  margin-bottom: 0.35rem;
+}
+
+.ai-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+
+.ai-card p {
+  font-size: var(--fs-body);
+  color: rgba(244, 239, 230, 0.55);
+  line-height: 1.6;
+}
+
+/* ========================= [AI Boundary Panel] ========================= */
+
+.ai-boundary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(244, 239, 230, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: var(--space-lg);
+}
+
+.ai-boundary-panel {
+  background: #141311;
+  padding: 1.25rem;
+}
+
+.ai-boundary-panel h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
+}
+
+.ai-boundary-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ai-boundary-panel li {
+  padding: 0.4rem 0;
+  font-size: var(--fs-body);
+  color: rgba(244, 239, 230, 0.55);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-boundary-panel li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ai-boundary-panel--ai li::before {
+  background: var(--accent-gold);
+}
+
+.ai-boundary-panel--human li::before {
+  background: var(--accent-sage);
+}
+
+/* ========================= [Reduced Motion] ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .country-card,
+  .ai-card,
+  .country-card-media img {
+    transition: none;
+  }
+  .country-card:hover,
+  .ai-card:hover {
+    transform: none;
+  }
+}
+
+/* ========================= [Responsive] ========================= */
+
+@media (max-width: 900px) {
+  .feature-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .feature-intro {
+    position: static;
+  }
+
+  .country-cards,
+  .ai-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-boundary {
+    grid-template-columns: 1fr;
+  }
+}
