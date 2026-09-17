@@ -1,0 +1,76 @@
+/* ========================= [Hero] ========================= */
+/* Full-width hero section with background image and overlay */
+
+.hero--full {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/enquiry.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    hsla(40, 30%, 95%, 0.93) 0%,
+    hsla(40, 30%, 95%, 0.78) 45%,
+    hsla(40, 30%, 95%, 0.25) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 6rem 5%;
+}
+
+.hero--full .hero-copy {
+  max-width: 560px;
+}
+
+.hero--full .lede {
+  color: var(--cream-dim);
+}
+
+/* ========================= [CTA Buttons] ========================= */
+/* Call-to-action button styles: solid and ghost variants */
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.35rem;
+  font-size: var(--fs-strong);
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.cta.solid {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.cta.solid:hover {
+  background: color-mix(in srgb, var(--ink) 85%, white);
+}
+
+.cta.ghost {
+  background: hsla(40, 30%, 97%, 0.7);
+  backdrop-filter: blur(6px);
+  border: 1px solid hsla(30, 10%, 20%, 0.12);
+  color: var(--ink);
+}
+
+.cta.ghost:hover {
+  background: hsla(40, 30%, 97%, 0.9);
+}

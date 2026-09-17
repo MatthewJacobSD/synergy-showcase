@@ -1,0 +1,13 @@
+/* ========================= [Responsive] ========================= */
+/* Desktop-only: wide screen (1400px+) adjustments */
+
+/* --- Wide screens (1400px+) --- */
+@media (min-width: 1400px) {
+  .container {
+    width: min(1200px, 90%);
+  }
+
+  .hero--full .hero-copy {
+    max-width: 640px;
+  }
+}

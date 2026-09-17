@@ -1,0 +1,18 @@
+/* ========================= [Footer] ========================= */
+/* Site footer with two-line layout */
+
+.site-footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--ink-overlay);
+  margin-top: 2rem;
+  font-size: var(--fs-nav);
+  color: var(--cream-dim);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

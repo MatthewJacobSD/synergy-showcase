@@ -1,0 +1,125 @@
+/* ========================= [Layout] ========================= */
+/* Container width and horizontal centering */
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+/* ========================= [Header] ========================= */
+/* Sticky site header with frosted-glass background */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--cream) 92%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ink-overlay);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* ========================= [Navigation] ========================= */
+/* Primary nav links with hover transitions */
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  font-size: var(--fs-nav);
+  font-weight: 500;
+}
+
+.primary-nav a {
+  color: var(--cream-dim);
+  transition: color var(--transition-fast);
+}
+
+.primary-nav a:hover {
+  color: var(--ink);
+}
+
+/* ========================= [Dropdown] ========================= */
+/* Artifact dropdown menu with chevron toggle */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: var(--fs-nav);
+  font-weight: 500;
+  color: var(--cream-dim);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown.is-open .nav-dropdown-toggle {
+  color: var(--ink);
+}
+
+.nav-chevron {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform var(--transition-fast);
+  margin-top: -2px;
+}
+
+.nav-dropdown.is-open .nav-chevron {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 0;
+  min-width: 180px;
+  background: var(--cream);
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all var(--transition-base);
+  box-shadow: 0 8px 24px hsla(30 8% 4% / 0.08);
+}
+
+.nav-dropdown.is-open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: var(--fs-nav);
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--surface-hover);
+}

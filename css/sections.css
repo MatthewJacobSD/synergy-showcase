@@ -1,0 +1,412 @@
+/* ========================= [Sections] ========================= */
+/* Generic section padding */
+
+section {
+  padding: 4.5rem 0;
+}
+
+/* ========================= [Section Kickers] ========================= */
+/* Small uppercase labels and intro paragraphs for sections */
+
+.section-kicker {
+  font-size: var(--fs-badge);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-sage);
+  margin-bottom: var(--space-sm);
+}
+
+.section-intro {
+  max-width: 58ch;
+  color: var(--cream-dim);
+  font-size: 1.05rem;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+/* ========================= [Intro Section] ========================= */
+/* Introduction text block below the hero */
+
+.intro .display {
+  margin-bottom: var(--space-lg);
+}
+
+.intro p {
+  max-width: 58ch;
+  margin-bottom: 1.25rem;
+  color: var(--cream-dim);
+  font-size: 1.05rem;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================= [Artifacts] ========================= */
+/* 3-column grid of artifact cards with hover lift */
+
+.artifacts-section {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.artifacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: var(--space-lg);
+}
+
+.artifact-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-md);
+  background: hsla(40, 20%, 97%, 0.5);
+  transition: all var(--transition-base);
+}
+
+.artifact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-sage);
+  box-shadow: 0 8px 24px hsla(30, 8%, 4%, 0.06);
+}
+
+.artifact-number {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--ink) 18%, transparent);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.artifact-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.artifact-card p {
+  color: var(--cream-dim);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.artifact-link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-size: var(--fs-nav);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent-sage);
+  transition: color var(--transition-fast);
+}
+
+.artifact-card:hover .artifact-link {
+  color: var(--ink);
+}
+
+/* ========================= [Authors] ========================= */
+/* 3-column grid of author cards with avatar and role */
+
+.authors-section {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: var(--space-lg);
+}
+
+.author-card {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-md);
+  background: hsla(40, 20%, 97%, 0.5);
+  transition: all var(--transition-base);
+}
+
+.author-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px hsla(30, 8%, 4%, 0.05);
+  border-color: color-mix(in srgb, var(--accent-sage) 40%, transparent);
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.author-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.author-role {
+  display: block;
+  font-size: var(--fs-badge);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: var(--space-sm);
+}
+
+.author-card p {
+  color: var(--cream-dim);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+/* ========================= [Author Popover] ========================= */
+/* Floating contact panel that appears above/below card on hover */
+/* Positions: above by default, flips below if no space, right-aligns for last card */
+
+.author-popover {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 0;
+  width: min(320px, calc(100vw - 2rem));
+  transform: translateY(6px);
+  background: var(--cream);
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  box-shadow: 0 12px 32px hsla(30, 8%, 4%, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 50;
+  /* Slow entrance */
+  transition:
+    opacity 0.4s var(--ease),
+    transform 0.5s var(--ease),
+    visibility 0.4s;
+}
+
+/* Arrow pointing down (popover is above) */
+.author-popover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 1.5rem;
+  border: 6px solid transparent;
+  border-top-color: var(--cream);
+  filter: drop-shadow(0 2px 2px hsla(30, 8%, 4%, 0.06));
+}
+
+/* Flipped below: arrow points up */
+.author-popover.popover-below {
+  bottom: auto;
+  top: calc(100% + 12px);
+}
+
+.author-popover.popover-below::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: var(--cream);
+  filter: drop-shadow(0 -2px 2px hsla(30, 8%, 4%, 0.06));
+}
+
+/* Show state — fast exit */
+.author-card:hover .author-popover,
+.author-card:focus-within .author-popover,
+.author-card.popover-active .author-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity 0.15s var(--ease),
+    transform 0.15s var(--ease),
+    visibility 0.15s;
+}
+
+/* Popover row layout */
+.author-popover a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.author-popover a:hover {
+  background: var(--surface-hover);
+}
+
+.author-popover .social-icon {
+  flex: 0 0 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--cream-dim);
+}
+
+.author-popover .social-divider {
+  display: none;
+}
+
+.author-popover .social-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.author-popover .social-content small {
+  font-size: var(--fs-badge);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.author-popover .social-content span {
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========================= [Split Layout] ========================= */
+/* Two-column layout for Challenges and Collaboration sections */
+/* Reversible with .split-layout--reverse */
+
+.challenges-section,
+.collaboration-section {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.split-layout--reverse {
+  direction: rtl;
+}
+
+.split-layout--reverse > * {
+  direction: ltr;
+}
+
+.split-content .display {
+  margin-bottom: var(--space-md);
+}
+
+.split-content p {
+  color: var(--cream-dim);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.split-content p:last-child {
+  margin-bottom: 0;
+}
+
+.split-image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--ink-overlay);
+}
+
+.split-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+
+.split-image:hover img {
+  transform: scale(1.02);
+}
+
+/* ========================= [PowerPoint Section] ========================= */
+/* CTA banner linking to the current PowerPoint presentation */
+
+.site-powerpoint {
+  padding: 3rem 0;
+  border-top: 1px solid var(--ink-overlay);
+  border-bottom: 1px solid var(--ink-overlay);
+}
+
+.site-powerpoint .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.powerpoint-label {
+  font-size: var(--fs-badge);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.powerpoint-link p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-strong);
+  font-weight: 500;
+  color: var(--ink);
+  transition: color var(--transition-fast);
+}
+
+.powerpoint-link:hover p {
+  color: var(--accent-sage);
+}
+
+.powerpoint-link svg {
+  transition: transform var(--transition-fast);
+}
+
+.powerpoint-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ========================= [Final Showcase] ========================= */
+/* Closing section with CTA back to artifacts */
+
+.showcase-section {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.showcase-section .display {
+  margin-bottom: var(--space-md);
+}

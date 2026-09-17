@@ -1,0 +1,16 @@
+# Data folder (team contributions, briefs, task files)
+data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Logs
+*.log

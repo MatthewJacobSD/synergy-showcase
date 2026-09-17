@@ -1,0 +1,90 @@
+/* ========================= [Empty State] ========================= */
+/* Placeholder pages for artifacts not yet ready to showcase */
+
+.empty-state {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 5%;
+}
+
+.empty-state-inner {
+  max-width: 480px;
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-lg);
+  border: 2px solid var(--ink-overlay);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--cream-dim);
+}
+
+.empty-state h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+}
+
+.empty-state p {
+  color: var(--cream-dim);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: var(--space-md);
+}
+
+.empty-state p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================= [Status Badges] ========================= */
+/* Colored badges: progress (green), upcoming (gold), empty (dim) */
+
+.empty-state .status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-badge);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+}
+
+.empty-state .status-badge--progress {
+  border-color: var(--accent-sage);
+  color: var(--accent-sage);
+}
+
+.empty-state .status-badge--upcoming {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.empty-state .status-badge--empty {
+  border-color: var(--cream-dim);
+  color: var(--cream-dim);
+}
+
+/* ========================= [404 Page] ========================= */
+/* Large error code display for not-found pages */
+
+.error-code {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink-overlay);
+  margin-bottom: var(--space-md);
+}
