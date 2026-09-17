@@ -4,6 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.classList.add("page-loaded");
 
+  /* ========================= [Header Scroll] ========================= */
+  /* Add .scrolled class to header when page is scrolled */
+
+  const header = document.querySelector(".site-header");
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   document.querySelectorAll("a[href]").forEach((link) => {
     const href = link.getAttribute("href");
 

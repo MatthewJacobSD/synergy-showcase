@@ -13,67 +13,88 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 5%;
+  padding: 1rem 5%;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: color-mix(in srgb, var(--cream) 92%, transparent);
-  backdrop-filter: blur(12px);
-  border-bottom: var(--border-width) solid var(--border-color);
+  background: color-mix(in srgb, var(--cream) 88%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: var(--border-width) solid transparent;
+  transition:
+    border-color 0.4s var(--ease),
+    background 0.4s var(--ease);
+}
+
+.site-header.scrolled {
+  border-bottom-color: var(--border-color);
+  background: color-mix(in srgb, var(--cream) 95%, transparent);
 }
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: var(--fw-semibold);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 /* ========================= [Navigation] ========================= */
-/* Primary nav links */
+/* Primary nav links — Aries-inspired underline animation */
 
 .primary-nav {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
 }
 
 .primary-nav a {
-  color: var(--text-secondary);
-  transition: color var(--transition-fast);
-}
-
-.primary-nav a:hover,
-.primary-nav a.nav-active {
-  color: var(--ink);
-}
-
-.primary-nav a.nav-active {
   position: relative;
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition:
+    opacity var(--transition-fast),
+    color var(--transition-fast);
 }
 
-.primary-nav a.nav-active::after {
+.primary-nav a::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -0.35rem;
+  bottom: -0.3rem;
   height: 1.5px;
   background: var(--accent-sage);
-  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ease);
+}
+
+.primary-nav a:hover,
+.primary-nav a.nav-active {
+  opacity: 1;
+  color: var(--ink);
+}
+
+.primary-nav a:hover::after,
+.primary-nav a.nav-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* ========================= [Dropdown] ========================= */
-/* Artifact dropdown with chevron toggle */
+/* Artifact dropdown — modern Aries-inspired panel */
 
 .nav-dropdown {
   position: relative;
 }
 
 .nav-dropdown-toggle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   background: none;
@@ -82,47 +103,73 @@
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.8;
   cursor: pointer;
-  transition: color var(--transition-fast);
+  position: relative;
+  transition:
+    opacity var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.nav-dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.3rem;
+  height: 1.5px;
+  background: var(--accent-sage);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ease);
 }
 
 .nav-dropdown-toggle:hover,
 .nav-dropdown.is-open .nav-dropdown-toggle {
+  opacity: 1;
   color: var(--ink);
 }
 
+.nav-dropdown-toggle:hover::after,
+.nav-dropdown.is-open .nav-dropdown-toggle::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .nav-chevron {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.4rem;
+  height: 0.4rem;
   border-right: 1.5px solid currentColor;
   border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-1px);
   transition: transform var(--transition-fast);
-  margin-top: -2px;
 }
 
 .nav-dropdown.is-open .nav-chevron {
-  transform: rotate(-135deg);
-  margin-top: 2px;
+  transform: rotate(-135deg) translateY(1px);
 }
+
+/* Dropdown menu — clean panel with item numbering */
 
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 0.75rem);
-  left: 0;
-  min-width: 180px;
+  left: -0.5rem;
+  min-width: 280px;
   background: var(--cream);
   border: var(--border-width) solid var(--border-color);
-  border-radius: var(--radius-sm);
-  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   transition:
     opacity var(--transition-base),
     transform var(--transition-base),
     visibility var(--transition-base);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .nav-dropdown.is-open .nav-dropdown-menu {
@@ -132,13 +179,35 @@
 }
 
 .nav-dropdown-menu a {
-  display: block;
-  padding: 0.55rem 0.75rem;
-  border-radius: var(--radius-xs);
-  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
   font-size: var(--fs-sm);
+  text-transform: none;
+  letter-spacing: normal;
+  opacity: 1;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
 }
 
 .nav-dropdown-menu a:hover {
+  color: var(--ink);
   background: var(--surface-hover);
+}
+
+.nav-dropdown-menu a::after {
+  display: none;
+}
+
+.nav-dropdown-menu .nav-item-num {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
 }
