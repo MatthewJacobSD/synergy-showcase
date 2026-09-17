@@ -14,7 +14,7 @@
   --surface-subtle: hsl(40 20% 94%);
   --surface-hover: hsl(40 18% 91%);
   --surface-faint: hsl(40 15% 96%);
-  --ink-overlay: hsla(30 8% 4% / 0.06);
+  --ink-overlay: hsla(30 8% 4% / 0.08);
 
   /* Accents */
   --accent-sage: #7d8f7a;
@@ -35,15 +35,17 @@
   /* Font sizes */
   --fs-badge: 0.62rem;
   --fs-nav: 0.68rem;
-  --fs-body: 0.78rem;
-  --fs-strong: 0.88rem;
-  --fs-display: 1.8rem;
+  --fs-body: 0.82rem;
+  --fs-strong: 0.92rem;
+  --fs-display: 2rem;
+  --fs-hero: clamp(2.8rem, 5vw, 4.2rem);
 
   /* Spacing */
   --space-xs: 0.64rem;
   --space-sm: 0.75rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
 
   /* Motion */
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);

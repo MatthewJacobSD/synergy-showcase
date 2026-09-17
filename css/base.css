@@ -22,6 +22,83 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ========================= [Page Transition] ========================= */
+/* Fade in on load, fade out on internal navigation */
+
+body {
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+body.page-leaving {
+  opacity: 0;
+}
+
+/* ========================= [Custom Cursor] ========================= */
+/* Small "VIEW ↗" label that follows cursor on artifact links */
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transform: translate(0, 0) scale(0.9);
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--spring);
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* ========================= [Floating Back Button] ========================= */
+/* Fixed "← SHOWCASE" link in bottom-left corner */
+
+.floating-back {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: var(--cream);
+  border: 1px solid var(--ink-overlay);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-badge);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  box-shadow: 0 4px 16px hsla(30, 8%, 4%, 0.08);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.floating-back:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px hsla(30, 8%, 4%, 0.12);
+  color: var(--accent-sage);
+}
+
 /* ========================= [Custom Scrollbar] ========================= */
 /* Thin, minimal scrollbar matching the cream/ink palette */
 

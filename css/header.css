@@ -45,8 +45,24 @@
   transition: color var(--transition-fast);
 }
 
-.primary-nav a:hover {
+.primary-nav a:hover,
+.primary-nav a.nav-active {
   color: var(--ink);
+}
+
+.primary-nav a.nav-active {
+  position: relative;
+}
+
+.primary-nav a.nav-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.35rem;
+  height: 1.5px;
+  background: var(--accent-sage);
+  border-radius: 1px;
 }
 
 /* ========================= [Dropdown] ========================= */
