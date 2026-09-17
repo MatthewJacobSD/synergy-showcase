@@ -8,8 +8,8 @@
 
   /* ---------- Color: Text ---------- */
   --text-primary:   var(--ink);
-  --text-secondary: #5c564f;          /* darkened for readability on cream */
-  --text-muted:     #7a746c;          /* for less important text */
+  --text-secondary: #3d3833;          /* darkened for readability on cream */
+  --text-muted:     #5c564f;          /* for less important text */
   --text-faint:     #6f6a61;          /* for labels, timestamps */
 
   /* ---------- Color: Surfaces ---------- */
