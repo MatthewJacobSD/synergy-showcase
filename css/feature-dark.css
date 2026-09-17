@@ -14,7 +14,8 @@
 }
 
 .feature-dark .section-number {
-  color: color-mix(in srgb, var(--cream) 35%, transparent);
+  color: var(--accent-gold);
+  letter-spacing: 0.1em;
 }
 
 .feature-dark .display {

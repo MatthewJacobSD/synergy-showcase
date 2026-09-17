@@ -1,9 +1,6 @@
 # Data folder (team contributions, briefs, task files)
 data/
 
-# PowerPoint files (large binaries)
-powerpoint/
-
 # OS files
 .DS_Store
 Thumbs.db
