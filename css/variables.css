@@ -8,9 +8,9 @@
 
   /* ---------- Color: Text ---------- */
   --text-primary:   var(--ink);
-  --text-secondary: #8c8579;          /* was --cream-dim */
-  --text-muted:     #a39e94;          /* was --cream-timestamp */
-  --text-faint:     #6f6a61;          /* was --cream-table-head */
+  --text-secondary: #5c564f;          /* darkened for readability on cream */
+  --text-muted:     #7a746c;          /* for less important text */
+  --text-faint:     #6f6a61;          /* for labels, timestamps */
 
   /* ---------- Color: Surfaces ---------- */
   --surface-base:   var(--cream);
