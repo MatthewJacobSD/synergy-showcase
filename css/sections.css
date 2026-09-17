@@ -131,6 +131,25 @@ section.alt {
   color: color-mix(in srgb, var(--ink) 10%, transparent);
 }
 
+.artifact-exhibit-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: linear-gradient(135deg, var(--surface-subtle) 0%, var(--surface-faint) 100%);
+}
+
+.artifact-exhibit-icon svg {
+  opacity: 0.4;
+  transition: opacity var(--transition-fast);
+}
+
+.artifact-exhibit:hover .artifact-exhibit-icon svg {
+  opacity: 0.6;
+}
+
 /* PowerPoint preview inside exhibit */
 
 .powerpoint-preview {
@@ -542,6 +561,79 @@ section.alt {
 
 .split-image:hover img {
   transform: scale(1.02);
+}
+
+/* ========================= [Transition Strip] ========================= */
+/* Aries-style marquee between hero and content */
+
+.transition-strip {
+  overflow: hidden;
+  padding: 1rem 0;
+  border-top: 1px solid var(--ink-overlay);
+  border-bottom: 1px solid var(--ink-overlay);
+  background: var(--surface-faint);
+}
+
+.transition-track {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.transition-track span {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.transition-dot {
+  color: var(--accent-gold) !important;
+  font-size: 1.1rem !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ========================= [Gallery] ========================= */
+
+.gallery-section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--ink-overlay);
+}
+
+.gallery-empty {
+  margin-top: var(--space-xl);
+  padding: 4rem 2rem;
+  border: 2px dashed var(--ink-overlay);
+  border-radius: var(--radius-md);
+  text-align: center;
+  background: hsla(40, 20%, 97%, 0.3);
+}
+
+.gallery-empty-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-md);
+  border-radius: 50%;
+  background: var(--surface-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.gallery-empty p {
+  color: var(--text-muted);
+  font-size: var(--fs-base);
+  max-width: 42ch;
+  margin: 0 auto;
 }
 
 /* ========================= [PowerPoint Section] ========================= */

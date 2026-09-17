@@ -24,13 +24,13 @@
 }
 
 .feature-dark .lede {
-  color: color-mix(in srgb, var(--cream) 65%, transparent);
+  color: var(--accent-gold);
   max-width: 42ch;
   margin-top: var(--space-md);
 }
 
 .feature-dark p {
-  color: color-mix(in srgb, var(--cream) 60%, transparent);
+  color: rgba(244, 239, 230, 0.82);
   line-height: var(--lh-relaxed);
 }
 
@@ -107,7 +107,7 @@
   backdrop-filter: blur(6px);
   padding: 0.3rem 0.6rem;
   border-radius: var(--radius-xs);
-  color: color-mix(in srgb, var(--cream) 80%, transparent);
+  color: rgba(244, 239, 230, 0.9);
 }
 
 .country-card-flag {
@@ -143,7 +143,7 @@
 
 .country-card-body > p {
   font-size: var(--fs-base);
-  color: color-mix(in srgb, var(--cream) 55%, transparent);
+  color: rgba(244, 239, 230, 0.78);
   line-height: var(--lh-normal);
   margin-bottom: var(--space-sm);
 }
@@ -156,11 +156,11 @@
 
 .country-card-tags span {
   padding: 0.2rem 0.5rem;
-  border: var(--border-width) solid color-mix(in srgb, var(--cream) 12%, transparent);
+  border: var(--border-width) solid rgba(244, 239, 230, 0.12);
   border-radius: var(--radius-xs);
   font-size: 0.55rem;
   letter-spacing: 0.05em;
-  color: color-mix(in srgb, var(--cream) 45%, transparent);
+  color: rgba(244, 239, 230, 0.7);
 }
 
 /* ========================= [Country Nav] ========================= */
@@ -182,7 +182,7 @@
   font-weight: var(--fw-medium);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--cream) 40%, transparent);
+  color: rgba(244, 239, 230, 0.7);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -195,7 +195,7 @@
 .country-nav a span {
   font-family: var(--font-mono);
   font-size: 0.55rem;
-  color: color-mix(in srgb, var(--cream) 25%, transparent);
+  color: rgba(244, 239, 230, 0.4);
 }
 
 /* ========================= [AI Cards] ========================= */
@@ -240,7 +240,7 @@
   font-family: var(--font-mono);
   font-size: 0.55rem;
   letter-spacing: 0.1em;
-  color: color-mix(in srgb, var(--cream) 30%, transparent);
+  color: var(--accent-gold);
   margin-bottom: 0.35rem;
 }
 
@@ -254,7 +254,7 @@
 
 .ai-card p {
   font-size: var(--fs-base);
-  color: color-mix(in srgb, var(--cream) 55%, transparent);
+  color: rgba(244, 239, 230, 0.78);
   line-height: var(--lh-normal);
 }
 
@@ -291,7 +291,7 @@
 .ai-boundary-panel li {
   padding: 0.4rem 0;
   font-size: var(--fs-base);
-  color: color-mix(in srgb, var(--cream) 55%, transparent);
+  color: rgba(244, 239, 230, 0.78);
   display: flex;
   align-items: center;
   gap: var(--space-xs);
