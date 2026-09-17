@@ -192,6 +192,15 @@ document.addEventListener("DOMContentLoaded", () => {
     popover.addEventListener("mouseleave", () => hidePopover());
   });
 
+  /* ========================= [Verification checklist] ========================= */
+
+  document.querySelectorAll(".verify-list button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const pressed = btn.getAttribute("aria-pressed") === "true";
+      btn.setAttribute("aria-pressed", pressed ? "false" : "true");
+    });
+  });
+
   /* ========================= [Custom Cursor on Artifact Links] ========================= */
   /* Shows a small "VIEW ↗" label next to cursor on artifact exhibit links (desktop only) */
 

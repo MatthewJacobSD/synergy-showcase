@@ -1,3 +1,4 @@
+
 /* ========================= [Global — Import Hub] ========================= */
 /* Single entry point: imports all section stylesheets in order */
 
@@ -8,5 +9,7 @@
 @import url("./sections.css");
 @import url("./feature-dark.css");
 @import url("./footer.css");
+@import url("./empty-state.css");
+@import url("./artifact.css");
 @import url("./animations.css");
 @import url("./responsive.css");
