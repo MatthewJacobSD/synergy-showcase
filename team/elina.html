@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elina Nilisani — Artifact 02 | INT Synergy</title>
+  <meta name="description" content="Elina's work on Artifact 02: Using AI for language support in a Java translation pipeline." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/artifact-2.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="../index.html">INT Synergy</a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="../index.html">Overview</a>
+      <a href="../index.html#team">Team</a>
+      <a href="../index.html#gigo">GiGo</a>
+      <a href="../coming-soon/index.html">Other Artifacts</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========================= [Hero] ========================= -->
+    <section class="artifact-hero">
+      <div class="container">
+        <span class="section-kicker">Artifact 02 · Elina</span>
+        <h1 class="display">Java Translation Pipeline</h1>
+        <p class="lede">
+          AI can support language work: clarification, wording, understanding,
+          and confidence while studying in English. That support is not a
+          substitute for judgement.
+        </p>
+        <div class="artifact-meta">
+          <div class="artifact-meta-item">
+            <span class="artifact-meta-label">Scenario</span>
+            <span class="artifact-meta-value">Java translation pipeline</span>
+          </div>
+          <div class="artifact-meta-item">
+            <span class="artifact-meta-label">Context</span>
+            <span class="artifact-meta-value">Architecture understanding · language support</span>
+          </div>
+        </div>
+        <nav class="artifact-progress" aria-label="Team members">
+          <a href="matthew.html">Matthew</a>
+          <a href="elina.html" aria-current="page">Elina</a>
+          <a href="thijmen.html">Thijmen</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========================= [Part 1] ========================= -->
+    <section class="content-section">
+      <div class="container">
+        <span class="section-label">Part 1 — My AI Usage Plan</span>
+        <h2 class="display">How I use AI</h2>
+        <div class="prose">
+          <p>
+            Since English is my second language, I sometimes find the meaning of
+            certain words, sentences, or concepts unclear. I would like to use AI
+            to help me better understand English materials throughout my education.
+          </p>
+        </div>
+
+        <h3 class="narrative-block" style="margin-bottom: 0.4rem">Intended use during studies</h3>
+        <ul class="verify-list">
+          <li><span>Ask AI to explain lessons, concepts, or English texts in my first language when I find them confusing</span></li>
+          <li><span>Use AI to get feedback on my work and understand what I can improve</span></li>
+          <li><span>Before giving a presentation, ask AI to check my work and give suggestions</span></li>
+          <li><span>Ask AI to give me ideas when writing a text and I need help developing ideas</span></li>
+          <li><span>Use AI to help me plan my studies and organize my study time</span></li>
+        </ul>
+
+        <h3 class="narrative-block" style="margin-bottom: 0.4rem; margin-top: 1.5rem;">What responsible use looks like</h3>
+        <div class="prose">
+          <p>
+            Responsible use of AI means making sure that I do not become dependent on
+            it. At every stage of my education, I want to think about the problem myself
+            first. If I face difficulties, I can then use AI as a guide or a source of
+            support. I do not want AI to do the work for me; instead, I want to use it
+            as a helpful tool or an online teacher.
+          </p>
+        </div>
+
+        <h3 class="narrative-block" style="margin-bottom: 0.4rem; margin-top: 1.5rem;">How I will avoid GiGo</h3>
+        <ul class="verify-list">
+          <li><span>Explain clearly what I want from AI and make my request as specific as possible</span></li>
+          <li><span>Use correct writing and clear sentence structures</span></li>
+          <li><span>Try to explain my question in simple language instead of complicated sentences</span></li>
+          <li><span>Do not completely depend on the first answer — ask follow-up questions</span></li>
+          <li><span>Communicate in my first language when it helps express thoughts more clearly</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================= [Part 2] ========================= -->
+    <section class="content-section alt">
+      <div class="container">
+        <span class="section-label">Part 2 — Prompt Scenario</span>
+        <h2 class="display">Java translation pipeline</h2>
+
+        <div class="narrative-block">
+          <h3>The project</h3>
+          <p>
+            A Java application that translates English sentences to Dutch through
+            four modules: model (data structures), analysis (syntactic tagging),
+            translation (dictionary lookup), and rules (grammatical restructuring).
+          </p>
+        </div>
+
+        <h3 class="narrative-block" style="margin-bottom: 0.4rem">How a sentence travels through the system</h3>
+        <ol class="verify-list" style="list-style-position: inside;">
+          <li><span>The entry point receives an English text string from the user</span></li>
+          <li><span>Sentence Analyzer parses input into Token instances with part-of-speech labels</span></li>
+          <li><span>The application displays the analyzed structure to the terminal</span></li>
+          <li><span>Translator references the dictionary CSV to map tokens to Dutch</span></li>
+          <li><span>The direct translation result is outputted for display</span></li>
+          <li><span>The user picks a grammar rule option from the console</span></li>
+          <li><span>RuleEngine processes tokens according to the selected rule</span></li>
+          <li><span>The final Dutch sentence structure is rendered</span></li>
+        </ol>
+
+        <h3 class="narrative-block" style="margin-bottom: 0.4rem; margin-top: 1.5rem;">AI Interaction 1</h3>
+        <div class="narrative-block">
+          <p><strong>What I needed:</strong> Clarify how Sentence Analyzer handles words missing from the CSV lookup files.</p>
+          <p><strong>What AI told me:</strong> Unlisted words are given a default role (like 'Other') so the pipeline doesn't break.</p>
+          <p><strong>What I did with it:</strong> Noted this behaviour to understand why unknown words can still pass through without exceptions.</p>
+        </div>
+
+        <h3 class="narrative-block" style="margin-bottom: 0.4rem; margin-top: 1.5rem;">AI Interaction 2</h3>
+        <div class="narrative-block">
+          <p><strong>What I needed:</strong> Understand the design reason behind separating translation logic from syntax manipulation.</p>
+          <p><strong>What AI told me:</strong> Keeping them separate follows the Single Responsibility Principle, making it easier to add new grammar rules.</p>
+          <p><strong>What I did with it:</strong> Used this insight to write the architecture summary and better grasp how modular design is applied.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= [Navigation] ========================= -->
+    <section class="content-section">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="matthew.html" class="back-link">← Matthew Jacob</a>
+        <a href="thijmen.html" class="back-link">Next: Thijmen Verschuur →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>INT Synergy / Saxion / 2026</span>
+        <span>Kindercarnavalsoptochtvoorbereidingswerkzaamhedencomiteleden</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

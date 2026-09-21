@@ -3,89 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INT Synergy – Artifact Showcase</title>
-  <meta name="description" content="A group project bringing together five artifacts created throughout the INT Synergy course." />
+  <title>INT Synergy — Artifact 02: Garbage In, Growth Out</title>
+  <meta name="description" content="Using AI tools responsibly. How prompt design determines whether you get useful results — or garbage." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/artifact-2.css" />
 </head>
 <body>
 
   <!-- ========================= [Header] ========================= -->
   <header class="site-header">
-    <a class="logo" href="index.html">Saxion – INT Synergy</a>
-
+    <a class="logo" href="index.html">INT Synergy</a>
     <nav class="primary-nav" aria-label="Primary">
-      <div class="nav-dropdown">
-        <button
-          class="nav-dropdown-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-haspopup="true"
-        >
-          Artifacts
-          <span class="nav-chevron" aria-hidden="true"></span>
-        </button>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="quests/artifact-01.html" role="menuitem">Cultural Stories <span class="nav-item-num">01</span></a>
-          <a href="quests/artifact-02.html" role="menuitem">AI &amp; GiGo <span class="nav-item-num">02</span></a>
-          <a href="quests/artifact-03.html" role="menuitem">Language &amp; Structure <span class="nav-item-num">03</span></a>
-          <a href="quests/artifact-04.html" role="menuitem">Hofstede's Dimensions <span class="nav-item-num">04</span></a>
-          <a href="quests/artifact-05.html" role="menuitem">Personal Reflection <span class="nav-item-num">05</span></a>
-        </div>
-      </div>
-
-      <a href="#countries">Cultures</a>
-      <a href="#ai-purpose">AI</a>
-      <a href="#authors">Authors</a>
-      <a href="#challenges">Challenges</a>
-      <a href="#collaboration">Collaboration</a>
+      <a href="#overview" class="nav-active">Overview</a>
+      <a href="#team">Team</a>
+      <a href="#gigo">GiGo</a>
+      <a href="coming-soon/index.html">Other Artifacts</a>
     </nav>
   </header>
 
   <main>
 
     <!-- ========================= [Hero] ========================= -->
-    <section class="hero hero--full" aria-label="Introduction">
+    <section class="hero hero--full" id="overview">
       <div class="hero-overlay">
         <div class="hero-copy">
-          <p class="eyebrow">INT / Synergy / 2026</p>
-          <h1 class="hero-display">
-            Five artifacts.<br />
-            Three people.<br />
-            One collaborative experience.
-          </h1>
+          <p class="eyebrow">INT Synergy · Artifact 02</p>
+          <h1 class="hero-display">Garbage In,<br> Growth Out.</h1>
           <p class="hero-sub">
-            A collection of work created throughout the INT Synergy course —
-            bringing together individual contributions and group quests
-            into one final showcase.
+            Using AI tools responsibly and documenting that use properly.
+            How prompt design determines whether you get useful results
+            — or garbage.
           </p>
-
           <div class="cta-row">
-            <a class="cta solid" href="#artifacts">Explore the work</a>
-            <a class="cta ghost" href="#how">Our process</a>
-          </div>
-
-          <div class="hero-stats" role="list">
-            <div class="hero-stat" role="listitem">
-              <span class="hero-stat-value">5</span>
-              <span class="hero-stat-label">Artifacts</span>
-            </div>
-            <div class="hero-stat" role="listitem">
-              <span class="hero-stat-value">3</span>
-              <span class="hero-stat-label">Contributors</span>
-            </div>
-            <div class="hero-stat" role="listitem">
-              <span class="hero-stat-value">7</span>
-              <span class="hero-stat-label">Weeks</span>
-            </div>
-            <div class="hero-stat" role="listitem">
-              <span class="hero-stat-value">1</span>
-              <span class="hero-stat-label">Showcase</span>
-            </div>
+            <a class="cta solid" href="#team">Meet the team</a>
+            <a class="cta ghost" href="#gigo">What is GiGo?</a>
           </div>
         </div>
       </div>
@@ -94,573 +50,162 @@
     <!-- ========================= [Transition Strip] ========================= -->
     <div class="transition-strip" aria-hidden="true">
       <div class="transition-track">
-        <span>Cultural Stories</span>
+        <span>Responsible AI</span>
         <span class="transition-dot">·</span>
-        <span>AI &amp; GiGo</span>
+        <span>Prompt Design</span>
         <span class="transition-dot">·</span>
-        <span>Language &amp; Structure</span>
+        <span>Garbage In, Garbage Out</span>
         <span class="transition-dot">·</span>
-        <span>Hofstede's Dimensions</span>
+        <span>Verification</span>
         <span class="transition-dot">·</span>
-        <span>Personal Reflection</span>
+        <span>Human Decision</span>
         <span class="transition-dot">·</span>
-        <span>Cultural Stories</span>
+        <span>Responsible AI</span>
         <span class="transition-dot">·</span>
-        <span>AI &amp; GiGo</span>
+        <span>Prompt Design</span>
         <span class="transition-dot">·</span>
-        <span>Language &amp; Structure</span>
+        <span>Garbage In, Garbage Out</span>
         <span class="transition-dot">·</span>
-        <span>Hofstede's Dimensions</span>
+        <span>Verification</span>
         <span class="transition-dot">·</span>
-        <span>Personal Reflection</span>
+        <span>Human Decision</span>
         <span class="transition-dot">·</span>
       </div>
     </div>
 
-    <!-- ========================= [Introduction] ========================= -->
-    <section class="intro" id="how">
+    <!-- ========================= [What We Did] ========================= -->
+    <section class="content-section" id="gigo">
       <div class="container">
-        <span class="section-number">01 / Process</span>
-        <p class="section-kicker">Introduction</p>
-        <h2 class="display">From quests to artifacts</h2>
-        <p>
-          Throughout the INT Synergy course, we worked through a series of activities
-          and quests designed to develop our understanding through practical group work.
-        </p>
-        <p>
-          Each member contributed their own ideas and work to the activities. We then
-          combined our individual contributions into group artifacts, allowing us to
-          present the outcome of our work together.
-        </p>
-        <p>
-          For our final showcase, we chose to present five PowerPoint artifacts created
-          throughout the course. This website brings those presentations together in
-          one place and provides additional context about what each artifact represents,
-          how it was created, and how our individual contributions came together.
-        </p>
-        <p>
-          The PowerPoints are the artifacts themselves; this website acts as the final
-          layer that connects and presents them as one collection.
-        </p>
-      </div>
-    </section>
-
-    <!-- ========================= [Artifacts] ========================= -->
-    <section class="artifacts-section alt" id="artifacts">
-      <div class="container">
-        <div class="artifacts-header">
-          <span class="section-number">02 / The Work</span>
-          <p class="section-kicker">SSD Artifacts</p>
-          <h2 class="display">Five artifacts. One group journey.</h2>
-          <p class="section-intro">
-            Each artifact represents a stage of our journey — from personal storytelling
-            to cultural analysis to responsible AI use. Select any artifact to explore
-            the work behind it.
+        <span class="section-number">01 / Context</span>
+        <h2 class="display">What this artifact is about</h2>
+        <div class="prose">
+          <p>
+            This artifact explores how three students use AI in their studies —
+            and where they draw the line. Each of us wrote a personal AI usage plan
+            (Part 1), then demonstrated it through a real prompt scenario (Part 2).
+          </p>
+          <p>
+            The common thread: AI is a tool, not a shortcut. We each use it differently
+            — Matthew for code and writing, Elina for language support, Thijmen for
+            research and programming — but the principle is the same. We think first,
+            check what AI gives us, and stay responsible for the final result.
           </p>
         </div>
-
-        <!-- Artifact 01 -->
-        <article class="artifact-exhibit reveal">
-          <div class="artifact-exhibit-visual">
-            <div class="powerpoint-preview">
-              <div class="powerpoint-preview-icon" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                  <path d="M7 8h2m2 0h6"/>
-                </svg>
-              </div>
-              <span class="powerpoint-preview-label">synergy.pptx</span>
-              <span class="powerpoint-preview-meta">PowerPoint · Group Artifact</span>
-            </div>
-            <div class="artifact-accent-bar artifact-accent-bar--sage" aria-hidden="true"></div>
-          </div>
-          <div class="artifact-exhibit-content">
-            <span class="artifact-exhibit-number">Artifact 01</span>
-            <h3 class="artifact-exhibit-title">Good, Bad, Funny</h3>
-            <p class="artifact-exhibit-desc">
-              Introducing yourself through real stories and a cultural dimension dossier.
-              A reflection on how personal experiences reveal cultural values.
-            </p>
-            <a href="quests/artifact-01.html" class="artifact-exhibit-link">
-              Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Artifact 02 -->
-        <article class="artifact-exhibit artifact-exhibit--reverse reveal" data-delay="80">
-          <div class="artifact-exhibit-visual">
-            <img src="images/home/artifact-02.jpg" alt="GiGo — AI usage and prompt design" />
-            <div class="artifact-accent-bar artifact-accent-bar--terracotta" aria-hidden="true"></div>
-          </div>
-          <div class="artifact-exhibit-content">
-            <span class="artifact-exhibit-number">Artifact 02</span>
-            <h3 class="artifact-exhibit-title">GiGo — Garbage In / Garbage Out</h3>
-            <p class="artifact-exhibit-desc">
-              Using AI tools responsibly. How prompt design determines whether
-              you get useful results — or garbage.
-            </p>
-            <a href="quests/artifact-02.html" class="artifact-exhibit-link">
-              Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Artifact 03 -->
-        <article class="artifact-exhibit reveal" data-delay="80">
-          <div class="artifact-exhibit-visual">
-            <div class="artifact-exhibit-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <div class="artifact-accent-bar artifact-accent-bar--slate" aria-hidden="true"></div>
-          </div>
-          <div class="artifact-exhibit-content">
-            <span class="artifact-exhibit-number">Artifact 03</span>
-            <h3 class="artifact-exhibit-title">Lost in Translation, Found in Structure</h3>
-            <p class="artifact-exhibit-desc">
-              Exploring how meaning changes across languages and cultures,
-              and how structure helps us find clarity.
-            </p>
-            <a href="quests/artifact-03.html" class="artifact-exhibit-link">
-              Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Artifact 04 -->
-        <article class="artifact-exhibit artifact-exhibit--reverse reveal" data-delay="80">
-          <div class="artifact-exhibit-visual">
-            <div class="artifact-exhibit-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div class="artifact-accent-bar artifact-accent-bar--gold" aria-hidden="true"></div>
-          </div>
-          <div class="artifact-exhibit-content">
-            <span class="artifact-exhibit-number">Artifact 04</span>
-            <h3 class="artifact-exhibit-title">The Culture Games</h3>
-            <p class="artifact-exhibit-desc">
-              Examining cultural differences and similarities through
-              interactive scenarios and shared reflection.
-            </p>
-            <a href="quests/artifact-04.html" class="artifact-exhibit-link">
-              Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Artifact 05 -->
-        <article class="artifact-exhibit reveal" data-delay="80">
-          <div class="artifact-exhibit-visual">
-            <div class="artifact-exhibit-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div class="artifact-accent-bar artifact-accent-bar--ink" aria-hidden="true"></div>
-          </div>
-          <div class="artifact-exhibit-content">
-            <span class="artifact-exhibit-number">Artifact 05</span>
-            <h3 class="artifact-exhibit-title">Getting to know Maranda</h3>
-            <p class="artifact-exhibit-desc">
-              Building understanding through personal introduction,
-              cultural background, and shared learning experiences.
-            </p>
-            <a href="quests/artifact-05.html" class="artifact-exhibit-link">
-              Explore artifact
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </a>
-          </div>
-        </article>
       </div>
     </section>
 
-    <!-- ========================= [Authors] ========================= -->
-    <section class="authors-section" id="authors">
-      <div class="container">
-        <span class="section-number">03 / The Team</span>
-        <p class="section-kicker">Authors</p>
-        <h2 class="display">The people behind the artifacts</h2>
-        <p class="section-intro">
-          This showcase was created through the combined work of three group members.
-          Each contributed to the activities and quests, with individual work brought
-          together to form the final group artifacts.
-        </p>
-
-        <div class="authors-grid">
-          <article class="author-card reveal">
-            <div class="author-avatar" aria-hidden="true">E</div>
-            <h3>Elina Nilisani</h3>
-            <span class="author-role">PowerPoint development</span>
-            <p>
-              Responsible for contributing to the activities and constructing the
-              PowerPoint artifacts used in the final showcase.
-            </p>
-            <div class="author-popover">
-              <a href="mailto:597889@student.saxion.nl" aria-label="Email Elina">
-                <span class="social-icon" aria-hidden="true">✉</span>
-                <span class="social-content">
-                  <small>Saxion Student ID</small>
-                  <span>597889</span>
-                </span>
-              </a>
-            </div>
-          </article>
-
-          <article class="author-card reveal" data-delay="80">
-            <div class="author-avatar" aria-hidden="true">M</div>
-            <h3>Matthew Jacob Sarkodie Darkwah</h3>
-            <span class="author-role">Website development &amp; final showcase</span>
-            <p>
-              Responsible for designing and developing the website that brings all five
-              artifacts together and presents the group's work as a single final showcase.
-            </p>
-            <div class="author-popover">
-              <a href="mailto:608280@student.saxion.nl" aria-label="Email Matthew Jacob">
-                <span class="social-icon" aria-hidden="true">✉</span>
-                <span class="social-content">
-                  <small>Saxion Student ID</small>
-                  <span>608280</span>
-                </span>
-              </a>
-              <a href="https://github.com/MatthewJacobSD" target="_blank" rel="noopener noreferrer" aria-label="Matthew Jacob on GitHub">
-                <span class="social-icon" aria-hidden="true">⎔</span>
-                <span class="social-content">
-                  <small>GitHub</small>
-                  <span>github.com/MatthewJacobSD</span>
-                </span>
-              </a>
-            </div>
-          </article>
-
-          <article class="author-card reveal" data-delay="160">
-            <div class="author-avatar" aria-hidden="true">T</div>
-            <h3>Thijmen Verschuur</h3>
-            <span class="author-role">PowerPoint development</span>
-            <p>
-              Responsible for contributing to the activities and constructing the
-              PowerPoint artifacts used in the final showcase.
-            </p>
-            <div class="author-popover">
-              <a href="mailto:586289@student.saxion.nl" aria-label="Email Thijmen">
-                <span class="social-icon" aria-hidden="true">✉</span>
-                <span class="social-content">
-                  <small>Saxion Student ID</small>
-                  <span>586289</span>
-                </span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= [Cultural Atlas] ========================= -->
-    <section class="feature-dark" id="countries">
+    <!-- ========================= [What is GiGo] ========================= -->
+    <section class="feature-dark" id="gigo-explained">
       <div class="container feature-layout">
         <div class="feature-intro">
-          <span class="section-number">04 / Perspectives</span>
-          <p class="section-kicker">Cultural Atlas</p>
-          <h2 class="display">Three Countries.<br />Three Perspectives.</h2>
+          <span class="section-number">02 / Core Concept</span>
+          <p class="section-kicker">What is GiGo?</p>
+          <h2 class="display">Garbage In,<br>Garbage Out.</h2>
           <p class="lede">
-            Our project brought together three different cultures, languages,
-            and ways of thinking. Here is a closer look at the countries we
-            came from — and what shapes our backgrounds, values, and perspectives.
-          </p>
-          <nav class="country-nav" aria-label="Countries">
-            <a href="#italy">Italy <span>01</span></a>
-            <a href="#iran">Iran <span>02</span></a>
-            <a href="#netherlands">Netherlands <span>03</span></a>
-          </nav>
-        </div>
-
-        <div class="country-cards">
-          <article class="country-card reveal" id="italy">
-            <div class="country-card-media">
-              <img src="images/home/italy-poster.png" alt="Italy — culture and tradition" />
-              <span class="country-card-number">01 · Italy</span>
-            </div>
-            <div class="country-card-body">
-              <h3>Italy</h3>
-              <p class="country-card-tagline">History, Family, and Balance</p>
-              <p>
-                Italy is known for its rich history, art, food, and strong sense of family.
-                People value connection, tradition, and enjoying the present. It is a culture
-                where work and everyday life are deeply intertwined.
-              </p>
-              <div class="country-card-tags">
-                <span>Family &amp; Community</span>
-                <span>Food &amp; Culture</span>
-                <span>Tradition &amp; Heritage</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="country-card reveal" data-delay="90" id="iran">
-            <div class="country-card-media">
-              <img src="images/home/iran-architecture.png" alt="Iran — heritage and resilience" />
-              <span class="country-card-number">02 · Iran</span>
-            </div>
-            <div class="country-card-body">
-              <h3>Iran</h3>
-              <p class="country-card-tagline">Resilience, Culture, and Pride</p>
-              <p>
-                Iran has a long and rich history, with a unique blend of tradition, art,
-                and strong cultural roots. People often value resilience, hospitality, and
-                deep cultural ties. It is a country where respect and community are central
-                to daily life.
-              </p>
-              <div class="country-card-tags">
-                <span>Heritage &amp; History</span>
-                <span>Hospitality</span>
-                <span>Resilience &amp; Pride</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="country-card reveal" data-delay="180" id="netherlands">
-            <div class="country-card-media">
-              <img src="images/home/netherlands-poster.png" alt="Netherlands — openness and innovation" />
-              <span class="country-card-number">03 · Netherlands</span>
-            </div>
-            <div class="country-card-body">
-              <h3>Netherlands</h3>
-              <p class="country-card-tagline">Openness, Equality, and Innovation</p>
-              <p>
-                The Netherlands is known for its open-minded culture, emphasis on independence,
-                equality, and direct communication. It is a society that values innovation,
-                practicality, and a strong focus on sustainability and freedom.
-              </p>
-              <div class="country-card-tags">
-                <span>Sustainability</span>
-                <span>Equality &amp; Diversity</span>
-                <span>Cycling &amp; Freedom</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= [AI with Purpose] ========================= -->
-    <section class="feature-dark alt" id="ai-purpose">
-      <div class="container feature-layout">
-        <div class="feature-intro">
-          <span class="section-number">05 / Tool</span>
-          <p class="section-kicker">Using AI with Purpose</p>
-          <h2 class="display">Support, Not<br />a Shortcut.</h2>
-          <p class="lede">
-            AI helped us refine text, understand concepts, and debug code —
-            but we did not use it for everything. We focused on using it
-            where it genuinely helped.
+            AI does not magically clean bad input. It repeats and dresses up
+            whatever you feed it.
           </p>
         </div>
-
         <div>
-          <div class="ai-cards">
-            <article class="ai-card reveal">
-              <div class="ai-card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <span class="ai-card-number">01</span>
-              <h3>AI Assistant</h3>
-              <p>
-                We used AI as a language and writing support tool — for understanding English concepts,
-                explaining lessons in our first language, and getting feedback on our work before submission.
-              </p>
-            </article>
-
-            <article class="ai-card reveal" data-delay="80">
-              <div class="ai-card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                  <path d="M7 8h2m2 0h2m2 0h2"/>
-                </svg>
-              </div>
-              <span class="ai-card-number">02</span>
-              <h3>Code Lecturer</h3>
-              <p>
-                When we encountered unfamiliar programming concepts, AI acted like a tutor —
-                explaining what things do and why. It helped us learn and improve our own code.
-              </p>
-            </article>
-
-            <article class="ai-card reveal" data-delay="160">
-              <div class="ai-card-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 9v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
-                </svg>
-              </div>
-              <span class="ai-card-number">03</span>
-              <h3>Debugger</h3>
-              <p>
-                AI helped us identify errors and fix bugs. It pointed us toward solutions,
-                but we made the final decisions and understood the fixes before applying them.
-              </p>
-            </article>
-          </div>
-
-          <div class="ai-boundary reveal">
-            <div class="ai-boundary-panel ai-boundary-panel--ai">
-              <h4>Where AI Helped</h4>
-              <ul>
-                <li>Explaining unfamiliar concepts</li>
-                <li>Brainstorming and ideation</li>
-                <li>Reviewing and refining writing</li>
-                <li>Finding and diagnosing bugs</li>
-                <li>Clarifying code structure</li>
-              </ul>
-            </div>
-            <div class="ai-boundary-panel ai-boundary-panel--human">
-              <h4>Where We Did the Work</h4>
-              <ul>
-                <li>All decisions and interpretations</li>
-                <li>Research analysis and synthesis</li>
-                <li>Group discussions and reflection</li>
-                <li>Final implementation</li>
-                <li>Reviewing and verifying AI output</li>
-              </ul>
-            </div>
+          <div class="narrative-block" style="background: #141311; border-color: rgba(244,239,230,0.1);">
+            <p style="color: rgba(244,239,230,0.82); line-height: 1.7;">
+              If the question, the prompt, or the information you give to an AI is
+              messy, vague, wrong, or incomplete, the answer you get back will also
+              be messy. You will get "garbage" that looks professional but is not reliable.
+            </p>
+            <p style="color: var(--accent-gold); margin-top: 1rem; font-weight: 500;">
+              The fix is not to avoid AI. It is to give it better input — and check
+              the output before you use it.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========================= [Challenges] ========================= -->
-    <section class="challenges-section" id="challenges">
+    <!-- ========================= [Our Approach] ========================= -->
+    <section class="content-section">
       <div class="container">
-        <div class="split-layout">
-          <div class="split-content">
-            <span class="section-number">06 / Process</span>
-            <p class="section-kicker">Challenges</p>
-            <h2 class="display">Surpassing obstacles</h2>
-            <p>
-              Working together throughout the course was not always straightforward.
-              Like any group project, we encountered challenges involving communication,
-              coordination, and combining individual work into a consistent final result.
-            </p>
-            <p>
-              These challenges required us to adapt how we worked together and find ways
-              to continue progressing despite differences in availability, communication,
-              and individual approaches.
-            </p>
-            <p>
-              Rather than allowing these obstacles to prevent us from completing the
-              project, we focused on bringing our separate contributions together and
-              delivering the artifacts we had committed to producing.
-            </p>
-          </div>
-          <div class="split-image reveal">
-            <img src="images/home/surpassing-obstacles.jpg" alt="Illustration representing overcoming challenges together" />
-          </div>
+        <span class="section-number">03 / Approach</span>
+        <h2 class="display">How we each approached it</h2>
+        <div class="prose">
+          <p>
+            Each team member chose a real context from their studies or daily life,
+            wrote a scenario with a bad prompt and a good prompt, and documented
+            a verification checklist. Below you can explore each person's work.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ========================= [Collaboration] ========================= -->
-    <section class="collaboration-section alt" id="collaboration">
+    <!-- ========================= [Team Cards] ========================= -->
+    <section class="content-section alt" id="team">
       <div class="container">
-        <div class="split-layout split-layout--reverse">
-          <div class="split-content">
-            <span class="section-number">07 / Process</span>
-            <p class="section-kicker">Collaboration</p>
-            <h2 class="display">Built together</h2>
-            <p>
-              The final result is based on collaboration between all three group members.
-              Although our responsibilities were divided, the artifacts were produced
-              through the combination of our individual contributions.
-            </p>
-            <p>
-              Two members focused primarily on constructing the PowerPoint presentations,
-              while the website was developed to provide a single place where all of the
-              completed work could be presented and understood as part of the same project.
-            </p>
-            <p>
-              We would also like to thank our lecturer for providing guidance and support
-              throughout the INT Synergy course.
-            </p>
-          </div>
-          <div class="split-image reveal">
-            <img src="images/home/collaboration.jpg" alt="Illustration representing collaboration" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= [Gallery] ========================= -->
-    <section class="gallery-section" id="gallery">
-      <div class="container">
-        <span class="section-number">07 / Gallery</span>
-        <p class="section-kicker">Image Gallery</p>
-        <h2 class="display">Behind the scenes</h2>
+        <span class="section-number">04 / Team</span>
+        <h2 class="display">Three perspectives</h2>
         <p class="section-intro">
-          A collection of images from our journey through the INT Synergy course.
-          More images will be added as we complete the remaining artifacts.
+          Each member brought their own experience with AI to this artifact.
+          Click through to explore their individual work.
         </p>
-        <div class="gallery-empty">
-          <div class="gallery-empty-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <polyline points="21 15 16 10 5 21"/>
-            </svg>
-          </div>
-          <p>Gallery coming soon. Images from our quests and cultural explorations will appear here.</p>
+
+        <div class="team-cards">
+          <a href="team/matthew.html" class="team-card reveal">
+            <div class="team-card-avatar">M</div>
+            <div class="team-card-content">
+              <h3>Matthew Jacob Sarkodie Darkwah</h3>
+              <span class="team-card-context">Building a technology store website</span>
+              <p>Uses AI heavily for code refactoring, writing, and learning. His plan focuses on recovering independence while embracing AI as a learning tool.</p>
+            </div>
+            <span class="team-card-link">View work →</span>
+          </a>
+
+          <a href="team/elina.html" class="team-card reveal" data-delay="80">
+            <div class="team-card-avatar">E</div>
+            <div class="team-card-content">
+              <h3>Elina Nilisani</h3>
+              <span class="team-card-context">Java translation pipeline</span>
+              <p>Uses AI for language support — explaining concepts, getting feedback, and brainstorming. Her plan centres on not becoming dependent.</p>
+            </div>
+            <span class="team-card-link">View work →</span>
+          </a>
+
+          <a href="team/thijmen.html" class="team-card reveal" data-delay="160">
+            <div class="team-card-avatar">T</div>
+            <div class="team-card-content">
+              <h3>Thijmen Verschuur</h3>
+              <span class="team-card-context">Bottle cap identifier</span>
+              <p>Uses AI as a research tool — summarising sources and learning new programming languages. His plan focuses on clear instructions and double-checking.</p>
+            </div>
+            <span class="team-card-link">View work →</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ========================= [PowerPoint Section] ========================= -->
+    <!-- ========================= [PowerPoint] ========================= -->
     <section class="site-powerpoint">
       <div class="container">
-        <span class="powerpoint-label">Designed PowerPoint</span>
-        <a href="#" class="powerpoint-link">
-          <p>
-            View Our Current PowerPoint
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
-            </svg>
-          </p>
-        </a>
+        <span class="powerpoint-label">Group artifact</span>
+        <span style="color: var(--text-muted); font-size: var(--fs-sm);">This artifact is website-based — no group PowerPoint.</span>
       </div>
     </section>
 
-    <!-- ========================= [Final Showcase] ========================= -->
-    <section class="showcase-section alt" id="showcase">
+    <!-- ========================= [Final] ========================= -->
+    <section class="content-section alt">
       <div class="container">
-        <span class="section-number">08 / Result</span>
-        <p class="section-kicker">Final Showcase</p>
-        <h2 class="display">Five artifacts, brought together.</h2>
-        <p class="section-intro">
-          What began as individual activities and quests became a collection of group
-          artifacts. The five PowerPoint presentations demonstrate the work produced
-          throughout the course, while this website provides the final framework that
-          connects them together.
-        </p>
-
-        <div class="cta-row">
-          <a class="cta solid" href="#artifacts">Explore the work</a>
+        <span class="section-number">05 / Reflection</span>
+        <h2 class="display">What we learned</h2>
+        <div class="prose">
+          <p>
+            AI is not bad. The person who uses it may make it feel bad. If you put
+            garbage in, you get garbage out. If you put a real question in, check the
+            answer, and learn from it, then it can be growth out.
+          </p>
+          <p>
+            Each of us found a different balance between using AI effectively and
+            staying independent. The key is not to avoid AI — it is to use it
+            intentionally, check the output, and stay the person who decides what
+            is correct.
+          </p>
         </div>
       </div>
     </section>
@@ -672,7 +217,7 @@
     <div class="container">
       <div class="footer-inner">
         <span>INT Synergy / Saxion / 2026</span>
-        <span>Sinterklaas</span>
+        <span>Kindercarnavalsoptochtvoorbereidingswerkzaamhedencomiteleden</span>
       </div>
     </div>
   </footer>

@@ -1,0 +1,90 @@
+/* ========================= [Artifact 2 — Landing Page] ========================= */
+
+/* Team cards */
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: var(--space-lg);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: hsla(40, 20%, 97%, 0.5);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-sage);
+  box-shadow: 0 8px 24px hsla(30, 8%, 4%, 0.06);
+}
+
+.team-card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-md);
+}
+
+.team-card-content {
+  flex: 1;
+}
+
+.team-card-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: var(--fw-semibold);
+  margin-bottom: 0.2rem;
+}
+
+.team-card-context {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: var(--space-sm);
+}
+
+.team-card-content p {
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  line-height: var(--lh-relaxed);
+}
+
+.team-card-link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--accent-sage);
+  transition: color var(--transition-fast);
+}
+
+.team-card:hover .team-card-link {
+  color: var(--ink);
+}
+
+/* ========================= [Responsive] ========================= */
+
+@media (max-width: 900px) {
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+}

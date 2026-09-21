@@ -1,5 +1,7 @@
-# Data folder (team contributions, briefs, task files)
-data/
+# Data folder — keep JSON, ignore original .md files
+data/**/*.md
+data/**/script.task_*.md
+data/Brief/
 
 # OS files
 .DS_Store

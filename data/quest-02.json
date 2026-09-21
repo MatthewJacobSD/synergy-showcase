@@ -1,0 +1,123 @@
+{
+  "quest": 2,
+  "title": "Garbage In, Growth Out",
+  "theme": "Using AI tools responsibly and documenting that use properly",
+  "members": {
+    "matthew": {
+      "name": "Matthew Jacob Sarkodie Darkwah",
+      "part1": {
+        "title": "My AI Usage Plan",
+        "aiUsage": "I honestly use AI for most of my personal work, even for basic things. The first time I discovered artificial intelligence was during an apprenticeship in the UK, and I was shocked by how convenient the usage was. From that day on I started to use it for simple tasks like refactoring code or commenting my code — basically the useless stuff I do not desire to do all the time. One day I started to use it slowly, to a certain degree that I couldn't say no to it due to the convenience. When I tried to do what I used to do without it, I simply couldn't do it. But I gained a new view — I became more aware and analytical. What I used to struggle to understand, I understood quickly with its help.",
+        "intendedUse": [
+          "To explain concepts I do not understand yet",
+          "To refactor, comment or check code",
+          "To restructure texts and improve grammar",
+          "To generate ideas or outlines when I am stuck",
+          "Not as a replacement for thinking the whole assignment myself from zero"
+        ],
+        "responsibleUse": "Responsible use, for me, does not mean pretending I never use AI. It means I stay the person who decides what is correct. I use AI as a helper, not as the author of my thinking. I check what it gives me against what I already know. I try to understand the output — if I cannot explain it in my own words, then I did not learn it. I document when I used AI, for what task, and what I changed afterwards.",
+        "gigo": "GiGo means Garbage In, Garbage Out. If the question, the prompt or the information I give to an AI is messy, vague, wrong or incomplete, the answer I get back will also be messy. AI does not magically clean bad input. It repeats and dresses up whatever I feed it.",
+        "avoidGigo": [
+          "Write clearer prompts with context",
+          "Not accept the first answer as final",
+          "Check facts, code and sources myself",
+          "Keep the useful parts and throw away the rest",
+          "Rewrite in my own language so I actually understand it"
+        ]
+      },
+      "part2": {
+        "title": "Building a Website",
+        "context": "Building a technology store website as part of university studies. The task is to use AI to help plan and generate a modern website while making sure the result matches project requirements.",
+        "badPrompt": "Build me a website about a tech store that sells tech media and generate a generous amount of revenue. Ensure the website is modern and follows web principles, integrating specific language suitable for sections related to the current project idea.",
+        "badPromptWhy": "The main problem is that it does not give enough specific information about what I want. Words such as 'modern', 'web principles' and 'suitable language' can mean different things depending on the project. The AI therefore has to make its own assumptions, which can lead to a result that does not match the original idea.",
+        "goodPrompt": "Build a website for a technology store that sells technology products and related media. This is for a university project, so first understand the concept before implementing anything. The target audience should be students and general consumers interested in technology. First identify the purpose, target audience, website structure, required pages, content, visual style and main user journey. Do not immediately start implementing. First create a plan and explain any assumptions or missing information. After implementation, audit the website against the original requirements. Leave the final decision to the human reviewer.",
+        "goodPromptWhy": "This is better because I am giving the AI more information about the what, how, details, concept, goal, what to avoid and what to include instead of expecting it to understand everything from a short sentence. It also gives it a process to follow.",
+        "verificationChecklist": [
+          "Does it follow the original idea?",
+          "Does it follow the requirements?",
+          "Is the content correct?",
+          "Does the design make sense?",
+          "Does it work on different screens?",
+          "Does the functionality work?",
+          "Check the code for errors",
+          "Human verification",
+          "Give the AI feedback and test again",
+          "Human decision"
+        ]
+      }
+    },
+    "elina": {
+      "name": "Elina Nilisani",
+      "part1": {
+        "title": "My AI Usage Plan",
+        "aiUsage": "Since English is my second language, I sometimes find the meaning of certain words, sentences, or concepts unclear. I would like to use AI to help me better understand English materials throughout my education.",
+        "intendedUse": [
+          "Ask AI to explain lessons, concepts, or English texts in my first language when I find them confusing",
+          "Use AI to get feedback on my work and understand what I can improve",
+          "Before giving a presentation, ask AI to check my work and give suggestions",
+          "Ask AI to give me ideas when writing a text and I need help developing ideas",
+          "Use AI to help me plan my studies and organize my study time"
+        ],
+        "responsibleUse": "Responsible use of AI means making sure that I do not become dependent on it. At every stage of my education, I want to think about the problem myself first. If I face difficulties, I can then use AI as a guide or a source of support. I do not want AI to do the work for me; instead, I want to use it as a helpful tool or an online teacher.",
+        "avoidGigo": [
+          "Explain clearly what I want from AI and make my request as specific as possible",
+          "Use correct writing and clear sentence structures",
+          "Try to explain my question in simple language instead of complicated sentences",
+          "Do not completely depend on the first answer — ask follow-up questions",
+          "Communicate in my first language when it helps express thoughts more clearly"
+        ]
+      },
+      "part2": {
+        "title": "Java Translation Pipeline",
+        "context": "A Java application that translates English sentences to Dutch through four modules: model, analysis, translation, and rules.",
+        "modules": [
+          "Model — Core data structure representing linguistic units (Token class, Sentence management)",
+          "Analysis — Handles syntactic analysis, tags words with structural labels (Subject, Verb, Auxiliary)",
+          "Translation — Performs direct dictionary lookups to swap English words for Dutch equivalents",
+          "Rules — Applies grammatical structural changes, reorganizes word order based on Dutch syntax patterns"
+        ],
+        "pipeline": [
+          "Entry point receives English text from user",
+          "Sentence Analyzer parses input into Token instances with part-of-speech labels",
+          "Application displays analyzed structure to terminal",
+          "Translator references dictionary CSV to map tokens to Dutch",
+          "Direct translation result is outputted",
+          "User picks a grammar rule option",
+          "RuleEngine processes tokens according to selected rule",
+          "Final Dutch sentence structure is rendered"
+        ],
+        "aiInteraction1": {
+          "needed": "Clarify how Sentence Analyzer handles words missing from the analysis CSV lookup files",
+          "aiSaid": "Unlisted words are given a default or generic grammatical role (like 'Other') so the pipeline doesn't break",
+          "didWithIt": "Noted this behavior to understand why unknown words can still pass through the translation and rule pipeline without throwing exceptions"
+        },
+        "aiInteraction2": {
+          "needed": "Understand the design reason behind separating translation logic from syntax manipulation logic",
+          "aiSaid": "Keeping them separate follows the Single Responsibility Principle, making it easier to add new grammar rules without altering the dictionary translation code",
+          "didWithIt": "Used this insight to write the summary of the architecture and better grasp how modular design is applied"
+        }
+      }
+    },
+    "thijmen": {
+      "name": "Thijmen Verschuur",
+      "part1": {
+        "title": "My AI Usage Plan",
+        "aiUsage": "I often use AI as a substitute to Google for research purposes. It summarizes a bunch of pages easily and when needed has the option to give sources too. I also have used it in the past to program things without prior knowledge of a language.",
+        "responsibleUse": "Double check important information. Go to the actual sources and see if what the summary says is accurate. For coding related tasks, I always skim through the code and determine whether it is good code, and if I am unsure about it I ask for reasoning or fix it myself.",
+        "avoidGigo": [
+          "Give clear instructions about expectations",
+          "Double check information"
+        ]
+      },
+      "part2": {
+        "title": "Bottle Cap Identifier",
+        "context": "Collecting bottle caps for over 10 years with over 300 unique ones, but starting to lose track. Working on a better way to catalogue and identify them.",
+        "badPrompt": "How can I make a bottle cap identifier",
+        "badPromptWhy": "Way too generic, there is 0 context behind it and no clear expectations.",
+        "goodPrompt": "I am making a bottle cap identifier, it will need to scan the caps, store their picture somewhere and be able to compare the scanned caps with newly scanned caps from anywhere to check whether the can is unique or not, what can I use to scan them, store them, compare them, run it 24/7 and access it from anywhere outside of my local network",
+        "goodPromptWhy": "Has very clear instructions, expectations and context.",
+        "verificationChecklist": "Go to the Google/GitHub pages of the listed systems and check if this matches what was asked for and if I will be able to use it. If they do, go back and ask for more info on the specifics. If they do not, explain what is wrong with them and ask to find another way."
+      }
+    }
+  }
+}
