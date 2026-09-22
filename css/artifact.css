@@ -331,10 +331,46 @@
   line-height: var(--lh-relaxed);
   padding: var(--space-md);
   white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .prompt-panel--bad .prompt-body {
   color: color-mix(in srgb, var(--cream) 82%, transparent);
+}
+
+/* ========================= [Steps List] ========================= */
+
+.steps-list {
+  margin: 1rem 0;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: var(--border-width) solid var(--surface-hover);
+}
+
+.step-item:last-child {
+  border-bottom: none;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface-subtle);
+  border: var(--border-width) solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
 }
 
 .issue-grid {
@@ -672,6 +708,36 @@
   .editorial-figure--bleed {
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .prompt-panel {
+    overflow: visible;
+  }
+
+  .prompt-body {
+    font-size: 0.72rem;
+    padding: var(--space-sm);
+  }
+
+  .prompt-panel--bad {
+    background: var(--surface-faint);
+    color: var(--ink);
+    border-color: var(--border-color);
+  }
+
+  .prompt-panel--bad .prompt-body {
+    color: var(--text-secondary);
+  }
+
+  .prompt-panel--bad header {
+    color: var(--text-secondary);
+    border-bottom-color: var(--border-color);
+  }
+
+  .step-item {
+    padding: 0.5rem 0;
   }
 }
 
