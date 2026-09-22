@@ -350,3 +350,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 700px) {
+  .feature-dark {
+    padding: 3rem 0;
+  }
+
+  .country-card-body h3 {
+    font-size: 1rem;
+  }
+
+  .ai-card {
+    padding: 1rem;
+  }
+}

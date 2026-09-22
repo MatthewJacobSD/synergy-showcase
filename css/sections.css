@@ -691,3 +691,39 @@ section.alt {
 .showcase-section .display {
   margin-bottom: var(--space-md);
 }
+
+/* ========================= [Responsive] ========================= */
+
+@media (max-width: 900px) {
+  .artifact-exhibit {
+    grid-template-columns: 1fr;
+  }
+
+  .artifact-exhibit--reverse {
+    direction: ltr;
+  }
+
+  .artifact-exhibit-visual {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 700px) {
+  .transition-strip {
+    padding: 0.75rem 0;
+  }
+
+  .transition-track span {
+    font-size: 0.75rem;
+  }
+
+  .gallery-empty {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .site-powerpoint .container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+}
