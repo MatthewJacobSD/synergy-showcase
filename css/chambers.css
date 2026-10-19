@@ -1,0 +1,52 @@
+/* =========================================================
+   CHAMBERS PANEL
+   The four package cards (Model · Analysis · Translation · Rules)
+   ========================================================= */
+.chamber-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.chamber {
+  background: var(--cream);
+  border: 2px solid var(--aged);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 5px 6px 0 var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.chamber:hover {
+  transform: translateY(-6px);
+  box-shadow: 7px 10px 0 var(--shadow);
+}
+.chamber::before {
+  content: '';
+  position: absolute;
+  top: -24px; right: -24px;
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  opacity: 0.12;
+}
+.chamber.model::before       { background: var(--deep-teal); }
+.chamber.analysis::before    { background: var(--soft-blue); }
+.chamber.translation::before { background: var(--gold); }
+.chamber.rules::before       { background: var(--rust); }
+
+.chamber h3 {
+  font-size: 1.3rem;
+  margin: 0.6rem 0 0.4rem;
+}
+.chamber p { font-size: 0.95rem; }
+.chamber .tag {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--aged);
+  color: var(--ink);
+}
+.chamber-icon { width: 52px; height: 52px; }

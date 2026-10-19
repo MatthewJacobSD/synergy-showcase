@@ -1,0 +1,22 @@
+/* =========================================================
+   REFLECTION PANEL
+   AI assessment level badge and closing statement
+   ========================================================= */
+.level-badge {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--deep-teal);
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  margin: 0.5rem 0 1.25rem;
+  box-shadow: 3px 5px 0 rgba(0,0,0,0.12);
+}
+.reflect-text {
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+}

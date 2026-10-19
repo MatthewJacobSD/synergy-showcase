@@ -1,0 +1,49 @@
+/* =========================================================
+   TYPOGRAPHY
+   Creative, legible scales for headings, leads, and panels
+   ========================================================= */
+.landing-header h1,
+.panel-title,
+.seal-title,
+.content-panel[data-seal-title="Elina"] .panel-avatar { border-color: var(--rust); color: var(--rust); }
+.content-panel[data-seal-title="Matthew"] .panel-avatar { border-color: var(--deep-teal); color: var(--deep-teal); }
+.panel-title-sm {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.landing-header h1 {
+  font-size: clamp(3rem, 8vw, 5.2rem);
+  line-height: 1.02;
+}
+.landing-header p,
+.section-lead {
+  max-width: 62ch;
+  margin-inline: auto;
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+.panel-title {
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.15;
+}
+.seal-title {
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  line-height: 1.12;
+}
+.panel-title-sm {
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+.panel-body-text,
+.panel-tags,
+.paper-sheet,
+.codex {
+  letter-spacing: 0.005em;
+}
+.panel-body-text p,
+.section-lead {
+  text-wrap: pretty;
+}

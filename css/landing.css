@@ -1,0 +1,284 @@
+/* =========================================================
+   LANDING
+   Tower stage, floating bubbles, sigils, and header
+   ========================================================= */
+.landing {
+  min-height: 100vh;
+  min-height: 100dvh; /* real viewport height under mobile browser toolbars */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem 3rem;
+  background:
+    radial-gradient(ellipse at 30% 15%, rgba(201,162,39,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 80%, rgba(26,74,74,0.07) 0%, transparent 45%),
+    linear-gradient(180deg, #f7f0e1 0%, #efe4c9 100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.landing.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.97);
+  position: absolute;
+  inset: 0;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.landing-header h1 {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 8vw, 4.8rem);
+  color: var(--deep-teal);
+  -webkit-text-fill-color: var(--deep-teal);
+  text-shadow: 2px 2px 0 rgba(201,162,39,0.2);
+  margin-bottom: 0.25rem;
+}
+.landing-header .subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--rust);
+  margin-bottom: 0.35rem;
+}
+.landing-header .team {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---- Tower stage ---- */
+.tower-stage {
+  position: relative;
+  width: min(420px, 90vw);
+  height: min(480px, 70vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-tower {
+  width: 70%;
+  max-width: 260px;
+  filter: drop-shadow(0 14px 28px var(--shadow));
+  animation: tower-float 7s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes tower-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* ---- Clickable bubbles ---- */
+.bubble {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 3px solid var(--gold);
+  box-shadow: 4px 6px 0 var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--deep-teal);
+  text-align: center;
+  line-height: 1.15;
+  transition: transform 0.25s ease, box-shadow 0.25s, background 0.25s;
+  z-index: 3;
+  padding: 0.3rem;
+}
+.bubble:hover {
+  transform: scale(1.12);
+  background: #fff;
+  box-shadow: 5px 8px 0 var(--shadow);
+}
+.bubble .bubble-icon {
+  font-size: 1.35rem;
+  margin-bottom: 0.15rem;
+  line-height: 1;
+}
+.bubble.b-chambers  { top: 8%;  left: -8%;  border-color: var(--deep-teal); }
+.bubble.b-journey   { top: 28%; right: -12%; border-color: var(--soft-blue); }
+.bubble.b-ai        { top: 52%; left: -14%;  border-color: var(--rust); }
+.bubble.b-authors   { top: 68%; right: -6%;  border-color: var(--gold); }
+.bubble.b-reflect   { bottom: 4%; left: 28%; border-color: var(--leaf); }
+
+.hint {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--soft-blue);
+  font-weight: 500;
+  text-align: center;
+  z-index: 2;
+}
+
+/* =========================================================
+   ILLUMINATED PASS — sigils, aura, glowing tower, bubbles
+   ========================================================= */
+.landing {
+  isolation: isolate;
+  overflow: hidden;
+}
+.landing::before,
+.landing::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: -1;
+}
+.landing::before {
+  width: min(72vw, 760px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  box-shadow:
+    0 0 0 22px rgba(201, 162, 39, 0.035),
+    0 0 0 58px rgba(26, 74, 74, 0.025),
+    inset 0 0 70px rgba(201, 162, 39, 0.07);
+  animation: sigil-turn 80s linear infinite;
+}
+.landing::after {
+  width: min(48vw, 500px);
+  aspect-ratio: 1;
+  border: 1px dashed rgba(139, 58, 42, 0.2);
+  animation: sigil-turn 55s linear infinite reverse;
+}
+@keyframes sigil-turn { to { transform: rotate(360deg); } }
+
+.tower-stage {
+  width: min(540px, 94vw);
+  height: min(510px, 70vh);
+  min-height: 390px;
+  perspective: 1000px;
+  isolation: isolate;
+}
+.tower-stage::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  width: 66%;
+  height: 13%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(44, 36, 22, 0.22), transparent 70%);
+  filter: blur(10px);
+  z-index: 0;
+}
+.hero-tower {
+  width: min(78%, 330px);
+  max-width: none;
+  overflow: visible;
+  transform-origin: 50% 85%;
+  filter:
+    drop-shadow(0 18px 22px rgba(44, 36, 22, 0.17))
+    drop-shadow(0 0 18px rgba(201, 162, 39, 0.12));
+  animation: tower-float 7s ease-in-out infinite, tower-glow 6s ease-in-out infinite;
+  transition: filter 0.5s ease;
+  z-index: 2;
+}
+.tower-stage:hover .hero-tower {
+  filter:
+    drop-shadow(0 24px 26px rgba(44, 36, 22, 0.22))
+    drop-shadow(0 0 28px rgba(201, 162, 39, 0.3));
+}
+@keyframes tower-glow {
+  0%, 100% { filter: drop-shadow(0 18px 22px rgba(44,36,22,.17)) drop-shadow(0 0 10px rgba(201,162,39,.1)); }
+  50% { filter: drop-shadow(0 20px 25px rgba(44,36,22,.2)) drop-shadow(0 0 24px rgba(201,162,39,.26)); }
+}
+
+.tower-aura {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(201, 162, 39, 0.24);
+  border-radius: 50%;
+  z-index: 1;
+  animation: aura-breathe 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+.tower-aura.aura-two {
+  width: 76%;
+  border-style: dashed;
+  border-color: rgba(26, 74, 74, 0.17);
+  animation-delay: -2s;
+}
+@keyframes aura-breathe {
+  0%, 100% { transform: scale(.96); opacity: .55; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+
+.bubble {
+  width: 82px;
+  height: 82px;
+  border-width: 2px;
+  background:
+    radial-gradient(circle at 30% 22%, #fff 0 9%, transparent 10%),
+    radial-gradient(circle at 35% 25%, rgba(255,255,255,.96), rgba(255,253,247,.94) 58%, rgba(232,217,184,.9));
+  box-shadow:
+    inset -5px -7px 0 rgba(92, 64, 48, 0.055),
+    0 0 0 6px rgba(255, 253, 247, 0.34),
+    4px 8px 0 rgba(44, 36, 22, 0.12),
+    0 10px 24px rgba(44, 36, 22, 0.1);
+  animation: bubble-hover 5s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px dashed currentColor;
+  border-radius: 50%;
+  opacity: 0.23;
+  transition: transform .35s ease, opacity .35s ease;
+  pointer-events: none;
+}
+.bubble:hover {
+  animation-play-state: paused;
+  transform: translateY(-5px) scale(1.09) rotate(-3deg);
+  box-shadow:
+    inset -5px -7px 0 rgba(92, 64, 48, 0.04),
+    0 0 0 8px rgba(255, 253, 247, 0.4),
+    5px 11px 0 rgba(44, 36, 22, 0.12),
+    0 14px 28px rgba(44, 36, 22, 0.15);
+}
+.bubble:hover::after { transform: rotate(24deg) scale(1.08); opacity: .5; }
+.bubble:nth-of-type(2) { animation-delay: -.7s; }
+.bubble:nth-of-type(3) { animation-delay: -1.8s; }
+.bubble:nth-of-type(4) { animation-delay: -2.5s; }
+.bubble:nth-of-type(5) { animation-delay: -3.2s; }
+@keyframes bubble-hover {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+
+.hint {
+  position: relative;
+  padding: .65rem 1.2rem;
+  border: 1px solid rgba(201,162,39,.45);
+  border-radius: 999px;
+  background: rgba(255,253,247,.52);
+  color: var(--ink-soft);
+  box-shadow: 0 4px 14px rgba(44,36,22,.045);
+}
+.hint::before {
+  content: "✧";
+  color: var(--rust);
+  margin-right: .5rem;
+}

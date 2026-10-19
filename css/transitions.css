@@ -1,0 +1,49 @@
+/* =========================================================
+   PORTAL TRANSITION
+   Circular veil that blooms from the clicked bubble
+   ========================================================= */
+.transition-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background:
+    radial-gradient(circle at center, rgba(255,253,247,.96), rgba(247,240,225,.94) 42%, rgba(232,217,184,.97));
+  clip-path: circle(0 at var(--portal-x, 50%) var(--portal-y, 50%));
+  transition:
+    clip-path .62s cubic-bezier(.2,.75,.25,1),
+    opacity .18s ease,
+    visibility 0s linear .7s;
+}
+.transition-veil.is-active {
+  opacity: 1;
+  visibility: visible;
+  clip-path: circle(150vmax at var(--portal-x, 50%) var(--portal-y, 50%));
+  transition:
+    clip-path .62s cubic-bezier(.2,.75,.25,1),
+    opacity .18s ease,
+    visibility 0s;
+}
+.transition-sigil {
+  width: 84px;
+  height: 84px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--deep-teal);
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  box-shadow: 0 0 0 10px rgba(201,162,39,.1), 0 0 0 22px rgba(26,74,74,.05);
+  transform: scale(.5) rotate(-35deg);
+  opacity: 0;
+  transition: transform .35s ease .08s, opacity .25s ease .08s;
+}
+.transition-veil.is-active .transition-sigil {
+  transform: scale(1) rotate(0);
+  opacity: 1;
+}

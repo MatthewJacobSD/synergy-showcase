@@ -1,0 +1,114 @@
+/* =========================================================
+   SECTION PANELS
+   Full-screen overlay panels with sticky bar and footer
+   ========================================================= */
+.panel {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  background: var(--parchment);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(24px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  overflow-y: auto;
+}
+.panel.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.panel-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: rgba(247, 240, 225, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--aged);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.panel-bar .panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--deep-teal);
+}
+.btn-exit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border: 2px solid var(--deep-teal);
+  border-radius: 999px;
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--deep-teal);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-exit:hover {
+  background: var(--aged);
+  transform: translateY(-1px);
+}
+
+.panel-body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  width: 100%;
+}
+
+.section-lead {
+  font-size: 1.15rem;
+  color: var(--rust);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+/* ---- Footer (inside panels) ---- */
+.panel-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--aged);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---- Illuminated pass ---- */
+.panel {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(201,162,39,.09), transparent 34%),
+    var(--parchment);
+}
+.panel.is-open {
+  animation: panel-arrive .45s cubic-bezier(.2,.75,.25,1) both;
+}
+@keyframes panel-arrive {
+  from { opacity: 0; transform: translateY(20px) scale(.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.panel-bar {
+  border-bottom-color: rgba(201,162,39,.6);
+  box-shadow: 0 5px 20px rgba(44,36,22,.09);
+}
+.panel-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rust), var(--gold), var(--deep-teal), transparent);
+  opacity: .65;
+}

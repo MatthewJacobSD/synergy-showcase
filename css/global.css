@@ -1,15 +1,18 @@
-
 /* ========================= [Global — Import Hub] ========================= */
-/* Single entry point: imports all section stylesheets in order */
+/* Single entry point: imports all stylesheets in cascade order */
 
 @import url("./variables.css");
 @import url("./base.css");
-@import url("./header.css");
-@import url("./hero.css");
-@import url("./sections.css");
-@import url("./feature-dark.css");
-@import url("./footer.css");
-@import url("./empty-state.css");
-@import url("./artifact.css");
-@import url("./animations.css");
+@import url("./typography.css");
+@import url("./cursor.css");
+@import url("./background.css");
+@import url("./scrollbar.css");
+@import url("./landing.css");
+@import url("./transitions.css");
+@import url("./panels.css");
+@import url("./chambers.css");
+@import url("./journey.css");
+@import url("./ai-logs.css");
+@import url("./authors.css");
+@import url("./reflection.css");
 @import url("./responsive.css");

@@ -1,0 +1,72 @@
+/* =========================================================
+   AI LOGS PANEL
+   Stack of slightly rotated paper sheets (recorded exchanges)
+   ========================================================= */
+.paper-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.paper-sheet {
+  position: relative;
+  background: #f5efe3;
+  border: 1.5px solid #d4c4a8;
+  border-radius: 2px 8px 2px 2px;
+  padding: 1.5rem 1.6rem 1.4rem;
+  box-shadow:
+    0 1px 0 #e8dcc8,
+    0 3px 0 #e0d4bc,
+    0 5px 0 #d8ccb4,
+    0 7px 0 #d0c4ac,
+    4px 10px 18px var(--shadow);
+  transform: rotate(-0.4deg);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.paper-sheet:nth-child(even) { transform: rotate(0.5deg); }
+.paper-sheet:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow:
+    0 1px 0 #e8dcc8,
+    0 3px 0 #e0d4bc,
+    0 5px 0 #d8ccb4,
+    0 8px 0 #d0c4ac,
+    6px 14px 24px var(--shadow);
+}
+/* curled corner */
+.paper-sheet::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 28px; height: 28px;
+  background: linear-gradient(225deg, #efe6d4 50%, transparent 50%);
+  border-left: 1px solid #d4c4a8;
+  border-bottom: 1px solid #d4c4a8;
+  border-radius: 0 0 0 4px;
+}
+.paper-meta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rust);
+  margin-bottom: 0.5rem;
+}
+.paper-sheet h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
+  color: var(--deep-teal);
+}
+.paper-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--deep-teal);
+  margin-top: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+.paper-sheet p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink);
+}

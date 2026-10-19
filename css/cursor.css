@@ -1,0 +1,33 @@
+/* =========================================================
+   CUSTOM CURSOR
+   Ring + trailing dot, enabled only on fine pointers
+   ========================================================= */
+body.has-custom-cursor, body.has-custom-cursor a, body.has-custom-cursor button, body.has-custom-cursor [role="button"] { cursor: none; }
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 22px; height: 22px;
+  border: 2px solid var(--deep-teal);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s, height 0.15s, background 0.15s, border-color 0.15s;
+  mix-blend-mode: normal;
+  isolation: isolate;
+}
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+.cursor.hover {
+  width: 40px; height: 40px;
+  background: rgba(201, 162, 39, 0.18);
+  border-color: var(--gold);
+}

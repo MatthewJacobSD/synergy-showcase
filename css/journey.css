@@ -1,0 +1,62 @@
+/* =========================================================
+   JOURNEY PANEL
+   Numbered vertical flow: English input → Dutch structure
+   ========================================================= */
+.flow {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+.flow::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 36px;
+  bottom: 36px;
+  width: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--gold) 0, var(--gold) 10px,
+    transparent 10px, transparent 18px
+  );
+  opacity: 0.7;
+}
+.step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 0.9rem 0;
+  position: relative;
+}
+.step-num {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--deep-teal);
+  box-shadow: 2px 3px 0 var(--shadow);
+  z-index: 2;
+}
+.step-body {
+  background: var(--cream);
+  border: 2px solid var(--aged);
+  border-radius: 12px;
+  padding: 0.95rem 1.2rem;
+  flex: 1;
+  box-shadow: 3px 4px 0 var(--shadow);
+}
+.step-body h3 {
+  font-size: 1.05rem;
+  color: var(--rust);
+  margin-bottom: 0.25rem;
+}
+.step-body p { font-size: 0.95rem; }

@@ -1,169 +1,39 @@
-/* ========================= [Base] ========================= */
-/* Reset, box-sizing, body defaults, links, images */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
   scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--ink) 20%, transparent) var(--cream);
 }
 
 body {
   font-family: var(--font-body);
-  font-size: var(--fs-base);
-  line-height: var(--lh-normal);
-  color: var(--ink);
-  background-color: var(--cream);
-  -webkit-font-smoothing: antialiased;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-/* ========================= [Page Transition] ========================= */
-/* Fade in on load, fade out on internal navigation */
-
-body {
-  opacity: 0;
-  transition: opacity 0.3s var(--ease);
-}
-
-body.page-loaded {
-  opacity: 1;
-}
-
-body.page-leaving {
-  opacity: 0;
-}
-
-/* ========================= [Custom Cursor] ========================= */
-/* Small "VIEW ↗" label that follows cursor on artifact links */
-
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.35rem 0.6rem;
-  background: var(--ink);
-  color: var(--cream);
-  font-size: 0.55rem;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border-radius: var(--radius-xs);
-  opacity: 0;
-  transform: translate(0, 0) scale(0.9);
-  transition:
-    opacity 0.2s var(--ease),
-    transform 0.2s var(--ease-spring);
-}
-
-.custom-cursor.visible {
-  opacity: 1;
-  transform: translate(0, 0) scale(1);
-}
-
-/* ========================= [Floating Back Button] ========================= */
-/* Fixed "← SHOWCASE" link in bottom-left corner */
-
-.floating-back {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  z-index: 90;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.6rem 1rem;
-  background: var(--cream);
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--radius-sm);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink);
-  box-shadow: var(--shadow-md);
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast),
-    color var(--transition-fast);
-  text-decoration: none;
-}
-
-.floating-back:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  color: var(--accent-sage);
-}
-
-/* ========================= [Custom Scrollbar] ========================= */
-/* Thin, minimal scrollbar matching the cream/ink palette */
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--cream);
-}
-
-::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--ink) 20%, transparent);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in srgb, var(--ink) 35%, transparent);
-}
-
-/* ========================= [Typography] ========================= */
-/* Display headings, eyebrow labels, lede paragraph */
-
-.display {
-  font-family: var(--font-display);
-  font-size: var(--fs-2xl);
-  font-weight: var(--fw-semibold);
-  line-height: var(--lh-tight);
-  letter-spacing: -0.02em;
-}
-
-.eyebrow {
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-sm);
-}
-
-.lede {
   font-size: 1.05rem;
-  color: var(--text-secondary);
-  max-width: 42ch;
-  margin-top: var(--space-md);
+  background: var(--parchment);
+  color: var(--ink);
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+  cursor: none;
 }
+
+a, button, [role="button"], .bubble, .chamber, .paper-sheet, .book-tab { position: relative;
+  cursor: none;
+}
+
+/* Touch polish: fast taps, gold highlight instead of gray, no double-tap zoom delay */
+button { touch-action: manipulation; }
+a, button { -webkit-tap-highlight-color: rgba(201, 162, 39, 0.18); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--deep-teal);
+}
+
+p { color: var(--ink-soft); }

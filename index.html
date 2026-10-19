@@ -1,226 +1,444 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INT Synergy — Artifact 02: Garbage In, Growth Out</title>
-  <meta name="description" content="Using AI tools responsibly. How prompt design determines whether you get useful results — or garbage." />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f0e1" />
+  <meta name="description" content="Babel Gavel — Quest 2 artifact of Team Sinterklass. Explore the four chambers, the translation pipeline, documented AI conversations, and the authors behind an English-to-Dutch sentence restructuring tool." />
+  <title>Exploring Babel Gavel · Quest 2 Artifact · Team Sinterklass</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/artifact-2.css" />
+  <script src="js/cursor.js" defer></script>
+  <script src="js/particles.js" defer></script>
+  <script src="js/panels.js" defer></script>
+  <script src="js/codex.js" defer></script>
 </head>
 <body>
 
-  <!-- ========================= [Header] ========================= -->
-  <header class="site-header">
-    <a class="logo" href="index.html">INT Synergy</a>
-    <nav class="primary-nav" aria-label="Primary">
-      <a href="#overview" class="nav-active">Overview</a>
-      <a href="#team">Team</a>
-      <a href="#gigo">GiGo</a>
-    </nav>
-  </header>
+  <div class="transition-veil" id="transitionVeil" aria-hidden="true">
+    <div class="transition-sigil">✧</div>
+  </div>
 
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Abstract doodle background (wavy + hex inspired, theme colors) -->
+  <div class="doodle-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" fill="none">
+      <!-- Soft wavy bands -->
+      <path d="M0 600 C200 520 350 680 550 600 C750 520 900 680 1200 580 L1200 800 L0 800 Z" fill="#e8d9b8" opacity="0.35"/>
+      <path d="M0 680 C180 620 400 720 600 660 C800 600 1000 720 1200 650 L1200 800 L0 800 Z" fill="#1a4a4a" opacity="0.04"/>
+      <path d="M0 100 C250 40 400 160 650 80 C900 0 1050 140 1200 60 L1200 0 L0 0 Z" fill="#c9a227" opacity="0.06"/>
+      <!-- Hex outlines -->
+      <polygon points="180,220 240,185 300,220 300,290 240,325 180,290" stroke="#1a4a4a" stroke-width="1.2" opacity="0.12" fill="none"/>
+      <polygon points="920,480 970,450 1020,480 1020,540 970,570 920,540" stroke="#8b3a2a" stroke-width="1.2" opacity="0.12" fill="none"/>
+      <polygon points="780,140 820,116 860,140 860,188 820,212 780,188" stroke="#6b8e9f" stroke-width="1" opacity="0.14" fill="none"/>
+      <polygon points="120,520 155,500 190,520 190,560 155,580 120,560" stroke="#c9a227" stroke-width="1" opacity="0.15" fill="none"/>
+      <!-- Subtle curves -->
+      <path d="M50 350 Q200 280 350 360 T650 340" stroke="#4a6b4a" stroke-width="1.5" opacity="0.1" fill="none"/>
+      <path d="M700 200 Q850 140 1000 220 T1200 190" stroke="#8b3a2a" stroke-width="1.5" opacity="0.1" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- Floating language particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- ================= LANDING (tower + bubbles) ================= -->
   <main>
-
-    <!-- ========================= [Hero] ========================= -->
-    <section class="hero hero--full" id="overview">
-      <div class="hero-overlay">
-        <div class="hero-copy">
-          <p class="eyebrow">INT Synergy · Artifact 02</p>
-          <h1 class="hero-display">Garbage In,<br> Growth Out.</h1>
-          <p class="hero-sub">
-            Using AI tools responsibly and documenting that use properly.
-            How prompt design determines whether you get useful results
-            — or garbage.
-          </p>
-          <div class="cta-row">
-            <a class="cta solid" href="#team">Meet the team</a>
-            <a class="cta ghost" href="#gigo">What is GiGo?</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= [Transition Strip] ========================= -->
-    <div class="transition-strip" aria-hidden="true">
-      <div class="transition-track">
-        <span>Responsible AI</span>
-        <span class="transition-dot">·</span>
-        <span>Prompt Design</span>
-        <span class="transition-dot">·</span>
-        <span>Garbage In, Garbage Out</span>
-        <span class="transition-dot">·</span>
-        <span>Verification</span>
-        <span class="transition-dot">·</span>
-        <span>Human Decision</span>
-        <span class="transition-dot">·</span>
-        <span>Responsible AI</span>
-        <span class="transition-dot">·</span>
-        <span>Prompt Design</span>
-        <span class="transition-dot">·</span>
-        <span>Garbage In, Garbage Out</span>
-        <span class="transition-dot">·</span>
-        <span>Verification</span>
-        <span class="transition-dot">·</span>
-        <span>Human Decision</span>
-        <span class="transition-dot">·</span>
-      </div>
+  <div class="landing" id="landing">
+    <div class="landing-header">
+      <h1>Babel Gavel</h1>
+      <p class="subtitle">Quest 2 Artifact · Exploring the Architecture of Meaning</p>
+      <p class="team">Team Sinterklass</p>
     </div>
 
-    <!-- ========================= [What We Did] ========================= -->
-    <section class="content-section" id="gigo">
-      <div class="container">
-        <span class="section-number">01 / Context</span>
-        <h2 class="display">What this artifact is about</h2>
-        <div class="prose">
-          <p>
-            This artifact explores how three students use AI in their studies —
-            and where they draw the line. Each of us wrote a personal AI usage plan
-            (Part 1), then demonstrated it through a real prompt scenario (Part 2).
-          </p>
-          <p>
-            The common thread: AI is a tool, not a shortcut. We each use it differently
-            — Matthew for code and writing, Elina for language support, Thijmen for
-            research and programming — but the principle is the same. We think first,
-            check what AI gives us, and stay responsible for the final result.
-          </p>
-        </div>
-      </div>
-    </section>
+    <div class="tower-stage">
+      <!-- Bubbles -->
+      <button class="bubble b-chambers" data-panel="chambers" type="button">
+        <span class="bubble-icon">⬡</span>
+        Chambers
+      </button>
+      <button class="bubble b-journey" data-panel="journey" type="button">
+        <span class="bubble-icon">↑</span>
+        Journey
+      </button>
+      <button class="bubble b-ai" data-panel="ai" type="button">
+        <span class="bubble-icon">✎</span>
+        AI Logs
+      </button>
+      <button class="bubble b-authors" data-panel="authors" type="button">
+        <span class="bubble-icon">📖</span>
+        Authors
+      </button>
+      <button class="bubble b-reflect" data-panel="reflection" type="button">
+        <span class="bubble-icon">✦</span>
+        Reflect
+      </button>
 
-    <!-- ========================= [What is GiGo] ========================= -->
-    <section class="feature-dark" id="gigo-explained">
-      <div class="container feature-layout">
-        <div class="feature-intro">
-          <span class="section-number">02 / Core Concept</span>
-          <p class="section-kicker">What is GiGo?</p>
-          <h2 class="display">Garbage In,<br>Garbage Out.</h2>
-          <p class="lede">
-            AI does not magically clean bad input. It repeats and dresses up
-            whatever you feed it.
-          </p>
-        </div>
-        <div>
-          <div class="narrative-block" style="background: #141311; border-color: rgba(244,239,230,0.1);">
-            <p style="color: rgba(244,239,230,0.82); line-height: 1.7;">
-              If the question, the prompt, or the information you give to an AI is
-              messy, vague, wrong, or incomplete, the answer you get back will also
-              be messy. You will get "garbage" that looks professional but is not reliable.
-            </p>
-            <p style="color: var(--accent-gold); margin-top: 1rem; font-weight: 500;">
-              The fix is not to avoid AI. It is to give it better input — and check
-              the output before you use it.
-            </p>
+      <!-- Illustrated Babel tower: layered brickwork, balconies, lantern, and language ribbons -->
+      <div class="tower-aura" aria-hidden="true"></div>
+      <div class="tower-aura aura-two" aria-hidden="true"></div>
+      <svg class="hero-tower" viewBox="0 0 340 430" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An illustrated Babel tower made of stacked, ornate brickwork, with a glowing lantern and floating language symbols">
+        <defs>
+          <linearGradient id="stoneFront" x1="70" y1="110" x2="265" y2="380" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff4d7"/>
+            <stop offset="1" stop-color="#d5b77b"/>
+          </linearGradient>
+          <linearGradient id="stoneSide" x1="220" y1="100" x2="300" y2="350" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#b78b53"/>
+            <stop offset="1" stop-color="#79523b"/>
+          </linearGradient>
+          <linearGradient id="lanternGlow" x1="145" y1="25" x2="195" y2="95" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#fff6bf"/>
+            <stop offset="1" stop-color="#c9a227"/>
+          </linearGradient>
+          <filter id="lanternBlur" x="105" y="0" width="130" height="135" filterUnits="userSpaceOnUse">
+            <feGaussianBlur stdDeviation="10"/>
+          </filter>
+          <pattern id="brickPattern" width="38" height="24" patternUnits="userSpaceOnUse">
+            <path d="M0 0H38M0 12H38M19 0V12M0 12V24M38 12V24" stroke="#8b3a2a" stroke-opacity=".27" stroke-width="1.3"/>
+          </pattern>
+        </defs>
+
+        <!-- Ground seal -->
+        <ellipse cx="170" cy="398" rx="122" ry="20" fill="#c9a227" opacity=".16"/>
+        <ellipse cx="170" cy="394" rx="94" ry="10" stroke="#8b3a2a" stroke-opacity=".38" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+        <!-- Floating language marks -->
+        <g font-family="Lora, Georgia, serif" font-weight="700">
+          <text x="25" y="158" fill="#1a4a4a" font-size="26" transform="rotate(-12 25 158)">A</text>
+          <text x="278" y="174" fill="#8b3a2a" font-size="25" transform="rotate(10 278 174)">ß</text>
+          <text x="24" y="282" fill="#6b8e9f" font-size="22">あ</text>
+          <text x="286" y="290" fill="#4a6b4a" font-size="23">Я</text>
+          <text x="55" y="350" fill="#c9a227" font-size="20">ε</text>
+          <text x="267" y="355" fill="#1a4a4a" font-size="21">ø</text>
+        </g>
+        <path d="M42 178C61 163 71 165 83 181M257 188C274 172 286 176 299 192M42 301C56 287 66 289 77 301M262 313C277 299 288 303 300 317"
+          stroke="#c9a227" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 5" opacity=".7"/>
+
+        <!-- Lantern aura and crown -->
+        <circle cx="170" cy="61" r="45" fill="#f2cc55" opacity=".35" filter="url(#lanternBlur)"/>
+        <path d="M132 80L170 16L208 80Z" fill="#8b3a2a" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M142 73L170 29L198 73Z" fill="url(#lanternGlow)" stroke="#fff4d7" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M150 78H190L184 91H156Z" fill="#c9a227" stroke="#3d2b1f" stroke-width="2"/>
+        <rect x="153" y="88" width="34" height="17" rx="3" fill="#1a4a4a" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M161 91V102M170 91V102M179 91V102" stroke="#f7f0e1" stroke-width="2" opacity=".8"/>
+        <circle cx="170" cy="97" r="4" fill="#f2cc55"/>
+
+        <!-- Upper tier -->
+        <path d="M133 105H207L220 147L204 159H136L120 147Z" fill="url(#stoneFront)" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M207 105L220 147L204 159V116Z" fill="url(#stoneSide)" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M133 105H207L220 147H120Z" fill="url(#brickPattern)" opacity=".75"/>
+        <path d="M127 147H213L226 160H114Z" fill="#c9a227" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M145 119H157V137H145ZM166 119H178V137H166ZM187 119H199V137H187Z" fill="#1a4a4a" stroke="#3d2b1f" stroke-width="1.5"/>
+        <path d="M145 123H157M166 123H178M187 123H199" stroke="#f7f0e1" stroke-width="1.5"/>
+
+        <!-- Second tier -->
+        <path d="M111 160H229L246 213L225 228H115L94 213Z" fill="url(#stoneFront)" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M229 160L246 213L225 228V174Z" fill="url(#stoneSide)" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M111 160H229L246 213H94Z" fill="url(#brickPattern)" opacity=".8"/>
+        <path d="M100 211H240L253 226H87Z" fill="#8b3a2a" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M130 177H147V198H130ZM161 177H178V198H161ZM192 177H209V198H192Z" fill="#1a4a4a" stroke="#3d2b1f" stroke-width="1.5"/>
+        <path d="M130 183H147M161 183H178M192 183H209" stroke="#f7f0e1" stroke-width="1.5"/>
+        <path d="M110 205H230" stroke="#c9a227" stroke-width="3" stroke-dasharray="5 4"/>
+
+        <!-- Third tier -->
+        <path d="M85 228H255L275 294L250 312H90L65 294Z" fill="url(#stoneFront)" stroke="#3d2b1f" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M255 228L275 294L250 312V244Z" fill="url(#stoneSide)" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M85 228H255L275 294H65Z" fill="url(#brickPattern)" opacity=".85"/>
+        <path d="M72 291H268L282 308H58Z" fill="#c9a227" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M103 247H125V273H103ZM145 247H167V273H145ZM187 247H209V273H187ZM229 247H251V273H229Z" fill="#1a4a4a" stroke="#3d2b1f" stroke-width="1.5"/>
+        <path d="M103 254H125M145 254H167M187 254H209M229 254H251" stroke="#f7f0e1" stroke-width="1.5"/>
+        <path d="M93 283H247" stroke="#8b3a2a" stroke-width="2" stroke-dasharray="7 5"/>
+
+        <!-- Base tier -->
+        <path d="M59 310H281L306 370L278 389H62L34 370Z" fill="url(#stoneFront)" stroke="#3d2b1f" stroke-width="2.8" stroke-linejoin="round"/>
+        <path d="M281 310L306 370L278 389V326Z" fill="url(#stoneSide)" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M59 310H281L306 370H34Z" fill="url(#brickPattern)" opacity=".9"/>
+        <path d="M40 367H300L315 384H25Z" fill="#8b3a2a" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M111 330H137V367H111ZM157 323H183V389H157ZM203 330H229V367H203Z" fill="#1a4a4a" stroke="#3d2b1f" stroke-width="2"/>
+        <path d="M116 337H132M162 332H178M208 337H224" stroke="#c9a227" stroke-width="2"/>
+        <path d="M157 348H183" stroke="#f7f0e1" stroke-width="2"/>
+        <path d="M52 357H288" stroke="#c9a227" stroke-width="3" stroke-dasharray="8 5"/>
+
+        <!-- Tiny winding stair -->
+        <path d="M64 360C85 345 91 330 82 316C73 302 80 289 97 279" stroke="#8b3a2a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M64 360L75 361M70 350L81 352M78 338L89 341M81 325L92 328M83 313L94 316M88 300L99 303M94 288L105 291" stroke="#8b3a2a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Star marks etched into the stone -->
+        <g stroke="#c9a227" stroke-width="1.7" stroke-linecap="round" opacity=".9">
+          <path d="M87 185V193M83 189H91M84 186L90 192M90 186L84 192"/>
+          <path d="M251 260V268M247 264H255M248 261L254 267M254 261L248 267"/>
+          <path d="M80 337V345M76 341H84M77 338L83 344M83 338L77 344"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="hint">Click a bubble to climb a floor of the tower</p>
+  </div>
+
+  <!-- ================= PANEL: CHAMBERS ================= -->
+  <div class="panel" id="panel-chambers" role="dialog" aria-label="The Four Chambers">
+    <div class="panel-bar">
+      <h2 class="panel-title">The Four Chambers</h2>
+      <button class="btn-exit" type="button" data-exit>← Back to tower</button>
+    </div>
+    <div class="panel-body">
+      <p class="section-lead">Each package is a distinct floor of the tower, holding its own craft and purpose.</p>
+      <div class="chamber-grid">
+        <article class="chamber model">
+          <svg class="chamber-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect x="8" y="12" width="48" height="40" rx="6" stroke="#1a4a4a" stroke-width="2.5" fill="#f7f0e1"/>
+            <path d="M16 24 H48 M16 34 H40 M16 44 H44" stroke="#1a4a4a" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="48" cy="20" r="6" fill="#c9a227"/>
+          </svg>
+          <h3>Model</h3>
+          <p>The core data structure for linguistic units. Holds the <strong>Token</strong> class (word + grammatical properties) and <strong>Sentence</strong> (collections of tokens). Everything else reads from and writes to these records.</p>
+          <span class="tag">Token · Sentence</span>
+        </article>
+        <article class="chamber analysis">
+          <svg class="chamber-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="32" r="22" stroke="#6b8e9f" stroke-width="2.5" fill="#e8f0f0"/>
+            <path d="M22 32 L30 40 L44 24" stroke="#1a4a4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Analysis</h3>
+          <p>Syntactic analysis via <strong>SentenceAnalyzer</strong>. Tags words as Subject, Verb, Auxiliary, Negation, or defaults to <em>Other</em> when missing from the CSVs—so the pipeline never breaks.</p>
+          <span class="tag">Roles · Lookup · Fallback</span>
+        </article>
+        <article class="chamber translation">
+          <svg class="chamber-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect x="10" y="14" width="28" height="36" rx="3" stroke="#c9a227" stroke-width="2.5" fill="#fffdf7"/>
+            <rect x="26" y="18" width="28" height="36" rx="3" stroke="#8b3a2a" stroke-width="2.5" fill="#f7f0e1"/>
+          </svg>
+          <h3>Translation</h3>
+          <p>Direct dictionary lookups. The <strong>Translator</strong> maps each token against the Dutch dictionary CSV and swaps the English word—keeping the original role. Unmatched words stay English.</p>
+          <span class="tag">Dictionary · Literal Swap</span>
+        </article>
+        <article class="chamber rules">
+          <svg class="chamber-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect x="28" y="8" width="8" height="28" rx="2" fill="#8b3a2a"/>
+            <rect x="18" y="6" width="28" height="12" rx="3" fill="#c9a227" stroke="#2c2416" stroke-width="1.5"/>
+            <path d="M20 40 Q32 52 44 40" stroke="#1a4a4a" stroke-width="2.5" fill="none"/>
+          </svg>
+          <h3>Rules</h3>
+          <p>Grammatical restructuring. The <strong>RuleEngine</strong> reorders tokens by Dutch syntax patterns. Verb-Second is fully implemented; four further rules await completion.</p>
+          <span class="tag">RuleEngine · Verb Second</span>
+        </article>
+      </div>
+      <div class="panel-footer">Babel Gavel · Team Sinterklass</div>
+    </div>
+  </div>
+
+  <!-- ================= PANEL: JOURNEY ================= -->
+  <div class="panel" id="panel-journey" role="dialog" aria-label="How a Sentence Climbs the Tower">
+    <div class="panel-bar">
+      <h2 class="panel-title">How a Sentence Climbs the Tower</h2>
+      <button class="btn-exit" type="button" data-exit>← Back to tower</button>
+    </div>
+    <div class="panel-body">
+      <p class="section-lead">From English input to Dutch structure—one deliberate step at a time.</p>
+      <div class="flow">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Entry Point</h3><p>The application receives an English text string from the user via the console.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Sentence Analysis</h3><p>SentenceAnalyzer cleans the input, splits it into words, and assigns each a grammatical role (Subject, Verb, Auxiliary, Negation, or Other).</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Structure Revealed</h3><p>The analyzed tokens and their roles are displayed so the journey is visible.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Literal Translation</h3><p>Translator maps every token against the Dutch dictionary CSV. Roles travel with the words; unknown terms remain in English.</p></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-body"><h3>Direct Result</h3><p>The word-for-word Dutch version is shown—still in English word order.</p></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-body"><h3>Rule Selection</h3><p>The user chooses a grammar rule from the console prompt (currently Verb-Second is the complete path).</p></div></div>
+        <div class="step"><div class="step-num">7</div><div class="step-body"><h3>Rule Engine</h3><p>RuleEngine reorders the tokens according to the chosen Dutch syntax pattern, using the roles as navigation beacons.</p></div></div>
+        <div class="step"><div class="step-num">8</div><div class="step-body"><h3>Final Rendering</h3><p>The restructured Dutch sentence is printed—the ultimate output of the climb.</p></div></div>
+      </div>
+      <div class="panel-footer">Babel Gavel · Team Sinterklass</div>
+    </div>
+  </div>
+
+  <!-- ================= PANEL: AI LOGS (paper stack) ================= -->
+  <div class="panel" id="panel-ai" role="dialog" aria-label="Documented AI Conversations">
+    <div class="panel-bar">
+      <h2 class="panel-title">Documented AI Conversations</h2>
+      <button class="btn-exit" type="button" data-exit>← Back to tower</button>
+    </div>
+    <div class="panel-body">
+      <p class="section-lead">Two explorers, two sets of questions—both climbing the same tower. Each sheet is a recorded exchange.</p>
+      <div class="paper-stack">
+        <article class="paper-sheet">
+          <div class="paper-meta">Elina · Interaction 1</div>
+          <h3>Missing words in the analysis CSV</h3>
+          <p class="paper-label">What I needed</p>
+          <p>Clarify how SentenceAnalyzer handles words that are missing from the analysis CSV lookup files.</p>
+          <p class="paper-label">What AI told me</p>
+          <p>Unlisted words receive a default or generic role (for example “Other”) so the pipeline continues without exceptions.</p>
+          <p class="paper-label">What I did with it</p>
+          <p>Noted the resilient design—unknown words still travel through translation and rules unharmed.</p>
+        </article>
+        <article class="paper-sheet">
+          <div class="paper-meta">Elina · Interaction 2</div>
+          <h3>Why translation stays separate from rules</h3>
+          <p class="paper-label">What I needed</p>
+          <p>Understand why translation logic (Translator) is kept separate from syntax manipulation (RuleEngine).</p>
+          <p class="paper-label">What AI told me</p>
+          <p>Separation follows the Single Responsibility Principle: new grammar rules can be added without touching dictionary code.</p>
+          <p class="paper-label">What I did with it</p>
+          <p>Used the insight to write a clearer architectural summary and appreciate the modularity of the repository.</p>
+        </article>
+        <article class="paper-sheet">
+          <div class="paper-meta">Matthew · Interaction 1</div>
+          <h3>What each package does</h3>
+          <p class="paper-label">What I needed</p>
+          <p>Understand what each of the four packages does and how they connect.</p>
+          <p class="paper-label">What AI told me</p>
+          <p>Model stores words and roles; Analyser assigns roles; Translator swaps English→Dutch; RuleEngine rearranges the translated tokens.</p>
+          <p class="paper-label">What I did with it</p>
+          <p>Walked the code myself to confirm how a sentence travels from input to final output.</p>
+        </article>
+        <article class="paper-sheet">
+          <div class="paper-meta">Matthew · Interaction 2</div>
+          <h3>Token roles and the RuleEngine</h3>
+          <p class="paper-label">What I needed</p>
+          <p>Learn what a token’s role actually means and how RuleEngine uses it.</p>
+          <p class="paper-label">What AI told me</p>
+          <p>Roles come from word-list matching; the engine uses those roles to locate and move the correct tokens (for example Verb-Second).</p>
+          <p class="paper-label">What I did with it</p>
+          <p>Traced determineRole() and the Verb-Second implementation, and discovered the other four rules are still stubs.</p>
+        </article>
+      </div>
+      <div class="panel-footer">Babel Gavel · Team Sinterklass</div>
+    </div>
+  </div>
+
+  <!-- ================= PANEL: AUTHORS ================= -->
+  <div class="panel" id="panel-authors" role="dialog" aria-label="The Authors Codex">
+    <div class="panel-bar">
+      <h2 class="panel-title">The Authors’ Codex</h2>
+      <button class="btn-exit" type="button" data-exit>← Back to tower</button>
+    </div>
+    <div class="panel-body">
+      <p class="section-lead">An open ledger of the explorers who climbed the tower. Use the side tabs to turn the page.</p>
+      <div class="codex-wrap">
+        <div class="codex" role="region" aria-label="Authors codex book">
+          <div class="codex-binding" aria-hidden="true"></div>
+          <div class="codex-tabs" role="tablist">
+            <button class="book-tab active" data-tab="elina" role="tab" aria-selected="true" title="Elina">E</button>
+            <button class="book-tab" data-tab="matthew" role="tab" aria-selected="false" title="Matthew">M</button>
+            <button class="book-tab" data-tab="team" role="tab" aria-selected="false" title="Team">S</button>
+            <button class="book-tab" data-tab="notes" role="tab" aria-selected="false" title="Notes">✎</button>
+          </div>
+          <div class="codex-page left">
+            <div class="page-seal">
+              <div class="seal-ring">
+                <div class="seal-title" id="sealTitle">Elina</div>
+                <div class="seal-sub" id="sealSub">Explorer · Architect</div>
+              </div>
+            </div>
+          </div>
+          <div class="codex-spine" aria-hidden="true"></div>
+          <div class="codex-page right">
+            <div class="page-content">
+              <div class="content-panel active" id="panel-elina" data-seal-title="Elina" data-seal-sub="Explorer · Architect">
+                <div class="panel-header">
+                  <div class="panel-avatar">E</div>
+                  <div>
+                    <div class="panel-title-sm">Elina</div>
+                    <div class="panel-role">Explorer · Architect</div>
+                  </div>
+                </div>
+                <div class="panel-body-text">
+                  <p>Mapped the four chambers and pressed the AI on resilience and modularity.</p>
+                  <p>Asked how missing dictionary words are handled, and why translation lives apart from the rule engine—then used those answers to sharpen the architectural story.</p>
+                </div>
+                <div class="panel-tags">
+                  <span class="panel-tag">SentenceAnalyzer</span>
+                  <span class="panel-tag">SRP</span>
+                  <span class="panel-tag">Fallback roles</span>
+                </div>
+              </div>
+              <div class="content-panel" id="panel-matthew" data-seal-title="Matthew" data-seal-sub="Explorer · Tracer">
+                <div class="panel-header">
+                  <div class="panel-avatar">M</div>
+                  <div>
+                    <div class="panel-title-sm">Matthew</div>
+                    <div class="panel-role">Explorer · Tracer</div>
+                  </div>
+                </div>
+                <div class="panel-body-text">
+                  <p>Walked every package end-to-end, tracing how a sentence travels from console input to final Dutch output.</p>
+                  <p>Dug into determineRole() and the Verb-Second path, and discovered the other four grammar rules still sleep as stubs.</p>
+                </div>
+                <div class="panel-tags">
+                  <span class="panel-tag">RuleEngine</span>
+                  <span class="panel-tag">Token roles</span>
+                  <span class="panel-tag">Verb-Second</span>
+                </div>
+              </div>
+              <div class="content-panel" id="panel-team" data-seal-title="Sinterklass" data-seal-sub="Quest 2 · Team">
+                <div class="panel-header">
+                  <div class="panel-avatar">S</div>
+                  <div>
+                    <div class="panel-title-sm">Team Sinterklass</div>
+                    <div class="panel-role">Quest 2 · Babel Gavel</div>
+                  </div>
+                </div>
+                <div class="panel-body-text">
+                  <p>Two explorers, one tower. Together they documented the climb: chambers, pipeline, AI conversations, and the honest limit of Level 3 collaboration.</p>
+                  <p>The map was drawn by human hands; the lantern was shared with AI.</p>
+                </div>
+                <div class="panel-tags">
+                  <span class="panel-tag">Level 3</span>
+                  <span class="panel-tag">Collaboration</span>
+                  <span class="panel-tag">Artifact</span>
+                </div>
+              </div>
+              <div class="content-panel" id="panel-notes" data-seal-title="Field Notes" data-seal-sub="Margins of the climb">
+                <div class="panel-header">
+                  <div class="panel-avatar">✎</div>
+                  <div>
+                    <div class="panel-title-sm">Field Notes</div>
+                    <div class="panel-role">Margins of the climb</div>
+                  </div>
+                </div>
+                <div class="panel-body-text">
+                  <p>The tower does not break when a word is unknown—it labels it Other and keeps climbing.</p>
+                  <p>Translation and rules remain separate so new syntax can be added without rewriting the dictionary. Four rules still wait for their day.</p>
+                </div>
+                <div class="panel-tags">
+                  <span class="panel-tag">Resilience</span>
+                  <span class="panel-tag">Modularity</span>
+                  <span class="panel-tag">Stubs remain</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="codex-ribbons" aria-hidden="true">
+            <div class="ribbon r1"></div>
+            <div class="ribbon r2"></div>
+            <div class="ribbon r3"></div>
+            <div class="ribbon r4"></div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="panel-footer">Babel Gavel · Team Sinterklass</div>
+    </div>
+  </div>
 
-    <!-- ========================= [Our Approach] ========================= -->
-    <section class="content-section">
-      <div class="container">
-        <span class="section-number">03 / Approach</span>
-        <h2 class="display">How we each approached it</h2>
-        <div class="prose">
-          <p>
-            Each team member chose a real context from their studies or daily life,
-            wrote a scenario with a bad prompt and a good prompt, and documented
-            a verification checklist. Below you can explore each person's work.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= [Team Cards] ========================= -->
-    <section class="content-section alt" id="team">
-      <div class="container">
-        <span class="section-number">04 / Team</span>
-        <h2 class="display">Three perspectives</h2>
-        <p class="section-intro">
-          Each member brought their own experience with AI to this artifact.
-          Click through to explore their individual work.
-        </p>
-
-        <div class="team-cards">
-          <a href="team/matthew.html" class="team-card reveal">
-            <div class="team-card-avatar">M</div>
-            <div class="team-card-content">
-              <h3>Matthew Jacob Sarkodie Darkwah</h3>
-              <span class="team-card-context">Building a technology store website</span>
-              <p>Uses AI heavily for code refactoring, writing, and learning. His plan focuses on recovering independence while embracing AI as a learning tool.</p>
-            </div>
-            <span class="team-card-link">View work →</span>
-          </a>
-
-          <a href="team/elina.html" class="team-card reveal" data-delay="80">
-            <div class="team-card-avatar">E</div>
-            <div class="team-card-content">
-              <h3>Elina Nilisani</h3>
-              <span class="team-card-context">Java translation pipeline</span>
-              <p>Uses AI for language support — explaining concepts, getting feedback, and brainstorming. Her plan centres on not becoming dependent.</p>
-            </div>
-            <span class="team-card-link">View work →</span>
-          </a>
-
-          <a href="team/thijmen.html" class="team-card reveal" data-delay="160">
-            <div class="team-card-avatar">T</div>
-            <div class="team-card-content">
-              <h3>Thijmen Verschuur</h3>
-              <span class="team-card-context">Bottle cap identifier</span>
-              <p>Uses AI as a research tool — summarising sources and learning new programming languages. His plan focuses on clear instructions and double-checking.</p>
-            </div>
-            <span class="team-card-link">View work →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= [PowerPoint] ========================= -->
-    <section class="site-powerpoint">
-      <div class="container">
-        <span class="powerpoint-label">Group artifact</span>
-        <span style="color: var(--text-muted); font-size: var(--fs-sm);">This artifact is website-based — no group PowerPoint.</span>
-      </div>
-    </section>
-
-    <!-- ========================= [Final] ========================= -->
-    <section class="content-section alt">
-      <div class="container">
-        <span class="section-number">05 / Reflection</span>
-        <h2 class="display">What we learned</h2>
-        <div class="prose">
-          <p>
-            AI is not bad. The person who uses it may make it feel bad. If you put
-            garbage in, you get garbage out. If you put a real question in, check the
-            answer, and learn from it, then it can be growth out.
-          </p>
-          <p>
-            Each of us found a different balance between using AI effectively and
-            staying independent. The key is not to avoid AI — it is to use it
-            intentionally, check the output, and stay the person who decides what
-            is correct.
-          </p>
-        </div>
-      </div>
-    </section>
-
+  <!-- ================= PANEL: REFLECTION ================= -->
+  <div class="panel" id="panel-reflection" role="dialog" aria-label="AI Assessment Scale">
+    <div class="panel-bar">
+      <h2 class="panel-title">AI Assessment Scale</h2>
+      <button class="btn-exit" type="button" data-exit>← Back to tower</button>
+    </div>
+    <div class="panel-body" style="text-align: center;">
+      <div class="level-badge">Level 3 · AI Collaboration</div>
+      <p class="reflect-text" style="margin: 0 auto;">
+        AI was used as a thinking partner to illuminate existing code and explain uncertain corners.
+        Both explorers still walked the source themselves—verifying methods, tracing data flow,
+        and confirming what the program actually does. The tower was climbed together, but the map was drawn by human hands.
+      </p>
+      <div class="panel-footer">Babel Gavel · Team Sinterklass</div>
+    </div>
+  </div>
   </main>
 
-  <!-- ========================= [Footer] ========================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span>INT Synergy / Saxion / 2026</span>
-        <span>Sinterklaas</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
